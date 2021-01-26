@@ -1,8 +1,14 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
-- name:
-  surname:
-  mail:
-  organization:
-  project:
+- name: Alexandros
+  surname: Koufakis
+  mail: akoufakis@iti.gr
+  organization: CERTH / ITI [https://www.iti.gr/iti/index.html]
+  project: aqua3S
+  comments:
+  - name: Savvas
+  surname: Tzanakis
+  mail: stzanakis@iti.gr
+  organization: CERTH / ITI [https://www.iti.gr/iti/index.html]
+  project: aqua3S
   comments:
