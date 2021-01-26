@@ -1,0 +1,2 @@
+﻿id_;type_;createdAt_;modifiedAt_;hasConfidence__type_;hasConfidence__value_;analyzedAt__type_;analyzedAt__value_;hasAnalysisType__type_;hasAnalysisType__value_;hasAnalysisValue__type_;hasAnalysisValue__value_;@context__0_
+urn:ngsi-ld:Analysis:X;Analysis;2020-03-13T15:42:00Z;2020-03-13T15:45:00Z;Property;0.4;DateTime;2020-12-24T12:00:00Z;Property;Sentiment;Property;Anger;https://schema.lab.fiware.org/ld/context

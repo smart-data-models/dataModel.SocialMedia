@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "schemaVersion": "0.0",
+  "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMPost/schema.json",
+  "title": "Social Media - SMPost",
+  "description": "This entity contains a harmonised description of a generic SMPost made for the Social Media domain.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+	    "type": {
+          "type": "string",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
+          "enum": [
+            "SMPost"
+          ]
+        },
+	      "location": {
+          "$ref": "http://geojson.org/schema/Point.json"
+        },
+		"postCreatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+		"post_id": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The Post ID of the SMPost."
+        },
+		"hasLanguage": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The language of the post."
+        },
+		"hasText": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The text of the post."
+        },
+		"hasImage": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The image URL of the post."
+        },
+		"hasVideo": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The video URL of the post."
+        },
+		"hasPrivacy": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
+        },
+		"hasHashtag": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The hashtags of the post."
+        },
+		"hasThumbnail": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The thumbnail URL of the post."
+        },
+		"likes": {
+          "type": "number",
+          "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. The number of likes of the post. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        },
+		"platform": {
+			"type": "string",
+			"description": "Property. Platform of post."
+        },
+		"createdBy": {
+          "type": "string",
+		  "format": "uri",
+          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that created this post."
+        },
+		"hasReferencedLocation": {
+          "type": "string",
+		  "format": "uri",
+          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the referenced location of this post."
+        },
+		"hasMentions": {
+          "type": "string",
+		  "format": "uri",
+          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that has mentions in this post."
+        },
+		"isAnalyzedBy": {
+          "type": "string",
+		  "format": "uri",
+          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this post."
+        },
+		"belongsToCollection": {
+          "type": "string",
+		  "format": "uri",
+          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMCollection, which this post is a part of."
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "postCreatedAt",
+    "post_id",
+    "platform",
+    "location"
+  ]
+}

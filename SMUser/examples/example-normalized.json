@@ -1,0 +1,27 @@
+{
+  "id": "urn:ngsi-ld:SMUser:123",
+  "type": "SMUser",
+  "user_id": {
+    "type": "Property",
+    "value": "21098319"
+  },
+  "platform": {
+    "type": "Property",
+    "value": "Twitter"
+  },
+  "username": {
+    "type": "Property",
+    "value": "Jsmith2"
+  },
+  "createdPost": {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMPost:123"
+   },
+   "isMentionedBy": {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMPost:123"
+   },
+  "@context": [
+    "https://schema.lab.fiware.org/ld/context"
+  ]
+}
