@@ -12,7 +12,7 @@
 			"@value": "2020-12-24T12:00:00Z"
 			 }		
   },
-  "post_id": {
+  "postId": {
     "type": "Property",
     "value": "21098319"
   },
