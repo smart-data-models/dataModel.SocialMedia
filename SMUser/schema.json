@@ -18,7 +18,7 @@
             		"SMUser"
           		]
         },
-	  "user_id": {
+	  "userId": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The User ID of the SMUser."
         },
@@ -26,7 +26,7 @@
 	  "type": "string",
 	  "description": "Property. Description of the  social platform of the user."
         },
-	  "username": {
+	  "userName": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The username of the SMUser."
         },
@@ -46,8 +46,8 @@
   "required": [
     "id",
     "type",
-    "user_id",
+    "userId",
     "platform",
-    "username"
+    "userName"
   ]
 }
