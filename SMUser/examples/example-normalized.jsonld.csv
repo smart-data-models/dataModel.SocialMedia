@@ -1,2 +1,0 @@
-﻿id_;type_;createdAt_;modifiedAt_;user_id__type_;user_id__value_;platform__type_;platform__value_;username__type_;username__value_;@context__0_
-urn:ngsi-ld:SMUser:123;SMUser;2020-03-13T15:42:00Z;2020-03-13T15:45:00Z;Property;21098319;Property;Twitter;Property;Jsmith2;https://schema.lab.fiware.org/ld/context
