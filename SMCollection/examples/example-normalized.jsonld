@@ -16,7 +16,7 @@
 	 ]
 	}
   },
-  "hasPost": [
+  "hasPosts": [
   {
    "type": "Relationship",
    "object": "urn:ngsi-ld:SMPost:125",
