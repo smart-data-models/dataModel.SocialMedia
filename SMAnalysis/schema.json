@@ -45,9 +45,6 @@
   "required": [
     "id",
     "type",
-    "hasConfidence",
-    "analyzedAt",
-    "hasAnalysisType",
-    "hasAnalysisValue"
+    "analyzedAt"
   ]
 }
