@@ -25,7 +25,7 @@
 		"location": {
           "$ref": "http://geojson.org/schema/Point.json"
         },
-		"hasPost": {
+		"hasPosts": {
           		"type": "array",	  
           		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMPost that belong in this SMCollection.",
 			"items": {
@@ -43,8 +43,6 @@
   ],
   "required": [
     "id",
-    "type",
-    "description",
-    "location"
+    "type"
   ]
 }
