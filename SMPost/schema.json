@@ -25,13 +25,17 @@
           "type": "string",
           "format": "date-time"
         },
-		"post_id": {
+		"postId": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The Post ID of the SMPost."
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The  post ID of the SMPost."
         },
 		"hasLanguage": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The language of the post."
+        },
+	      "hasPostURL": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The URL of the post."
         },
 		"hasText": {
           "type": "string",
