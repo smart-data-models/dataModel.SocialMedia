@@ -101,7 +101,7 @@
     "id",
     "type",
     "postCreatedAt",
-    "post_id",
+    "postId",
     "platform",
     "location"
   ]
