@@ -13,7 +13,7 @@
     "type": "Property",
     "value": "Jsmith2"
   },
-  "createdPost": {
+  "createdPosts": {
    "type": "Relationship",
    "object": "urn:ngsi-ld:SMPost:123"
    },
