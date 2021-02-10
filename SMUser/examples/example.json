@@ -4,6 +4,6 @@
   "userId": "21098319",
   "platform": "Twitter",
   "userName": "Jsmith2",
-  "createdPost": "urn:ngsi-ld:SMPost:123",
+  "createdPosts": "urn:ngsi-ld:SMPost:123",
   "isMentionedBy": "urn:ngsi-ld:SMPost:123"
 }
