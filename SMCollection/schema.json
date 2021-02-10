@@ -42,6 +42,7 @@
 	      "type": "date-time",
 	      "description": "Property. The date and time of when the collection was constructed / grouped."
       }
+    }
   ],
   "required": [
     "id",
@@ -49,4 +50,4 @@
     "groupedAt",
     "description"
   ]
-}}
+}
