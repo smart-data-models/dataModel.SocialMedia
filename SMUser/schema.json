@@ -30,10 +30,13 @@
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The username of the SMUser."
         },
-	  "createdPost": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of the post that the SMUser created."
+	  "createdPosts": {
+          "type": "array",
+	  "description": "Relationship. The IDs of the post that the SMUser created.",
+	  "items": {
+	  "type": "string",
+          "format": "uri"
+	  }
         },
 	  "isMentionedBy": {
           "type": "string",
