@@ -37,7 +37,7 @@
         "isAnalysisOf": {
           "type": "string",
           "format": "uri",
-          "description": "Relationship. The ID of the post that was used in the analysis."
+          "description": "Relationship. The ID of the post or the collection that was used in the analysis."
         }
       }
     }
@@ -45,6 +45,8 @@
   "required": [
     "id",
     "type",
-    "analyzedAt"
+    "hasAnalysisValue",
+    "hasAnalysisType",
+    "isAnalysisOf"
   ]
 }
