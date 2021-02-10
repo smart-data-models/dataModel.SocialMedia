@@ -49,6 +49,7 @@
     "id",
     "type",
     "groupedAt",
-    "description"
+    "description",
+    "hasPosts"
   ]
 }
