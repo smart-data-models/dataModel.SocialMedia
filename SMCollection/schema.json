@@ -33,7 +33,7 @@
 				"format": "uri"
 			}
 		  },
-		"isAnalyzedBy": {
+		"hasAnalysis": {
           "type": "string",
 		  "format": "uri",
           "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this SMCollection."
