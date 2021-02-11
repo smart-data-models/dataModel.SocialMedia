@@ -93,7 +93,7 @@
           "type": "array",
 	  "description": "Relationship. The IDs of the locations referenced in the posts.",
 	  "items": {
-	  "type": "string"
+	  "type": "string",
 	  "format": "uri"
 	  }
         },
