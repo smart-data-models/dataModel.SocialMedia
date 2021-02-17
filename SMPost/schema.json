@@ -110,15 +110,15 @@
 	  }
         },
 	      
-      "interactionCount": {     
+      "hasInteractionCount": {     
       "type": "object",
       "required": [
-        "type",
-        "value"
+        "interactionType",
+        "count"
       ],
       "properties": {
         "type": {
-          "type": "string",
+          "interactionType": "string",
           "enum": [
             "Quote",
             "Reply",
@@ -133,14 +133,17 @@
             "Comment"
           ]
         } ,
-        "value": {
+        "count": {
           "type": "number"
           }
         }},
-		"belongsToCollection": {
-                "type": "string",
-		"format": "uri",
-                "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMCollection, which this post is a part of."
+	  "belongsToCollection": {
+          "type": "array",
+	  "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
+	  "items": {
+	  "type": "string",
+	  "format": "uri"
+	  }
         }
       }
     }
