@@ -22,9 +22,6 @@
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. Name of the referenced location."
         },
-		"location": {
-          "$ref": "http://geojson.org/schema/Point.json"
-        },
 		"locationReferencedBy": {
           "type": "string",
           "format": "uri",
