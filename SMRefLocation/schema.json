@@ -11,18 +11,18 @@
     },
     {
       "properties": {
-	    "type": {
+	  "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMRefLocation.",
           "enum": [
             "SMRefLocation"
           ]
         },
-		"locationName": {
+	  "locationName": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. Name of the referenced location."
         },
-		"locationReferencedBy": {
+	  "locationReferencedBy": {
           "type": "string",
           "format": "uri",
           "description": "Relationship. The ID of the post that references this location."
