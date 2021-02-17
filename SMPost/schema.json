@@ -131,7 +131,7 @@
             "Favorite",
             "Comment"
           ]
-        },
+        } ,
         "value": {
           "type": "number"
           }
