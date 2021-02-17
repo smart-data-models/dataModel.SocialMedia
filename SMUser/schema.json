@@ -40,7 +40,7 @@
         },
 	  "isMentionedBy": {
 		  "type": "array",
-		  "description": "Relationship. The IDs of the posts that mention the SMUser."
+		  "description": "Relationship. The IDs of the posts that mention the SMUser.",
 		  "items": {
 		  "type": "string",
                   "format": "uri"
@@ -48,7 +48,6 @@
       } 
         }
       }
-    }
   ],
   "required": [
     "id",
