@@ -22,10 +22,7 @@
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. General description of the SMCollection."
         },
-		"location": {
-          "$ref": "http://geojson.org/schema/Point.json"
-        },
-		"hasPosts": {
+		        "hasPosts": {
           		"type": "array",	  
           		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMPost that belong in this SMCollection.",
 			"items": {
@@ -34,9 +31,9 @@
 			}
 		  },
 		"hasAnalysis": {
-          "type": "string",
-		  "format": "uri",
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this SMCollection."
+                "type": "string",
+		"format": "uri",
+                "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this SMCollection."
         },
 	      "groupedAt": {
 	      "type": "date-time",
