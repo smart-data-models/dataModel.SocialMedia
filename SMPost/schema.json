@@ -119,16 +119,16 @@
         "type": {
           "type": "string",
           "enum": [
-            "Quote"
-            "Reply"
-            "Retweet"
-            "Favorite"
-            "Shares"
-            "Reactions"
-            "Views"
-            "Like"
-            "Dislike"
-            "Favorite"
+            "Quote",
+            "Reply",
+            "Retweet",
+            "Favorite",
+            "Shares",
+            "Reactions",
+            "Views",
+            "Like",
+            "Dislike",
+            "Favorite",
             "Comment"
           ]
         },
