@@ -10,6 +10,7 @@
 	  25.5
 	 ]
 	},
+  "groupedAt": "2020-12-24T12:00:00Z",
   "hasPosts": ["urn:ngsi-ld:SMPost:125","urn:ngsi-ld:SMPost:124"],
-  "isAnalyzedBy": "urn:ngsi-ld:Analysis:331"
+  "hasAnalysis": "urn:ngsi-ld:Analysis:331"
 }
