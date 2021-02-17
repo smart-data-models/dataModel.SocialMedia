@@ -11,34 +11,40 @@
     },
     {
       "properties": {
-	  "type": {
-          	"type": "string",
-          	"description": "Property. NGSI-LD Entity Type. It must be equal to SMUser.",
-          	"enum": [
-            		"SMUser"
-          		]
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to SMUser.",
+          "enum": [
+            "SMUser"
+          ]
         },
-	  "userId": {
+        "userId": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The User ID of the SMUser."
         },
-	  "platform": {
-	  "type": "string",
-	  "description": "Property. Description of the  social platform of the user."
+        "platform": {
+          "type": "string",
+          "description": "Property. Description of the  social platform of the user."
         },
-	  "userName": {
+        "userName": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The username of the SMUser."
         },
-	  "createdPost": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of the post that the SMUser created."
+        "createdPost": {
+          "type": "array",
+          "description": "Relationship. The ID of the post that the SMUser created.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         },
-	  "isMentionedBy": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of a post that mentions the SMUser."
+        "isMentionedBy": {
+          "type": "array",
+          "description": "Relationship. The ID of a post that mentions the SMUser.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         }
       }
     }
