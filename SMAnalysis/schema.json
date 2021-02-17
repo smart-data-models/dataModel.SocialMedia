@@ -11,26 +11,26 @@
     },
     {
       "properties": {
-	    "type": {
+	  "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMAnalysis.",
           "enum": [
             "SMAnalysis"
           ]
         },
-		"hasConfidence": {
+	  "hasConfidence": {
           "type": "number",
           "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. It represents the confidence of the analysis. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
         },
-		"analyzedAt": {
+	  "analyzedAt": {
           "type": "string",
           "format": "date-time"
         },
-		"hasAnalysisValue": {
+	  "hasAnalysisValue": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The type of the analysis."
         },
-		"hasAnalysisType": {
+	  "hasAnalysisType": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The value of the analysis."
         },
