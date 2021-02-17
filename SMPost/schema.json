@@ -6,6 +6,9 @@
   "description": "This entity contains a harmonised description of a generic SMPost made for the Social Media domain.",
   "type": "object",
   "allOf": [
+     {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
@@ -17,9 +20,6 @@
           "enum": [
             "SMPost"
           ]
-        },
-	  "location": {
-          "$ref": "http://geojson.org/schema/Point.json"
         },
 	  "postCreatedAt": {
           "type": "string",
