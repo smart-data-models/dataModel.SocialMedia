@@ -20,7 +20,7 @@
 	},
   "hasHashtags": ["#sample", "#tag"],
   "hasThumbnails": ["https://twt.com/thumb.png", "https://twt.com/thumb2.png"],
-  "interactionCount":
+  "hasInteractionCount":
 	{
 		"type":"Like",
 		"value": 750
