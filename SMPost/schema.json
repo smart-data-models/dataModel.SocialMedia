@@ -109,8 +109,8 @@
 	  "format": "uri"
 	  }
         },
-      "InteractionCount":{
 	      
+      "interactionCount": {     
       "type": "object",
       "required": [
         "type",
