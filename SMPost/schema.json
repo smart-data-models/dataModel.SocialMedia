@@ -109,7 +109,8 @@
 	  "format": "uri"
 	  }
         },
-      "title": "InteractionCount",
+      "InteractionCount":{
+	      
       "type": "object",
       "required": [
         "type",
@@ -135,7 +136,7 @@
         "value": {
           "type": "number"
           }
-        },
+        }},
 		"belongsToCollection": {
                 "type": "string",
 		"format": "uri",
