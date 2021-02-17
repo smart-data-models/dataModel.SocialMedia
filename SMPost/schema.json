@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "schemaVersion": "0.0",
-  "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMPost/schema.json",
+  "$id": "https://raw.githubusercontent.com/satzanakis/dataModel.SocialMedia/master/SMPost/schema.json",
   "title": "Social Media - SMPost",
   "description": "This entity contains a harmonised description of a generic SMPost made for the Social Media domain.",
   "type": "object",
