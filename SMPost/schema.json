@@ -139,8 +139,7 @@
         "value": {
           "type": "number"
           }
-        }
-},
+        },
 		"belongsToCollection": {
                 "type": "string",
 		"format": "uri",
