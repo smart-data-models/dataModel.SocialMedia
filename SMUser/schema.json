@@ -39,9 +39,13 @@
 	  }
         },
 	  "isMentionedBy": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of a post that mentions the SMUser."
+		  "type": "array",
+		  "description": "Relationship. The IDs of the posts that mention the SMUser."
+		  "items": {
+		  "type": "string",
+                  "format": "uri"
+	  }
+      } 
         }
       }
     }
