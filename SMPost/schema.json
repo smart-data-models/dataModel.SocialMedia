@@ -113,6 +113,34 @@
 	  "format": "uri"
 	  }
         },
+      "title": "InteractionCount",
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Quote"
+            "Reply"
+            "Retweet"
+            "Favorite"
+            "Shares"
+            "Reactions"
+            "Views"
+            "Like"
+            "Dislike"
+            "Favorite"
+            "Comment"
+          ]
+        },
+        "value": {
+          "type": "number"
+          }
+        }
+},
 		"belongsToCollection": {
                 "type": "string",
 		"format": "uri",
