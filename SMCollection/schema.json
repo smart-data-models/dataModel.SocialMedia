@@ -11,14 +11,14 @@
     },
     {
       "properties": {
-	    "type": {
+	  "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection.",
           "enum": [
             "SMCollection"
           ]
         },
-		"description": {
+	  "description": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. General description of the SMCollection."
         },
@@ -30,11 +30,14 @@
 				"format": "uri"
 			}
 		  },
-		"hasAnalysis": {
-                "type": "string",
-		"format": "uri",
-                "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this SMCollection."
-        },
+	      "hasAnalysis": {
+          		"type": "array",	  
+          		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMAnalyses that analyze this SMCollection.",
+			"items": {
+				"type": "string",
+				"format": "uri"
+			}
+		  },
 	      "groupedAt": {
 	      "type": "date-time",
 	      "description": "Property. The date and time of when the collection was constructed / grouped."
