@@ -53,7 +53,7 @@
         },
 	  "hasVideos": {
           "type": "array",
-	  "description": "Relationship. The URL of the content that is in video form.",
+	  "description": "Property. The URLs of the content that is in video form.",
 	  "items": {
 	  "type": "string"
 	  }
