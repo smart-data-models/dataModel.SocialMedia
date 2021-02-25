@@ -95,7 +95,8 @@
           "type": "array",
 	  "description": "Relationship. The IDs of the locations referenced in the posts.",
 	  "items": {
-	  	"$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+	  	"type": "string",
+          "format": "uri"
 	  }
         },
 	  "hasMentions": {
