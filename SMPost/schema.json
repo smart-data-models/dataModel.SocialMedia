@@ -13,6 +13,12 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+    },
+    {
+        "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
+    },  
+    {
       "properties": {
 	  "type": {
           "type": "string",
@@ -89,8 +95,7 @@
           "type": "array",
 	  "description": "Relationship. The IDs of the locations referenced in the posts.",
 	  "items": {
-	  "type": "string",
-	  "format": "uri"
+	  	"$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  }
         },
 	  "hasMentions": {
