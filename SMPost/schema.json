@@ -5,12 +5,28 @@
   "title": "Social Media - SMPost",
   "description": "This entity contains a harmonised description of a generic SMPost made for the Social Media domain.",
   "type": "object",
+  "definitions":
+	{
+	  "hasReferencedLocations": {
+          "type": "array",
+	  "items": {
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+	  }
+        }
+	},
+		
   "allOf": [
      {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Property"
+    },
+    {
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
     },
     
     {
@@ -87,12 +103,7 @@
                 "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that created this post."
         },
 	  "hasReferencedLocations": {
-          "type": "array",
-	  "description": "Relationship. The IDs of the locations referenced in the posts.",
-	  "items": {
-	  	"type": "string",
-          "format": "uri"
-	  }
+          "$ref": "#/definitions/hasReferencedLocations"
         },
 	  "hasMentions": {
           "type": "array",
