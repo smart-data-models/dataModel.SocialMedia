@@ -39,7 +39,8 @@
 			}
 		  },
 	      "groupedAt": {
-	      "type": "date-time",
+	      "type": "string",
+              "format": "date-time",
 	      "description": "Property. The date and time of when the collection was constructed / grouped."
       	}
       }
