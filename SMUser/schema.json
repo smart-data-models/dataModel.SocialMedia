@@ -31,7 +31,7 @@
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The username of the SMUser."
         },
 	  "createdPosts": {
-          "type": "array",
+      "type": "array",
 	  "description": "Relationship. The IDs of the post that the SMUser created.",
 	  "items": {
 	  "type": "string",
@@ -39,10 +39,10 @@
 	  }
         },
 	  "isMentionedBy": {
-		  "type": "array",
-		  "description": "Relationship. The IDs of the posts that mention the SMUser.",
-		  "items": {
-		  "type": "string",
+	  "type": "array",
+	  "description": "Relationship. The IDs of the posts that mention the SMUser.",
+	  "items": {
+	  "type": "string",
                   "format": "uri"
 	  }
       } 
