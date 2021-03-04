@@ -23,12 +23,12 @@
   "hasInteractionCount":
   [
 	{
-		"type":"Like",
-		"value": 750
+		"interactionType":"Like",
+		"count": 750
 	},
     {
-		"type":"Views",
-		"value": 2150
+		"interactionType":"Views",
+		"count": 2150
 	}
   ],
   "hasReferencedLocations": ["urn:ngsi-ld:RefLocation:00", "urn:ngsi-ld:RefLocation:01"],
