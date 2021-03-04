@@ -5,16 +5,6 @@
   "title": "Social Media - SMPost",
   "description": "This entity contains a harmonised description of a generic SMPost made for the Social Media domain.",
   "type": "object",
-  "definitions":
-	{
-	  "hasReferencedLocations": {
-          "type": "array",
-	  "items": {
-          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
-	  }
-        }
-	},
-		
   "allOf": [
      {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
@@ -31,6 +21,7 @@
     
     {
       "properties": {
+        
 	  "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
@@ -38,123 +29,137 @@
             "SMPost"
           ]
         },
+        
 	  "postCreatedAt": {
           "type": "string",
           "format": "date-time"
         },
+        
 	  "postId": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The  post ID of the SMPost."
         },
+        
 	  "hasLanguage": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The language of the post."
         },
+        
 	  "hasPostURL": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The URL of the post."
         },
-          "hasText": {
-          "type": "array",
+        
+      "hasText": {
+      "type": "array",
 	  "description": "Property. The content that is in textual form.",
 	  "items": {
 	  "type": "string"
 	  }
         },
+        
 	  "hasImages": {
-          "type": "array",
+      "type": "array",
 	  "description": "Property. The URLs of the content that is in image form.",
 	  "items": {
 	  "type": "string"
 	  }
         },
+        
 	  "hasVideos": {
-          "type": "array",
+      "type": "array",
 	  "description": "Property. The URLs of the content that is in video form.",
 	  "items": {
 	  "type": "string"
 	  }
         },
+        
 		"hasPrivacyLevel": {
-                "type": "string",
-                "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
+        "type": "string",
+        "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
         },
+        
 	  "hasHashtags": {
-          "type": "array",
+      "type": "array",
 	  "description": "Property. The hashtags of the post.",
 	  "items": {
 	  "type": "string"
 	  }
         },
+        
 	  "hasThumbnails": {
-          "type": "array",
+      "type": "array",
 	  "description": "Property. The thumbnail URLs of the post.",
 	  "items": {
 	  "type": "string"
 	  }
         },
+        
 		"platform": {
-	        "type": "string",
+	    "type": "string",
 		"description": "Property. Platform of post."
         },
+        
 		"createdBy": {
-                "type": "string",
+        "type": "string",
 		"format": "uri",
                 "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that created this post."
         },
+        
 	  "hasReferencedLocations": {
-          "$ref": "#/definitions/hasReferencedLocations"
-        },
-	  "hasMentions": {
-          "type": "array",
-	  "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
+      "type": "array",
 	  "items": {
-	  "type": "string",
-          "format": "uri"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  }
         },
+        
+	  "hasMentions": {
+      "type": "array",
+	  "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
+	  "items": {
+	  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+	  }
+      },
+        
 	  "hasAnalysis": {
-          "type": "array",
+      "type": "array",
 	  "description": "Relationship. The IDs of the SMAnalyses that analyze this post.",
 	  "items": {
-	  "type": "string",
-	  "format": "uri"
+	  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  }
         },
 	      
-      "hasInteractionCount": {     
-      "type": "object",
-      "required": [
-        "interactionType",
-        "count"
-      ],
-      "properties": {
-        "type": {
-          "interactionType": "string",
-          "enum": [
-            "Quote",
-            "Reply",
-            "Retweet",
-            "Favorite",
-            "Shares",
-            "Reactions",
-            "Views",
-            "Like",
-            "Dislike",
-            "Favorite",
-            "Comment"
-          ]
-        } ,
+      "hasInteractionCount": {
+	      "type": "array",
+	      "items": {
+		      "type": "object",
+      		      "properties": {
+                      "interactionType":
+		{
+		      "type":"string", 
+                      "enum": [
+                      "Quote",
+                      "Reply",
+                      "Retweet",
+                      "Favorite",
+                      "Shares",
+                      "Reactions",
+                      "Views",
+                      "Like",
+                      "Dislike",
+                      "Favorite",
+                      "Comment"
+                      ]},
         "count": {
-          "type": "number"
-          }
+        "type": "number"
+          }}
         }},
+        
 	  "belongsToCollection": {
-          "type": "array",
+      "type": "array",
 	  "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
 	  "items": {
-	  "type": "string",
-	  "format": "uri"
+	  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  }
         }
       }
