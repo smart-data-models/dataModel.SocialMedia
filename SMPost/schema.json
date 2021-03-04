@@ -67,7 +67,7 @@
 	  }
         },
         
-		"hasPrivacyLevel": {
+	"hasPrivacyLevel": {
         "type": "string",
         "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
         },
@@ -121,29 +121,32 @@
 	  }
         },
 	      
-      "hasInteractionCount": {     
-      "type": "object",
-      "properties": {
-        "type": {
-          "interactionType": "string",
-          "enum": [
-            "Quote",
-            "Reply",
-            "Retweet",
-            "Favorite",
-            "Shares",
-            "Reactions",
-            "Views",
-            "Like",
-            "Dislike",
-            "Favorite",
-            "Comment"
-          ]
-        } ,
+      "hasInteractionCount": {
+	      "type": "array",
+	      "items": {
+		      "type": "object",
+      		      "properties": {
+                      "interactionType":
+		{
+		      "type":"string", 
+                      "enum": [
+                      "Quote",
+                      "Reply",
+                      "Retweet",
+                      "Favorite",
+                      "Shares",
+                      "Reactions",
+                      "Views",
+                      "Like",
+                      "Dislike",
+                      "Favorite",
+                      "Comment"
+                      ]
+        },
         "count": {
         "type": "number"
-          }
-        }},
+          }}
+        },
 	  "belongsToCollection": {
       "type": "array",
 	  "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
