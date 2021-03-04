@@ -141,8 +141,7 @@
                       "Dislike",
                       "Favorite",
                       "Comment"
-                      ]
-        },
+                      ],
         "count": {
         "type": "number"
           }}
