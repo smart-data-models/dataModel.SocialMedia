@@ -141,11 +141,11 @@
                       "Dislike",
                       "Favorite",
                       "Comment"
-                      ],
+                      ]},
         "count": {
         "type": "number"
           }}
-        },
+        }},
 	  "belongsToCollection": {
       "type": "array",
 	  "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
