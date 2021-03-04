@@ -21,10 +21,16 @@
   "hasHashtags": ["#sample", "#tag"],
   "hasThumbnails": ["https://twt.com/thumb.png", "https://twt.com/thumb2.png"],
   "hasInteractionCount":
+  [
 	{
 		"type":"Like",
 		"value": 750
 	},
+    {
+		"type":"Views",
+		"value": 2150
+	}
+  ],
   "hasReferencedLocations": ["urn:ngsi-ld:RefLocation:00", "urn:ngsi-ld:RefLocation:01"],
   "hasMentions": ["urn:ngsi-ld:SMUser:154", "urn:ngsi-ld:SMUser:155", "urn:ngsi-ld:SMUser:156"],
   "hasAnalysis": ["urn:ngsi-ld:Analysis:X", "urn:ngsi-ld:Analysis:X2"],
