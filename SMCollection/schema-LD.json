@@ -11,6 +11,7 @@
     },
     {
       "properties": {
+	      
 	  "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection.",
@@ -18,28 +19,29 @@
             "SMCollection"
           ]
         },
+	      
 	  "description": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. General description of the SMCollection."
         },
+	      
 		        "hasPosts": {
-          		"type": "array",	  
-          		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMPost that belong in this SMCollection.",
-			"items": {
-				"type": "string",
-				"format": "uri"
-			}
-		  },
+          		"type": "array",
+	                "items": {
+          		"$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+	  			}
+       			 },
+	      
 	                "hasAnalysis": {
-          		"type": "array",	  
-          		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMAnalyses that analyze this SMCollection.",
-			"items": {
-				"type": "string",
-				"format": "uri"
-			}
-		  },
+          		"type": "array",
+	  		"items": {
+          		"$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+	  			 }
+        			},
+	      
 	      "groupedAt": {
-	      "type": "date-time",
+	      "type": "string",
+	      "format" : "date-time",
 	      "description": "Property. The date and time of when the collection was constructed / grouped."
       	}
       }
