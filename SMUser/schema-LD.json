@@ -34,16 +34,15 @@
           "type": "array",
 	  "description": "Relationship. The IDs of the post that the SMUser created.",
 	  "items": {
-	  "type": "string",
-          "format": "uri"
+          "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  }
         },
 	  "isMentionedBy": {
 		  "type": "array",
 		  "description": "Relationship. The IDs of the posts that mention the SMUser.",
 		  "items": {
-		  "type": "string",
-                  "format": "uri"
+          	  "$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
+	  }
 	  }
       } 
         }
