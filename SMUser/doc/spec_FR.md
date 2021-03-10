@@ -1,12 +1,239 @@
 Entité : SMUser  
 ===============  
 [Licence ouverte](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMUser/LICENSE.md)  
+Description globale : **Cette entité contient une description harmonisée d'un SMUser générique fait pour le domaine des médias sociaux. Cette entité est principalement associée à la description d'un utilisateur d'applications de médias sociaux.**  
 
 ## Liste des biens  
 
-Propriétés requises  
-- Aucune propriété requise  ## Modèle de données description des biens  
+- `address`: L'adresse postale  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `createdPost`: L'ID du poste que le PME a créé.  - `isMentionedBy`: L'identifiant d'un poste qui mentionne le SMUser.  - `location`:   - `platform`: Description de la plate-forme sociale de l'utilisateur.  - `type`: Type d'entité NGSI-LD. Il doit être égal à SMUser.  - `userId`: L'identifiant de l'utilisateur du SMUser.  - `userName`: Le nom d'utilisateur de la PME.    
+Propriétés requises  
+- `id`  - `platform`  - `type`  - `userId`  - `userName`  ## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
+SMUser:    
+  description: 'This entity contains a harmonised description of a generic SMUser made for the Social Media domain. This entity is primarily associated with the description of a user of Social Media applications.'    
+  properties:    
+    address:    
+      description: 'The mailing address'    
+      properties:    
+        addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          type: string    
+        addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          type: string    
+        addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          type: string    
+        areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
+          type: string    
+        postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          type: string    
+        postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          type: string    
+        streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
+    areaServed:    
+      description: 'The geographic area where a service or offered item is provided'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
+    createdPost:    
+      description: 'The ID of the post that the SMUser created.'    
+      items:    
+        format: uri    
+        type: string    
+      type: Relationship    
+    isMentionedBy:    
+      description: 'The ID of a post that mentions the SMUser.'    
+      items:    
+        format: uri    
+        type: string    
+      type: Relationship    
+    location:    
+      $id: https://geojson.org/schema/Geometry.json    
+      $schema: "http://json-schema.org/draft-07/schema#"    
+      oneOf:    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      title: 'GeoJSON Geometry'    
+    platform:    
+      description: 'Description of the  social platform of the user.'    
+      type: Property    
+    type:    
+      description: 'NGSI-LD Entity Type. It must be equal to SMUser.'    
+      enum:    
+        - SMUser    
+      type: Property    
+    userId:    
+      description: 'The User ID of the SMUser.'    
+      type: Property    
+      x-ngsi:    
+        model: ' https://schema.org/Text'    
+        units: 'No unit'    
+    userName:    
+      description: 'The username of the SMUser.'    
+      type: Property    
+      x-ngsi:    
+        model: ' https://schema.org/Text'    
+        units: 'No unit'    
+  required:    
+    - id    
+    - type    
+    - userId    
+    - platform    
+    - userName    
+  type: object    
+```  
+</details>    
 ## Exemples de charges utiles  
 #### SMUser NGSI V2 key-values Exemple  
 Voici un exemple d'un SMUser au format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
