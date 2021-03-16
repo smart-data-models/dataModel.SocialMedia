@@ -21,9 +21,10 @@
             "SMPost"
           ]
         },
-	  "postCreatedAt": {
+      "postCreatedAt": {
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "description": " The datetime of the creation of the SMPost."
         },
 	  "postId": {
       "type": "string",
