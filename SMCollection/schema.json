@@ -20,11 +20,11 @@
         },
 	  "description": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. General description of the SMCollection."
+          "description": "Property.  Model:'https://schema.org/Text'. General description of the SMCollection."
         },
 		        "hasPosts": {
           		"type": "array",	  
-          		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMPost that belong in this SMCollection.",
+          		"description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMPost that belong in this SMCollection.",
 			"items": {
 				"type": "string",
 				"format": "uri"
@@ -32,7 +32,7 @@
 		  },
 	                "hasAnalysis": {
           		"type": "array",	  
-          		"description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMAnalyses that analyze this SMCollection.",
+          		"description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection.",
 			"items": {
 				"type": "string",
 				"format": "uri"
