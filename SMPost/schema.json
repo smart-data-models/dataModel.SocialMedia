@@ -14,7 +14,6 @@
     },
     {
       "properties": {
-        
 	  "type": {
       "type": "string",
       "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
@@ -22,27 +21,22 @@
             "SMPost"
           ]
         },
-        
 	  "postCreatedAt": {
       "type": "string",
       "format": "date-time"
         },
-        
 	  "postId": {
       "type": "string",
-      "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The  post ID of the SMPost."
+      "description": "Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost."
         },
-        
 	  "hasLanguage": {
       "type": "string",
-      "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The language of the post."
+      "description": "Property.  Model:'https://schema.org/Text'. The language of the post."
         },
-        
 	  "hasPostURL": {
       "type": "string",
-      "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The URL of the post."
+      "description": "Property.  Model:'https://schema.org/Text'. The URL of the post."
         },
-        
       "hasText": {
       "type": "array",
 	  "description": "Property. The content that is in textual form.",
@@ -50,7 +44,6 @@
 	  "type": "string"
 	  }
         },
-        
 	  "hasImages": {
       "type": "array",
 	  "description": "Property. The URLs of the content that is in image form.",
@@ -58,7 +51,6 @@
 	  "type": "string"
 	  }
         },
-        
 	  "hasVideos": {
       "type": "array",
 	  "description": "Property. The URLs of the content that is in video form.",
@@ -66,12 +58,10 @@
 	  "type": "string"
 	  }
         },
-        
 	"hasPrivacyLevel": {
         "type": "string",
-        "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
+        "description": "Property.  Model:'https://schema.org/Text'. The privacy setting of the post."
         },
-        
 	  "hasHashtags": {
       "type": "array",
 	  "description": "Property. The hashtags of the post.",
@@ -79,7 +69,6 @@
 	  "type": "string"
 	  }
         },
-        
 	  "hasThumbnails": {
       "type": "array",
 	  "description": "Property. The thumbnail URLs of the post.",
@@ -94,7 +83,7 @@
 		"createdBy": {
         "type": "string",
 		"format": "uri",
-        "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that created this post."
+        "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post."
         },
 	  "hasReferencedLocations": {
       "type": "array",
@@ -120,7 +109,6 @@
 	  "format": "uri"
 	  }
         },
-	      
       "hasInteractionCount": {
 	      "type": "array",
 	      "items": {
