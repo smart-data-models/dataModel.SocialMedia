@@ -14,7 +14,6 @@
     },
     {
       "properties": {
-	      
 	  "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection.",
@@ -22,26 +21,22 @@
             "SMCollection"
           ]
         },
-	      
 	  "description": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. General description of the SMCollection."
+          "description": "Property.  Model:'https://schema.org/Text'. General description of the SMCollection."
         },
-	      
 		        "hasPosts": {
           		"type": "array",
 	                "items": {
           		"$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  			}
        			 },
-	      
 	                "hasAnalysis": {
           		"type": "array",
 	  		"items": {
           		"$ref": "https://forge.etsi.org/rep/NGSI-LD/NGSI-LD/raw/master/schema/Entity.json#/definitions/Relationship"
 	  			 }
         			},
-	      
 	      "groupedAt": {
 	      "type": "string",
 	      "format" : "date-time",
