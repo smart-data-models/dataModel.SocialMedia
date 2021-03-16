@@ -20,7 +20,7 @@
         },
 	  "locationName": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. Name of the referenced location."
+          "description": "Property.  Model:'https://schema.org/Text'. Name of the referenced location."
         },
 	  "locationReferencedBy": {
           "type": "string",
