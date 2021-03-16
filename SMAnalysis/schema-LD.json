@@ -20,7 +20,7 @@
         },
 	  "hasConfidence": {
           "type": "number",
-          "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. It represents the confidence of the analysis. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+          "description": "Property.  Model:'https://schema.org/Number'. It represents the confidence of the analysis."
         },
 	  "analyzedAt": {
           "type": "string",
@@ -28,11 +28,11 @@
         },
 	  "hasAnalysisValue": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The type of the analysis."
+          "description": "Property.  Model:'https://schema.org/Text'. The type of the analysis."
         },
 	  "hasAnalysisType": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The value of the analysis."
+          "description": "Property.  Model:'https://schema.org/Text'. The value of the analysis."
         },
         "isAnalysisOf": {
           "type": "string",
