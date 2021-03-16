@@ -6,7 +6,6 @@
     "type": "Property",
     "value": "this is a collection of posts"
   },
-	
   "location": {
     "type": "GeoProperty",
 	"value": {
@@ -18,7 +17,6 @@
 	 ]
 	}
   },
-	
   "hasPosts": [
   {
    "type": "Relationship",
@@ -31,7 +29,6 @@
    "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
   }
   ],
-	
    "hasAnalysis": [
    {
    "type": "Relationship",
@@ -43,7 +40,6 @@
    "object": "urn:ngsi-ld:SMAnalysis:332"
    "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:332"	   
    }],
-	
     "groupedAt": {
     "type": "Property",
     "value": {
@@ -51,7 +47,6 @@
 			"@value": "2020-12-24T12:00:00Z"
 			 }		
   },
-	   
   "@context": [
     "https://schema.lab.fiware.org/ld/context"
   ]
