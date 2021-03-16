@@ -1,22 +1,18 @@
 {
   "id": "urn:ngsi-ld:SMUser:123",
   "type": "SMUser",
-  
   "userId": {
     "type": "Property",
     "value": "21098319"
   },
-  
   "platform": {
     "type": "Property",
     "value": "Twitter"
   },
-  
   "userName": {
     "type": "Property",
     "value": "Jsmith2"
   },
-  
   "createdPosts": [
     {
    "type": "Relationship",
@@ -28,7 +24,6 @@
    "object": "urn:ngsi-ld:SMPost:124",
    "datasetId":"urn:ngsi-ld:Dataset:SMPost:124"
    }],
-  
    "isMentionedBy": [
     {
    "type": "Relationship",
@@ -40,7 +35,6 @@
    "object": "urn:ngsi-ld:SMPost:124",
    "datasetId":"urn:ngsi-ld:Dataset:SMPost:124"
    }],
-  
   "@context": [
     "https://schema.lab.fiware.org/ld/context"
   ]
