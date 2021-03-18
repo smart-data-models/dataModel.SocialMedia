@@ -11,43 +11,43 @@
     },
     {
       "properties": {
-	  "type": {
-          	"type": "string",
-          	"description": "Property. NGSI-LD Entity Type. It must be equal to SMUser.",
-          	"enum": [
-            		"SMUser"
-          		]
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to SMUser.",
+          "enum": [
+            "SMUser"
+          ]
         },
-	  "userId": {
+        "userId": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The User ID of the SMUser."
         },
-	  "platform": {
-	  "type": "string",
-	  "description": "Property. Description of the  social platform of the user."
+        "platform": {
+          "type": "string",
+          "description": "Property. Description of the  social platform of the user."
         },
-	  "userName": {
+        "userName": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The username of the SMUser."
         },
-	  "createdPosts": {
-      "type": "array",
-	  "description": "Relationship. The IDs of the post that the SMUser created.",
-	  "items": {
-	  "type": "string",
-          "format": "uri"
-	  }
+        "createdPosts": {
+          "type": "array",
+          "description": "Relationship. The IDs of the post that the SMUser created.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         },
-	  "isMentionedBy": {
-	  "type": "array",
-	  "description": "Relationship. The IDs of the posts that mention the SMUser.",
-	  "items": {
-	  "type": "string",
-                  "format": "uri"
-	  }
-      } 
+        "isMentionedBy": {
+          "type": "array",
+          "description": "Relationship. The IDs of the posts that mention the SMUser.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         }
       }
+    }
   ],
   "required": [
     "id",
