@@ -6,7 +6,7 @@
   "description": "This entity contains a harmonised description of a generic SMPost made for the Social Media domain.",
   "type": "object",
   "allOf": [
-     {
+    {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
     {
@@ -14,134 +14,136 @@
     },
     {
       "properties": {
-	  "type": {
-      "type": "string",
-      "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
-      "enum": [
+        "type": {
+          "type": "string",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
+          "enum": [
             "SMPost"
           ]
         },
-      "postCreatedAt": {
-      "type": "string",
-      "format": "date-time",
-      "description": " The datetime of the creation of the SMPost."
+        "postCreatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": " The datetime of the creation of the SMPost."
         },
-	  "postId": {
-      "type": "string",
-      "description": "Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost."
+        "postId": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost."
         },
-	  "hasLanguage": {
-      "type": "string",
-      "description": "Property.  Model:'https://schema.org/Text'. The language of the post."
+        "hasLanguage": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. The language of the post."
         },
-	  "hasPostURL": {
-      "type": "string",
-      "description": "Property.  Model:'https://schema.org/Text'. The URL of the post."
+        "hasPostURL": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. The URL of the post."
         },
-      "hasText": {
-      "type": "array",
-	  "description": "Property. The content that is in textual form.",
-	  "items": {
-	  "type": "string"
-	  }
+        "hasText": {
+          "type": "array",
+          "description": "Property. The content that is in textual form.",
+          "items": {
+            "type": "string"
+          }
         },
-	  "hasImages": {
-      "type": "array",
-	  "description": "Property. The URLs of the content that is in image form.",
-	  "items": {
-	  "type": "string"
-	  }
+        "hasImages": {
+          "type": "array",
+          "description": "Property. The URLs of the content that is in image form.",
+          "items": {
+            "type": "string"
+          }
         },
-	  "hasVideos": {
-      "type": "array",
-	  "description": "Property. The URLs of the content that is in video form.",
-	  "items": {
-	  "type": "string"
-	  }
+        "hasVideos": {
+          "type": "array",
+          "description": "Property. The URLs of the content that is in video form.",
+          "items": {
+            "type": "string"
+          }
         },
-	"hasPrivacyLevel": {
-        "type": "string",
-        "description": "Property.  Model:'https://schema.org/Text'. The privacy setting of the post."
+        "hasPrivacyLevel": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. The privacy setting of the post."
         },
-	  "hasHashtags": {
-      "type": "array",
-	  "description": "Property. The hashtags of the post.",
-	  "items": {
-	  "type": "string"
-	  }
+        "hasHashtags": {
+          "type": "array",
+          "description": "Property. The hashtags of the post.",
+          "items": {
+            "type": "string"
+          }
         },
-	  "hasThumbnails": {
-      "type": "array",
-	  "description": "Property. The thumbnail URLs of the post.",
-	  "items": {
-	  "type": "string"
-	  }
+        "hasThumbnails": {
+          "type": "array",
+          "description": "Property. The thumbnail URLs of the post.",
+          "items": {
+            "type": "string"
+          }
         },
-		"platform": {
-	    "type": "string",
-		"description": "Property. Platform of post."
+        "platform": {
+          "type": "string",
+          "description": "Property. Platform of post."
         },
-		"createdBy": {
-        "type": "string",
-		"format": "uri",
-        "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post."
+        "createdBy": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post."
         },
-	  "hasReferencedLocations": {
-      "type": "array",
-	  "description": "Relationship. The IDs of the locations referenced in this post.",
-	  "items": {
-	  "type": "string",
-          "format": "uri"
-	  }
+        "hasReferencedLocations": {
+          "type": "array",
+          "description": "Relationship. The IDs of the locations referenced in this post.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         },
-	  "hasMentions": {
-      "type": "array",
-	  "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
-	  "items": {
-	  "type": "string",
-          "format": "uri"
-	  }
+        "hasMentions": {
+          "type": "array",
+          "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         },
-	  "hasAnalysis": {
-      "type": "array",
-	  "description": "Relationship. The IDs of the SMAnalyses that analyze this post.",
-	  "items": {
-	  "type": "string",
-	  "format": "uri"
-	  }
+        "hasAnalysis": {
+          "type": "array",
+          "description": "Relationship. The IDs of the SMAnalyses that analyze this post.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         },
-      "hasInteractionCount": {
-	      "type": "array",
-	      "items": {
-		      "type": "object",
-      		      "properties": {
-                      "interactionType":
-		{
-		      "type":"string", 
-                      "enum": [
-                      "Quote",
-                      "Reply",
-                      "Retweet",
-                      "Favorite",
-                      "Shares",
-                      "Reactions",
-                      "Views",
-                      "Like",
-                      "Dislike",
-                      "Favorite",
-                      "Comment"
-                      ]},
-        "count": {
-        "type": "number"
-          }}
-        }},
-	  "belongsToCollection": {
-      "type": "array",
-	  "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
-	  "items": {
-	  "type": "string",
-	  "format": "uri"
-	  }
+        "hasInteractionCount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "interactionType": {
+                "type": "string",
+                "enum": [
+                  "Quote",
+                  "Reply",
+                  "Retweet",
+                  "Favorite",
+                  "Shares",
+                  "Reactions",
+                  "Views",
+                  "Like",
+                  "Dislike",
+                  "Favorite",
+                  "Comment"
+                ]
+              },
+              "count": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "belongsToCollection": {
+          "type": "array",
+          "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
         }
       }
     }
