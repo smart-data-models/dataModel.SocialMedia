@@ -1,14 +1,16 @@
 {
   "id": "urn:ngsi-ld:RefLocation:00",
   "type": "SMRefLocation",
-  "locationName": "Thessaloniki",
+  "locationName": {
+    "type": "string",
+    "streetAddress": "Thessaloniki"
+  },
   "location": {
     "type": "Point",
-	"coordinates": 
-	 [
-	  40.3,
-	  25.5
-	 ]
-	},
+    "coordinates": [
+      40.3,
+      25.5
+    ]
+  },
   "locationReferencedBy": "urn:ngsi-ld:SMPost:123"
 }
