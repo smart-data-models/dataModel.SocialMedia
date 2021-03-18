@@ -18,10 +18,6 @@
             "SMRefLocation"
           ]
         },
-	  "locationName": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Name of the referenced location."
-        },
 	  "locationReferencedBy": {
           "type": "string",
           "format": "uri",
@@ -33,7 +29,7 @@
   "required": [
     "id",
     "type",
-    "locationName",
+	  "streetAddress",
     "location"
   ]
 }
