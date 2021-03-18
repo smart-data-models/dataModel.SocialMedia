@@ -20,7 +20,7 @@
         },
         "userId": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The User ID of the SMUser."
+          "description": "Property.  Model:'https://schema.org/Text'. The User ID of the SMUser."
         },
         "platform": {
           "type": "string",
@@ -28,7 +28,7 @@
         },
         "userName": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The username of the SMUser."
+          "description": "Property.  Model:'https://schema.org/Text'. The username of the SMUser."
         },
         "createdPosts": {
           "type": "array",
