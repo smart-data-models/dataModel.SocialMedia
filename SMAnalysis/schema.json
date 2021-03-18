@@ -11,26 +11,26 @@
     },
     {
       "properties": {
-	  "type": {
+        "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMAnalysis.",
           "enum": [
             "SMAnalysis"
           ]
         },
-	  "hasConfidence": {
+        "hasConfidence": {
           "type": "number",
           "description": "Property.  Model:'https://schema.org/Number'. It represents the confidence of the analysis."
         },
-	  "analyzedAt": {
+        "analyzedAt": {
           "type": "string",
           "format": "date-time"
         },
-	  "hasAnalysisValue": {
+        "hasAnalysisValue": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. The type of the analysis."
         },
-	  "hasAnalysisType": {
+        "hasAnalysisType": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. The value of the analysis."
         },
