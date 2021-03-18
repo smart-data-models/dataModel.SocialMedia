@@ -18,6 +18,9 @@
             "SMRefLocation"
           ]
         },
+	  "locationName": {
+		  "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+	  }
 	  "locationReferencedBy": {
           "type": "string",
           "format": "uri",
@@ -29,7 +32,7 @@
   "required": [
     "id",
     "type",
-	  "streetAddress",
+    "locationName",
     "location"
   ]
 }
