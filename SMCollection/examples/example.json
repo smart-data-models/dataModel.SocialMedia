@@ -4,13 +4,18 @@
   "description": "this is a collection of posts",
   "location": {
     "type": "Point",
-    "coordinates": 
-	 [
-	  40.3,
-	  25.5
-	 ]
-	},
+    "coordinates": [
+      40.3,
+      25.5
+    ]
+  },
   "groupedAt": "2020-12-24T12:00:00Z",
-  "hasPosts": ["urn:ngsi-ld:SMPost:125","urn:ngsi-ld:SMPost:124"],
-  "hasAnalysis": ["urn:ngsi-ld:Analysis:331","urn:ngsi-ld:Analysis:334"]
+  "hasPosts": [
+    "urn:ngsi-ld:SMPost:125",
+    "urn:ngsi-ld:SMPost:124"
+  ],
+  "hasAnalysis": [
+    "urn:ngsi-ld:Analysis:331",
+    "urn:ngsi-ld:Analysis:334"
+  ]
 }
