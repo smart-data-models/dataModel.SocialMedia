@@ -7,20 +7,16 @@
   },
   "location": {
     "type": "GeoProperty",
-	"value": {
-	 "type": "Point",
-	 "coordinates": 
-	 [
-	  40.3,
-	  25.5
-	 ]
-	}
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        40.3,
+        25.5
+      ]
+    }
   },
   "locationReferencedBy": {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMPost:123"
-   },
-  "@context": [
-    "https://smartdatamodels.org/context"
-  ]
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:SMPost:123"
+  }
 }

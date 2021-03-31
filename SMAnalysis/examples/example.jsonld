@@ -1,0 +1,10 @@
+{
+  "id": "urn:ngsi-ld:Analysis:X",
+  "type": "SMAnalysis",
+  "hasConfidence": 0.4,
+  "analyzedAt": "2020-12-24T12:00:00Z",
+  "hasAnalysisValue": "Anger",
+  "hasAnalysisType": "Sentiment",
+  "isAnalysisOf": "urn:ngsi-ld:SMCollection:001",
+  "@context": "https://smartdatamodels.org/context.jsonld"
+}

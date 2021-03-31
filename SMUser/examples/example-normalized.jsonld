@@ -22,6 +22,7 @@
    "object": "urn:ngsi-ld:SMPost:123"
    },
   "@context": [
-    "https://schema.lab.fiware.org/ld/context"
+    "https://smartdatamodels.org/context.jsonld
+    "
   ]
 }

@@ -23,8 +23,5 @@
   "isAnalysisOf": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:SMCollection:001"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+  }
 }

@@ -30,8 +30,5 @@
   "isAnalyzedBy": {
     "type": "Relationship",
     "object": "urn:ngsi-ld:Analysis:331"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context"
-  ]
+  }
 }

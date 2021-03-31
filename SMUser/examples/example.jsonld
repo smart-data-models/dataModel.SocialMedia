@@ -7,6 +7,6 @@
   "createdPost": "urn:ngsi-ld:SMPost:123",
   "isMentionedBy": "urn:ngsi-ld:SMPost:123",
   "@context": [
-    "https://smart-data-models.github.io/data-models/context.jsonld"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }
