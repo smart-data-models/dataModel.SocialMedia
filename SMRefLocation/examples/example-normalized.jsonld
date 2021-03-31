@@ -1,26 +1,16 @@
 {
   "id": "urn:ngsi-ld:RefLocation:00",
   "type": "SMRefLocation",
-  "locationName": {
-    "type": "Property",
-    "value": "Thessaloniki"
-  },
+  "locationName": "Thessaloniki",
   "location": {
-    "type": "GeoProperty",
-	"value": {
-	 "type": "Point",
-	 "coordinates": 
-	 [
-	  40.3,
-	  25.5
-	 ]
-	}
+    "type": "Point",
+    "coordinates": [
+      40.3,
+      25.5
+    ]
   },
-  "locationReferencedBy": {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMPost:123"
-   },
+  "locationReferencedBy": "urn:ngsi-ld:SMPost:123",
   "@context": [
-    "https://smartdatamodels.org/context"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }
