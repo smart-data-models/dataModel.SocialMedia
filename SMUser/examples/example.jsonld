@@ -13,14 +13,18 @@
     "type": "Property",
     "value": "Jsmith2"
   },
-  "createdPost": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:SMPost:123"
-  },
-  "isMentionedBy": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:SMPost:123"
-  },
+  "createdPost": [
+    {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:SMPost:123"
+    }
+  ],
+  "isMentionedBy": [
+    {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:SMPost:123"
+    }
+  ],
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
   ]
