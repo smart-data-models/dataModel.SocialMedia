@@ -71,12 +71,13 @@
   "hasHashtags": [
   {
     "type": "Property",
-    "value": "[#sample,#tag]"
+    "value": "["#sample",
+	       "#tag"]"
   },
     {
     "type": "Property",
-    "value": "["#sample",
-	       "#tag"]"
+    "value": "["#sample2",
+	       "#tag2"]"
   }
   ],
   "hasThumbnails": [
