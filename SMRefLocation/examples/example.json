@@ -3,7 +3,7 @@
   "type": "SMRefLocation",
   "locationName": {
     "type": "string",
-    "streetAddress": "Thessaloniki"
+    "addressLocality": "Thessaloniki"
   },
   "location": {
     "type": "Point",
