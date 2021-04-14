@@ -75,7 +75,8 @@
   },
     {
     "type": "Property",
-    "value": "[#sample2,#tag2]"
+    "value": "["#sample",
+	       "#tag"]"
   }
   ],
   "hasThumbnails": [
