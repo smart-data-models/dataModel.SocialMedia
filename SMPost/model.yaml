@@ -34,15 +34,31 @@ SMPost:
       x-ngsi:
         model: https://schema.org/Text
     belongsToCollection:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
       description: 'The ID of the SMCollection, which this post is a part of.'
-      format: uri
       type: Relationship
       x-ngsi:
         model: ' https://schema.org/Text'
         units: 'No unit'
     createdBy:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
       description: 'The ID of the SMUser that created this post.'
-      format: uri
       type: Relationship
       x-ngsi:
         model: ' https://schema.org/Text'
@@ -66,8 +82,16 @@ SMPost:
         model: ' https://schema.org/Text'
         units: 'No unit'
     hasMentions:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
       description: 'The ID of the SMUser that has mentions in this post.'
-      format: uri
       type: Relationship
       x-ngsi:
         model: ' https://schema.org/Text'
@@ -85,8 +109,16 @@ SMPost:
         model: ' https://schema.org/Text'
         units: 'No unit'
     hasReferencedLocation:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
       description: 'The ID of the referenced location of this post.'
-      format: uri
       type: Relationship
       x-ngsi:
         model: ' https://schema.org/Text'
@@ -110,8 +142,16 @@ SMPost:
         model: ' https://schema.org/Text'
         units: 'No unit'
     isAnalyzedBy:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
       description: 'The ID of the SMAnalysis that analyzes this post.'
-      format: uri
       type: Relationship
       x-ngsi:
         model: ' https://schema.org/Text'
@@ -123,28 +163,152 @@ SMPost:
         model: ' https://schema.org/Number'
         units: 'No unit'
     location:
-      $id: https://geojson.org/schema/Point.json
+      $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
-      properties:
-        bbox:
-          items:
-            type: number
-          minItems: 4
-          type: array
-        coordinates:
-          items:
-            type: number
-          minItems: 2
-          type: array
-        type:
-          enum:
-            - Point
-          type: string
-      required:
-        - type
-        - coordinates
-      title: 'GeoJSON Point'
-      type: object
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
     platform:
       description: 'Platform of post.'
       type: Property

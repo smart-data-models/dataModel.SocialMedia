@@ -205,13 +205,11 @@ SMUser:
       type: Property
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
     userName:
-      description: 'The username of the SMUser.'
+      description: 'The username of the SMUser. Privacy:''Low'''
       type: Property
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
   required:
     - id
     - type
