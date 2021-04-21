@@ -5,7 +5,7 @@ Entidad: SMCollection
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `description`: Descripción general de la SMCollection.  - `hasPosts`: Los ID de los SMPost que pertenecen a esta SMCollection.  - `isAnalyzedBy`: El ID del SMAnalysis que analiza esta SMCollection.  - `location`:   - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMCollection.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasPosts`: Los ID de los SMPost que pertenecen a esta SMCollection.  - `id`: Identificador único de la entidad  - `isAnalyzedBy`: El ID del SMAnalysis que analiza esta SMCollection.  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMCollection.    
 Propiedades requeridas  
 - `id`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -41,56 +41,241 @@ SMCollection:
       type: Property    
       x-ngsi:    
         model: https://schema.org/address    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
-    description:    
-      description: 'General description of the SMCollection.'    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        units: 'No unit'    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: Property    
     hasPosts:    
       description: 'The IDs of the SMPost that belong in this SMCollection.'    
       items:    
-        format: uri    
-        type: string    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       type: Relationship    
       x-ngsi:    
         model: ' https://schema.org/Text'    
         units: 'No unit'    
+    id:    
+      anyOf: &smcollection_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     isAnalyzedBy:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
       description: 'The ID of the SMAnalysis that analyzes this SMCollection.'    
-      format: uri    
       type: Relationship    
       x-ngsi:    
         model: ' https://schema.org/Text'    
         units: 'No unit'    
     location:    
-      $id: https://geojson.org/schema/Point.json    
+      $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
-      properties:    
-        bbox:    
-          items:    
-            type: number    
-          minItems: 4    
+      oneOf:    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      title: 'GeoJSON Geometry'    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *smcollection_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            - format: uri    
+              type: string    
+          minItems: 1    
           type: array    
-        coordinates:    
-          items:    
-            type: number    
-          minItems: 2    
-          type: array    
-        type:    
-          enum:    
-            - Point    
+        - format: uri    
           type: string    
-      required:    
-        - type    
-        - coordinates    
-      title: 'GeoJSON Point'    
-      type: object    
+      type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to SMCollection.'    
       enum:    
@@ -103,66 +288,125 @@ SMCollection:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### SMCollection NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de una SMCollection en formato JSON como valores-clave. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SMCollection NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de una SMCollection en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:SMCollection:001",  
-  "type": "SMCollection",  
-  "description": "this is a collection of posts",  
-  "location": {  
-    "type": "Point",  
-    "coordinates":   
-	 [  
-	  40.3,  
-	  25.5  
-	 ]  
-	},  
-  "hasPosts": ["urn:ngsi-ld:SMPost:125","urn:ngsi-ld:SMPost:124"],  
-  "isAnalyzedBy": "urn:ngsi-ld:Analysis:331"  
-}  
+{  
+  "id": "SMCollection.001",  
+  "type": "SMCollection",  
+  "description": "this is a collection of posts",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      40.3,  
+      25.5  
+    ]  
+  },  
+  "hasPosts": [  
+    "SMPost.125",  
+    "SMPost.124"  
+  ],  
+  "isAnalyzedBy": "Analysis.331"  
+}  
 ```  
-No está disponible el ejemplo de una SMCollection en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-No está disponible el ejemplo de una SMCollection en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SMCollection NGSI-v2 normalizada Ejemplo  
+Aquí hay un ejemplo de una SMCollection en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:SMCollection:001",  
+  "type": "SMCollection",  
+  "description": {  
+    "type": "Text",  
+    "value": "this is a collection of posts"  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        40.3,  
+        25.5  
+      ]  
+    }  
+  },  
+  "hasPosts": [  
+    {  
+      "type": "Relationship",  
+      "object": "SMPost.125"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "SMPost.124"  
+    }  
+  ],  
+  "isAnalyzedBy": {  
+    "type": "Relationship",  
+    "object": "Analysis.331"  
+  }  
+}  
+```  
+#### SMCollection NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de una SMCollection en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:SMCollection:001",  
+  "type": "SMCollection",  
+  "description": "this is a collection of posts",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      40.3,  
+      25.5  
+    ]  
+  },  
+  "hasPosts": [  
+    "urn:ngsi-ld:SMPost:125",  
+    "urn:ngsi-ld:SMPost:124"  
+  ],  
+  "isAnalyzedBy": "urn:ngsi-ld:Analysis:331",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
 #### SMCollection NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de una SMCollection en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:SMCollection:001",  
-  "type": "SMCollection",  
-  "description": {  
-    "type": "Property",  
-    "value": "this is a collection of posts"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-	"value": {  
-	 "type": "Point",  
-	 "coordinates":   
-	 [  
-	  40.3,  
-	  25.5  
-	 ]  
-	}  
-  },  
-  "hasPosts": [  
-  {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:125",  
-   "datasetId": "urn:ngsi-ld:Dataset:01"  
-  },  
-  {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:124",  
-   "datasetId": "urn:ngsi-ld:Dataset:camera:01"  
-  }  
-  ],  
-   "isAnalyzedBy": {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:Analysis:331"  
-   },  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
-}  
+{  
+  "id": "urn:ngsi-ld:SMCollection:001",  
+  "type": "SMCollection",  
+  "description": {  
+    "type": "Property",  
+    "value": "this is a collection of posts"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        40.3,  
+        25.5  
+      ]  
+    }  
+  },  
+  "hasPosts": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:125",  
+      "datasetId": "urn:ngsi-ld:Dataset:01"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:124",  
+      "datasetId": "urn:ngsi-ld:Dataset:camera:01"  
+    }  
+  ],  
+  "isAnalyzedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Analysis:331"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
 ```  
