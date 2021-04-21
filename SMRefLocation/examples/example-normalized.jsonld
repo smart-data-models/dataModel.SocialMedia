@@ -1,9 +1,11 @@
 {
   "id": "urn:ngsi-ld:RefLocation:00",
   "type": "SMRefLocation",
-  "locationName": {
+  "address": {
     "type": "Property",
-    "value": "Thessaloniki"
+    "value": {
+      "addressLocality": "Thessaloniki"
+    }
   },
   "location": {
     "type": "GeoProperty",

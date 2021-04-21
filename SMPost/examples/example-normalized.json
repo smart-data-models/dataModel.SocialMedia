@@ -6,42 +6,39 @@
     "value": "http://twt.com/121"
   },
   "postCreatedAt": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-12-24T12:00:00Z"
-    }
+    "type": "DateTime",
+    "value": "2020-12-24T12:00:00Z"
   },
   "postId": {
-    "type": "Property",
+    "type": "Text",
     "value": "21098319"
   },
   "hasLanguage": {
-    "type": "Property",
+    "type": "Text",
     "value": "en"
   },
   "platform": {
-    "type": "Property",
+    "type": "Text",
     "value": "Twitter"
   },
   "hasText": {
-    "type": "Property",
+    "type": "Text",
     "value": "This is a tweet"
   },
   "hasImage": {
-    "type": "Property",
+    "type": "Text",
     "value": "https://twt.com/image.png"
   },
   "hasVideo": {
-    "type": "Property",
+    "type": "Text",
     "value": "https://twt.com/video.mp4"
   },
   "hasPrivacy": {
-    "type": "Property",
+    "type": "Text",
     "value": "public"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -51,35 +48,35 @@
     }
   },
   "hasHashtag": {
-    "type": "Property",
+    "type": "Text",
     "value": "[#sample,#tag]"
   },
   "hasThumbnail": {
-    "type": "Property",
+    "type": "Text",
     "value": "https://twt.com/thumb.png"
   },
   "likes": {
-    "type": "Property",
+    "type": "Number",
     "value": 762
   },
   "createdBy": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:SMUser:123"
+    "object": "SMUser.123"
   },
   "hasReferencedLocation": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:RefLocation:00"
+    "object": "RefLocation.00"
   },
   "hasMentions": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:SMUser:154"
+    "object": "SMUser.154"
   },
   "isAnalyzedBy": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:Analysis:X"
+    "object": "Analysis.X"
   },
   "belongsToCollection": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:SMCollection:001"
+    "object": "SMCollection.001"
   }
 }

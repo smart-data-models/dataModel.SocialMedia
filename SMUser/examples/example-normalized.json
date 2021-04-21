@@ -1,5 +1,5 @@
 {
-  "id": "urn:ngsi-ld:SMUser:123",
+  "id": "SMUser.123",
   "type": "SMUser",
   "userId": {
     "type": "Text",
@@ -16,13 +16,13 @@
   "createdPost": [
     {
       "type": "Relationship",
-      "value": "urn:ngsi-ld:SMPost:123"
+      "value": "SMPost.123"
     }
   ],
   "isMentionedBy": [
     {
       "type": "Relationship",
-      "value": "urn:ngsi-ld:SMPost:123"
+      "value": "SMPost.123"
     }
   ]
 }

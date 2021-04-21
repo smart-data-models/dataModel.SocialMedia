@@ -6,5 +6,7 @@
   "hasAnalysisValue": "Anger",
   "hasAnalysisType": "Sentiment",
   "isAnalysisOf": "urn:ngsi-ld:SMCollection:001",
-  "@context": "https://smartdatamodels.org/context.jsonld"
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
 }

@@ -11,87 +11,144 @@
     },
     {
       "properties": {
-	    "type": {
+        "type": {
           "type": "string",
           "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
           "enum": [
             "SMPost"
           ]
         },
-	      "location": {
-          "$ref": "http://geojson.org/schema/Point.json"
-        },
-		"postCreatedAt": {
+        "postCreatedAt": {
           "type": "string",
           "format": "date-time"
         },
-		"postId": {
+        "postId": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The  post ID of the SMPost."
         },
-		"hasLanguage": {
+        "hasLanguage": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The language of the post."
         },
-	      "hasPostURL": {
+        "hasPostURL": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The URL of the post."
         },
-		"hasText": {
+        "hasText": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The text of the post."
         },
-		"hasImage": {
+        "hasImage": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The image URL of the post."
         },
-		"hasVideo": {
+        "hasVideo": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The video URL of the post."
         },
-		"hasPrivacy": {
+        "hasPrivacy": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
         },
-		"hasHashtag": {
+        "hasHashtag": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The hashtags of the post."
         },
-		"hasThumbnail": {
+        "hasThumbnail": {
           "type": "string",
           "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The thumbnail URL of the post."
         },
-		"likes": {
+        "likes": {
           "type": "number",
           "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. The number of likes of the post. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
         },
-		"platform": {
-			"type": "string",
-			"description": "Property. Platform of post."
-        },
-		"createdBy": {
+        "platform": {
           "type": "string",
-		  "format": "uri",
+          "description": "Property. Platform of post."
+        },
+        "createdBy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that created this post."
         },
-		"hasReferencedLocation": {
-          "type": "string",
-		  "format": "uri",
+        "hasReferencedLocation": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the referenced location of this post."
         },
-		"hasMentions": {
-          "type": "string",
-		  "format": "uri",
+        "hasMentions": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that has mentions in this post."
         },
-		"isAnalyzedBy": {
-          "type": "string",
-		  "format": "uri",
+        "isAnalyzedBy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this post."
         },
-		"belongsToCollection": {
-          "type": "string",
-		  "format": "uri",
+        "belongsToCollection": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMCollection, which this post is a part of."
         }
       }

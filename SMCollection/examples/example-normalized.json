@@ -2,11 +2,11 @@
   "id": "urn:ngsi-ld:SMCollection:001",
   "type": "SMCollection",
   "description": {
-    "type": "Property",
+    "type": "Text",
     "value": "this is a collection of posts"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -18,17 +18,15 @@
   "hasPosts": [
     {
       "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:125",
-      "datasetId": "urn:ngsi-ld:Dataset:01"
+      "object": "SMPost.125"
     },
     {
       "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:124",
-      "datasetId": "urn:ngsi-ld:Dataset:camera:01"
+      "object": "SMPost.124"
     }
   ],
   "isAnalyzedBy": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:Analysis:331"
+    "object": "Analysis.331"
   }
 }

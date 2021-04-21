@@ -2,26 +2,23 @@
   "id": "urn:ngsi-ld:Analysis:X",
   "type": "SMAnalysis",
   "hasConfidence": {
-    "type": "Property",
+    "type": "Number",
     "value": 0.4
   },
   "analyzedAt": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-12-24T12:00:00Z"
-    }
+    "type": "DateTime",
+    "value": "2020-12-24T12:00:00Z"
   },
   "hasAnalysisValue": {
-    "type": "Property",
+    "type": "Text",
     "value": "Anger"
   },
   "hasAnalysisType": {
-    "type": "Property",
+    "type": "Text",
     "value": "Sentiment"
   },
   "isAnalysisOf": {
     "type": "Relationship",
-    "object": "urn:ngsi-ld:SMCollection:001"
+    "object": "SMCollection.001"
   }
 }
