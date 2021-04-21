@@ -5,7 +5,7 @@ Entidad: SMUser
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `createdPost`: El ID del puesto que el SMUser creó.  - `isMentionedBy`: El ID de un post que menciona al SMUser.  - `location`:   - `platform`: Descripción de la plataforma social del usuario.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMUser.  - `userId`: El ID de usuario del SMUser.  - `userName`: El nombre de usuario del SMUser.    
+- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `createdPost`: El ID del puesto que el SMUser creó.  - `isMentionedBy`: El ID de un post que menciona al SMUser.  - `location`:   - `platform`: Descripción de la plataforma social del usuario.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMUser.  - `userId`: El ID de usuario del SMUser.  - `userName`: El nombre de usuario del SMUser. Privacidad:'Baja'    
 Propiedades requeridas  
 - `id`  - `platform`  - `type`  - `userId`  - `userName`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -49,14 +49,28 @@ SMUser:
     createdPost:    
       description: 'The ID of the post that the SMUser created.'    
       items:    
-        format: uri    
-        type: string    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       type: Relationship    
     isMentionedBy:    
       description: 'The ID of a post that mentions the SMUser.'    
       items:    
-        format: uri    
-        type: string    
+        anyOf:    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+          - description: 'Property. Identifier format of any NGSI entity'    
+            format: uri    
+            type: string    
       type: Relationship    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
@@ -218,13 +232,11 @@ SMUser:
       type: Property    
       x-ngsi:    
         model: ' https://schema.org/Text'    
-        units: 'No unit'    
     userName:    
-      description: 'The username of the SMUser.'    
+      description: 'The username of the SMUser. Privacy:''Low'''    
       type: Property    
       x-ngsi:    
         model: ' https://schema.org/Text'    
-        units: 'No unit'    
   required:    
     - id    
     - type    
@@ -235,21 +247,92 @@ SMUser:
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### SMUser NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de un SMUser en formato JSON como key-values. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SMUser NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un SMUser en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": "21098319",  
-  "platform": "Twitter",  
-  "userName": "Jsmith2",  
-  "createdPost": "urn:ngsi-ld:SMPost:123",  
-  "isMentionedBy": "urn:ngsi-ld:SMPost:123"  
-}  
+{  
+  "id": "SMUser.123",  
+  "type": "SMUser",  
+  "userId": "21098319",  
+  "platform": "Twitter",  
+  "userName": "Jsmith2",  
+  "createdPost": [  
+    "SMPost.123"  
+  ],  
+  "isMentionedBy": [  
+    "SMPost.123"  
+  ]  
+}  
 ```  
-#### SMUser NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de un SMUser en formato JSON normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### SMUser NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un SMUser en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "SMUser.123",  
+  "type": "SMUser",  
+  "userId": {  
+    "type": "Text",  
+    "value": "21098319"  
+  },  
+  "platform": {  
+    "type": "Text",  
+    "value": "Twitter"  
+  },  
+  "userName": {  
+    "type": "Text",  
+    "value": "Jsmith2"  
+  },  
+  "createdPost": [  
+    {  
+      "type": "Relationship",  
+      "value": "SMPost.123"  
+    }  
+  ],  
+  "isMentionedBy": [  
+    {  
+      "type": "Relationship",  
+      "value": "SMPost.123"  
+    }  
+  ]  
+}  
+```  
+#### SMUser NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un SMUser en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:SMUser:123",  
+  "type": "SMUser",  
+  "userId": {  
+    "type": "Property",  
+    "value": "21098319"  
+  },  
+  "platform": {  
+    "type": "Property",  
+    "value": "Twitter"  
+  },  
+  "userName": {  
+    "type": "Property",  
+    "value": "Jsmith2"  
+  },  
+  "createdPost": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:123"  
+    }  
+  ],  
+  "isMentionedBy": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:123"  
+    }  
+  ],  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
+#### SMUser NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un SMUser en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SMUser:123",  
@@ -267,59 +350,22 @@ SMUser:
     "value": "Jsmith2"  
   },  
   "createdPost": {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:123"  
-   },  
-   "isMentionedBy": {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:123"  
-   }  
-}  
-```  
-#### SMUser NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un SMUser en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": "21098319",  
-  "platform": "Twitter",  
-  "userName": "Jsmith2",  
-  "createdPost": "urn:ngsi-ld:SMPost:123",  
-  "isMentionedBy": "urn:ngsi-ld:SMPost:123",  
+    "type": "Property",  
+    "value": [  
+      {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:SMPost:123"  
+      }  
+    ]  
+  },  
+  "isMentionedBy": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:123"  
+    }  
+  ],  
   "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld"  
+    "https://smartdatamodels.org/context.jsonld"  
   ]  
 }  
-```  
-#### SMUser NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un SMUser en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-```json  
-{  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": {  
-    "type": "Property",  
-    "value": "21098319"  
-  },  
-  "platform": {  
-    "type": "Property",  
-    "value": "Twitter"  
-  },  
-  "userName": {  
-    "type": "Property",  
-    "value": "Jsmith2"  
-  },  
-  "createdPost": {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:123"  
-   },  
-   "isMentionedBy": {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:123"  
-   },  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
-}  
 ```  
