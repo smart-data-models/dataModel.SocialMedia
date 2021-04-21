@@ -36,14 +36,28 @@ SMUser:
     createdPost:
       description: 'The ID of the post that the SMUser created.'
       items:
-        format: uri
-        type: string
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
       type: Relationship
     isMentionedBy:
       description: 'The ID of a post that mentions the SMUser.'
       items:
-        format: uri
-        type: string
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
       type: Relationship
     location:
       $id: https://geojson.org/schema/Geometry.json
