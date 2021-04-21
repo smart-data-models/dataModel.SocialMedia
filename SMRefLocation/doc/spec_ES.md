@@ -5,9 +5,9 @@ Entidad: SMRefLocation
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `location`:   - `locationName`: Nombre del lugar de referencia.  - `locationReferencedBy`: El ID del puesto que hace referencia a esta ubicación.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMRefLocation.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`:   - `locationReferencedBy`: El ID del puesto que hace referencia a esta ubicación.  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMRefLocation.    
 Propiedades requeridas  
-- `id`  - `location`  - `locationName`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `location`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -41,44 +41,222 @@ SMRefLocation:
       type: Property    
       x-ngsi:    
         model: https://schema.org/address    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
-    location:    
-      $id: https://geojson.org/schema/Point.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
-      properties:    
-        bbox:    
-          items:    
-            type: number    
-          minItems: 4    
-          type: array    
-        coordinates:    
-          items:    
-            type: number    
-          minItems: 2    
-          type: array    
-        type:    
-          enum:    
-            - Point    
-          type: string    
-      required:    
-        - type    
-        - coordinates    
-      title: 'GeoJSON Point'    
-      type: object    
-    locationName:    
-      description: 'Name of the referenced location.'    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        units: 'No unit'    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    description:    
+      description: 'A description of this item'    
+      type: Property    
+    id:    
+      anyOf: &smreflocation_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
+    location:    
+      $id: https://geojson.org/schema/Geometry.json    
+      $schema: "http://json-schema.org/draft-07/schema#"    
+      oneOf:    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      title: 'GeoJSON Geometry'    
     locationReferencedBy:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
       description: 'The ID of the post that references this location.'    
-      format: uri    
       type: Relationship    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *smreflocation_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            - format: uri    
+              type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to SMRefLocation.'    
       enum:    
@@ -87,59 +265,108 @@ SMRefLocation:
   required:    
     - id    
     - type    
-    - locationName    
     - location    
   type: object    
 ```  
 </details>    
 ## Ejemplo de carga útil  
-#### SMRefLocation NGSI V2 key-values Ejemplo  
-Aquí hay un ejemplo de un SMRefLocation en formato JSON como valores-clave. Esto es compatible con NGSI V2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SMRefLocation NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un SMRefLocation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:RefLocation:00",  
-  "type": "SMRefLocation",  
-  "locationName": "Thessaloniki",  
-  "location": {  
-    "type": "Point",  
-	"coordinates":   
-	 [  
-	  40.3,  
-	  25.5  
-	 ]  
-	},  
-  "locationReferencedBy": "urn:ngsi-ld:SMPost:123"  
+{  
+  "id": "urn:ngsi-ld:RefLocation:00",  
+  "type": "SMRefLocation",  
+  "address": {  
+    "addressLocality": "Thessaloniki"  
+  },  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      40.3,  
+      25.5  
+    ]  
+  },  
+  "locationReferencedBy": "urn:ngsi-ld:SMPost:123"  
 }  
 ```  
-No está disponible el ejemplo de un SMRefLocation en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
-No está disponible el ejemplo de una SMRefLocation en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### SMRefLocation NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un SMRefLocation en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "RefLocation.00",  
+  "type": "SMRefLocation",  
+  "address": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "addressLocality": "Thessaloniki"  
+    }  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        40.3,  
+        25.5  
+      ]  
+    }  
+  },  
+  "locationReferencedBy": {  
+    "type": "Relationship",  
+    "object": "SMPost.123"  
+  }  
+}  
+```  
+#### SMRefLocation NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un SMRefLocation en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:RefLocation:00",  
+  "type": "SMRefLocation",  
+  "address": {  
+    "addressLocality": "Thessaloniki"  
+  },  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      40.3,  
+      25.5  
+    ]  
+  },  
+  "locationReferencedBy": "urn:ngsi-ld:SMPost:123",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
 #### SMRefLocation NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un SMRefLocation en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:RefLocation:00",  
-  "type": "SMRefLocation",  
-  "locationName": {  
-    "type": "Property",  
-    "value": "Thessaloniki"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-	"value": {  
-	 "type": "Point",  
-	 "coordinates":   
-	 [  
-	  40.3,  
-	  25.5  
-	 ]  
-	}  
-  },  
-  "locationReferencedBy": {  
-   "type": "Relationship",  
-   "object": "urn:ngsi-ld:SMPost:123"  
-   },  
-  "@context": [  
-    "https://schema.lab.fiware.org/ld/context"  
-  ]  
+{  
+  "id": "urn:ngsi-ld:RefLocation:00",  
+  "type": "SMRefLocation",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Thessaloniki"  
+    }  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        40.3,  
+        25.5  
+      ]  
+    }  
+  },  
+  "locationReferencedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:SMPost:123"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context"  
+  ]  
 }  
 ```  
