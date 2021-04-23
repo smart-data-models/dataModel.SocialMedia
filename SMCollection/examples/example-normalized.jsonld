@@ -29,7 +29,7 @@
    "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
   }
   ],
-   "isAnalyzedBy": [
+   "hasAnalysis": [
    {
    "type": "Relationship",
    "object": "urn:ngsi-ld:SMAnalysis:331"
