@@ -19,7 +19,7 @@
     "https://twt.com/video.mp4",
     "https://twt.com/video2.mp4"
   ],
-  "hasPrivacy": "public",
+  "hasPrivacyLevel": "public",
   "location": {
     "type": "Point",
     "coordinates": [
