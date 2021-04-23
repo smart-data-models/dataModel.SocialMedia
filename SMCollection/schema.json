@@ -30,7 +30,7 @@
             "format": "uri"
           }
         },
-        "isAnalyzedBy": {
+        "hasAnalysis": {
           "type": "array",
           "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection.",
           "items": {
