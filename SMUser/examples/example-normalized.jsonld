@@ -13,21 +13,28 @@
     "type": "Property",
     "value": "Jsmith2"
   },
-  "createdPost": {
-    "type": "Property",
-    "value": [
-      {
-        "type": "Relationship",
-        "object": "urn:ngsi-ld:SMPost:123"
-      }
-    ]
-  },
-  "isMentionedBy": [
+  "createdPosts": [
     {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:123"
-    }
-  ],
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMPost:123",
+   "datasetId":"urn:ngsi-ld:Dataset:SMPost:123"
+   },
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMPost:124",
+   "datasetId":"urn:ngsi-ld:Dataset:SMPost:124"
+   }],
+   "isMentionedBy": [
+    {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMPost:123",
+   "datasetId":"urn:ngsi-ld:Dataset:SMPost:123"
+   },
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMPost:124",
+   "datasetId":"urn:ngsi-ld:Dataset:SMPost:124"
+   }],
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
   ]

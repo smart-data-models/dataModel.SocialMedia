@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "schemaVersion": "0.0",
+  "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMAnalysis/schema.json",
+  "title": "Social Media - SMAnalysis",
+  "description": "This entity contains a harmonised description of a generic SMAnalysis made for the Social Media domain. This entity is primarily associated with the process of analysis of Social Media applications' posts.",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+	  "type": {
+          "type": "string",
+          "description": "Property. NGSI-LD Entity Type. It must be equal to SMAnalysis.",
+          "enum": [
+            "SMAnalysis"
+          ]
+        },
+	  "hasConfidence": {
+          "type": "number",
+          "description": "Property.  Model:'https://schema.org/Number'. It represents the confidence of the analysis."
+        },
+	  "analyzedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+	  "hasAnalysisValue": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. The type of the analysis."
+        },
+	  "hasAnalysisType": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. The value of the analysis."
+        },
+        "isAnalysisOf": {
+          "type": "string",
+          "format": "uri",
+          "description": "Relationship. The ID of the post or the collection that was used in the analysis."
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "hasAnalysisValue",
+    "hasAnalysisType",
+    "isAnalysisOf"
+  ]
+}

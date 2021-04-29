@@ -7,6 +7,9 @@
   "type": "object",
   "allOf": [
     {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
@@ -20,47 +23,59 @@
         },
         "postCreatedAt": {
           "type": "string",
-          "format": "date-time"
+          "format": "date-time",
+          "description": " The datetime of the creation of the SMPost."
         },
         "postId": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The  post ID of the SMPost."
+          "description": "Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost."
         },
         "hasLanguage": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The language of the post."
+          "description": "Property.  Model:'https://schema.org/Text'. The language of the post."
         },
         "hasPostURL": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The URL of the post."
+          "description": "Property.  Model:'https://schema.org/Text'. The URL of the post."
         },
         "hasText": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The text of the post."
+          "type": "array",
+          "description": "Property. The content that is in textual form.",
+          "items": {
+            "type": "string"
+          }
         },
-        "hasImage": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The image URL of the post."
+        "hasImages": {
+          "type": "array",
+          "description": "Property. The URLs of the content that is in image form.",
+          "items": {
+            "type": "string"
+          }
         },
-        "hasVideo": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The video URL of the post."
+        "hasVideos": {
+          "type": "array",
+          "description": "Property. The URLs of the content that is in video form.",
+          "items": {
+            "type": "string"
+          }
         },
-        "hasPrivacy": {
+        "hasPrivacyLevel": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The privacy setting of the post."
+          "description": "Property.  Model:'https://schema.org/Text'. The privacy setting of the post."
         },
-        "hasHashtag": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The hashtags of the post."
+        "hasHashtags": {
+          "type": "array",
+          "description": "Property. The hashtags of the post.",
+          "items": {
+            "type": "string"
+          }
         },
-        "hasThumbnail": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The thumbnail URL of the post."
-        },
-        "likes": {
-          "type": "number",
-          "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. The number of likes of the post. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+        "hasThumbnails": {
+          "type": "array",
+          "description": "Property. The thumbnail URLs of the post.",
+          "items": {
+            "type": "string"
+          }
         },
         "platform": {
           "type": "string",
@@ -68,88 +83,127 @@
         },
         "createdBy": {
           "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that created this post."
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ],
+          "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post."
         },
-        "hasReferencedLocation": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the referenced location of this post."
+        "hasReferencedLocations": {
+          "type": "array",
+          "description": "Relationship. The IDs of the locations referenced in this post.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         },
         "hasMentions": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMUser that has mentions in this post."
+          "type": "array",
+          "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         },
-        "isAnalyzedBy": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        "hasAnalysis": {
+          "type": "array",
+          "description": "Relationship. The IDs of the SMAnalyses that analyze this post.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
+        },
+        "hasInteractionCount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "interactionType": {
+                "type": "string",
+                "enum": [
+                  "Quote",
+                  "Reply",
+                  "Retweet",
+                  "Favorite",
+                  "Shares",
+                  "Reactions",
+                  "Views",
+                  "Like",
+                  "Dislike",
+                  "Favorite",
+                  "Comment"
+                ]
+              },
+              "count": {
+                "type": "number"
+              }
             }
-          ],
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this post."
+          }
         },
         "belongsToCollection": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMCollection, which this post is a part of."
+          "type": "array",
+          "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         }
       }
     }
@@ -159,7 +213,6 @@
     "type",
     "postCreatedAt",
     "postId",
-    "platform",
-    "location"
+    "platform"
   ]
 }

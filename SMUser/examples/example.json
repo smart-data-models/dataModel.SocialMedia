@@ -5,9 +5,11 @@
   "platform": "Twitter",
   "userName": "Jsmith2",
   "createdPost": [
-    "SMPost.123"
+    "SMPost.123".
+    "SMPost.124"
   ],
   "isMentionedBy": [
-    "SMPost.123"
+    "SMPost.123",
+    "SMPost.124"
   ]
 }

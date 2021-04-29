@@ -1,16 +1,17 @@
 {
   "id": "urn:ngsi-ld:SMPost:123",
   "type": "SMPost",
-  "hasPostURL": {
+    "hasPostURL": 
+    {
     "type": "Property",
     "value": "http://twt.com/121"
   },
-  "postCreatedAt": {
+    "postCreatedAt": {
     "type": "Property",
     "value": {
-      "@type": "DateTime",
-      "@value": "2020-12-24T12:00:00Z"
-    }
+			"@type": "DateTime",
+			"@value": "2020-12-24T12:00:00Z"
+			 }		
   },
   "postId": {
     "type": "Property",
@@ -24,64 +25,134 @@
     "type": "Property",
     "value": "Twitter"
   },
-  "hasText": {
+  "hasText": [
+  {
     "type": "Property",
-    "value": "This is a tweet"
+    "value": "This is a tweet." 
   },
-  "hasImage": {
+    {
+    "type": "Property",
+    "value": "This is another tweet." 
+  }
+  ],
+  "hasImages": [
+  {
     "type": "Property",
     "value": "https://twt.com/image.png"
   },
-  "hasVideo": {
+  {
+    "type": "Property",
+    "value": "https://twt.com/image2.png"
+  }],
+  "hasVideos": [
+    {
     "type": "Property",
     "value": "https://twt.com/video.mp4"
   },
-  "hasPrivacy": {
+  {
+    "type": "Property",
+    "value": "https://twt.com/video2.mp4"
+  }],
+  "hasPrivacyLevel": {
     "type": "Property",
     "value": "public"
   },
   "location": {
     "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        40.3,
-        25.5
-      ]
-    }
+	"value": {
+	"type": "Point",
+	"coordinates": 
+	 [
+	  40.3,
+	  25.5
+	 ]
+	}
   },
-  "hasHashtag": {
+  "hasHashtags": [
+  {
     "type": "Property",
-    "value": "[#sample,#tag]"
+    "value": "["#sample",
+	       "#tag"]"
   },
-  "hasThumbnail": {
+    {
+    "type": "Property",
+    "value": "["#sample2",
+	       "#tag2"]"
+  }
+  ],
+  "hasThumbnails": [
+    {
     "type": "Property",
     "value": "https://twt.com/thumb.png"
-  },
-  "likes": {
+    },
+    {
     "type": "Property",
-    "value": 762
-  },
+    "value": "https://twt.com/thumb2.png"
+    }
+  ],
   "createdBy": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:SMUser:123"
-  },
-  "hasReferencedLocation": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:RefLocation:00"
-  },
-  "hasMentions": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:SMUser:154"
-  },
-  "isAnalyzedBy": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:Analysis:X"
-  },
-  "belongsToCollection": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:SMCollection:001"
-  },
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMUser:123"
+   },
+   "hasReferencedLocations": [
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:RefLocation:00",
+   "datasetId": "urn:ngsi-ld:Dataset:RefLocation:00"
+   },
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:RefLocation:01",
+   "datasetId": "urn:ngsi-ld:Dataset:RefLocation:01"
+   }],
+   "hasMentions": [
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMUser:154",
+   "datasetId": "urn:ngsi-ld:Dataset:SMUser:154"
+   },
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMUser:155",
+   "datasetId": "urn:ngsi-ld:Dataset:SMUser:155"
+   }],
+   "hasAnalysis": [
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:Analysis:X",
+   "datasetId": "urn:ngsi-ld:Dataset:Analysis:X"
+   },
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:Analysis:02",
+   "datasetId": "urn:ngsi-ld:Dataset:Analysis:02"
+   }
+   ],
+   "belongsToCollection": [
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMCollection:001",
+   "datasetId": "urn:ngsi-ld:Dataset:SMCollection:001"
+   },
+   {
+   "type": "Relationship",
+   "object": "urn:ngsi-ld:SMCollection:002",
+   "datasetId": "urn:ngsi-ld:Dataset:SMCollection:002"
+   }
+   ], 
+     "hasInteractionCount":[
+        {
+    	"type": "Property",
+		"value": {
+		"@interactionType": "Like",
+		"@count": "750"
+		}},
+        {
+    	"type": "Property",
+		"value": {
+		"@interactionType": "Views",
+		"@count": "2150"
+		}}],
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
   ]

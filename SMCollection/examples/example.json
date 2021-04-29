@@ -13,5 +13,8 @@
     "SMPost.125",
     "SMPost.124"
   ],
-  "isAnalyzedBy": "Analysis.331"
+  hasAnalysis": [
+    "Analysis.331",
+    "Analysis.334"
+  ]
 }

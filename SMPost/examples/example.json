@@ -6,24 +6,61 @@
   "postId": "21098319",
   "hasLanguage": "en",
   "platform": "Twitter",
-  "hasText": "This is a tweet",
-  "hasImage": "https://twt.com/image.png",
-  "hasVideo": "https://twt.com/video.mp4",
-  "hasPrivacy": "public",
+  "hasText": [
+    "This is a tweet",
+    "This is another tweet"
+  ],
+  "hasImages": [
+    "https://twt.com/image.png",
+    "https://twt.com/image2.png",
+    "https://twt.com/image3.png"
+  ],
+  "hasVideos": [
+    "https://twt.com/video.mp4",
+    "https://twt.com/video2.mp4"
+  ],
+  "hasPrivacyLevel": "public",
   "location": {
     "type": "Point",
-	"coordinates": 
-	 [
-	  40.3,
-	  25.5
-	 ]
-	},
-  "hasHashtag": "[#sample,#tag]",
-  "hasThumbnail": "https://twt.com/thumb.png",
-  "likes": 762,
+    "coordinates": [
+      40.3,
+      25.5
+    ]
+  },
+  "hasHashtags": [
+    "#sample",
+    "#tag"
+  ],
+  "hasThumbnails": [
+    "https://twt.com/thumb.png",
+    "https://twt.com/thumb2.png"
+  ],
+  "hasInteractionCount": [
+    {
+      "interactionType": "Like",
+      "count": 750
+    },
+    {
+      "interactionType": "Views",
+      "count": 2150
+    }
+  ],
+  "hasReferencedLocations": [
+    "urn:ngsi-ld:RefLocation:00",
+    "urn:ngsi-ld:RefLocation:01"
+  ],
+  "hasMentions": [
+    "urn:ngsi-ld:SMUser:154",
+    "urn:ngsi-ld:SMUser:155",
+    "urn:ngsi-ld:SMUser:156"
+  ],
+  "hasAnalysis": [
+    "urn:ngsi-ld:Analysis:X",
+    "urn:ngsi-ld:Analysis:X2"
+  ],
   "createdBy": "urn:ngsi-ld:SMUser:123",
-  "hasReferencedLocation": "urn:ngsi-ld:RefLocation:00",
-  "hasMentions": "urn:ngsi-ld:SMUser:154",
-  "isAnalyzedBy": "urn:ngsi-ld:Analysis:X",
-  "belongsToCollection": "urn:ngsi-ld:SMCollection:001"
+  "belongsToCollection": [
+    "urn:ngsi-ld:SMCollection:001",
+    "urn:ngsi-ld:SMCollection:002"
+  ]
 }

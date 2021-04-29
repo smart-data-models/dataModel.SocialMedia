@@ -10,9 +10,6 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-    },
-    {
       "properties": {
         "type": {
           "type": "string",
@@ -21,9 +18,21 @@
             "SMCollection"
           ]
         },
+        "description": {
+          "type": "string",
+          "description": "Property.  Model:'https://schema.org/Text'. General description of the SMCollection."
+        },
         "hasPosts": {
           "type": "array",
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The IDs of the SMPost that belong in this SMCollection.",
+          "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMPost that belong in this SMCollection.",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "hasAnalysis": {
+          "type": "array",
+          "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection.",
           "items": {
             "anyOf": [
               {
@@ -41,28 +50,19 @@
             ]
           }
         },
-        "isAnalyzedBy": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship.  Model:'https://schema.org/Text'. Units:'No unit'. The ID of the SMAnalysis that analyzes this SMCollection."
+        "groupedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. The date and time of when the collection was constructed / grouped."
         }
       }
     }
   ],
   "required": [
     "id",
-    "type"
+    "type",
+    "groupedAt",
+    "description",
+    "hasPosts"
   ]
 }
