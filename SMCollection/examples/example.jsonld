@@ -13,7 +13,7 @@
     "urn:ngsi-ld:SMPost:125",
     "urn:ngsi-ld:SMPost:124"
   ],
-  "isAnalyzedBy": "urn:ngsi-ld:Analysis:331",
+  "isAnalyzedBy": ["urn:ngsi-ld:Analysis:331"],
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
   ]
