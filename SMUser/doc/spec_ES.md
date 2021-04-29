@@ -5,9 +5,9 @@ Entidad: SMUser
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `createdPost`: El ID del puesto que el SMUser creó.  - `isMentionedBy`: El ID de un post que menciona al SMUser.  - `location`:   - `platform`: Descripción de la plataforma social del usuario.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMUser.  - `userId`: El ID de usuario del SMUser.  - `userName`: El nombre de usuario del SMUser. Privacidad:'Baja'    
+- `address`: La dirección postal  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `createdPosts`: El ID del puesto que el SMUser creó.  - `isMentionedBy`: El ID de un post que menciona al SMUser.  - `location`:   - `platform`: Descripción de la plataforma social del usuario.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMUser.  - `userId`: El ID de usuario del SMUser.  - `userName`: El nombre de usuario del SMUser. Privacidad:'Baja'    
 Propiedades requeridas  
-- `id`  - `platform`  - `type`  - `userId`  - `userName`  ## Descripción del modelo de datos de las propiedades  
+- `id`  - `platform`  - `type`  - `userName`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -46,7 +46,7 @@ SMUser:
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
-    createdPost:    
+    createdPosts:    
       description: 'The ID of the post that the SMUser created.'    
       items:    
         anyOf:    
@@ -240,7 +240,6 @@ SMUser:
   required:    
     - id    
     - type    
-    - userId    
     - platform    
     - userName    
   type: object    
@@ -256,11 +255,13 @@ SMUser:
   "userId": "21098319",  
   "platform": "Twitter",  
   "userName": "Jsmith2",  
-  "createdPost": [  
-    "SMPost.123"  
+  "createdPosts": [  
+    "SMPost.123",  
+    "SMPost.124"  
   ],  
   "isMentionedBy": [  
-    "SMPost.123"  
+    "SMPost.123",  
+    "SMPost.124"  
   ]  
 }  
 ```  
@@ -282,7 +283,7 @@ SMUser:
     "type": "Text",  
     "value": "Jsmith2"  
   },  
-  "createdPost": [  
+  "createdPosts": [  
     {  
       "type": "Relationship",  
       "value": "SMPost.123"  
@@ -302,29 +303,14 @@ SMUser:
 {  
   "id": "urn:ngsi-ld:SMUser:123",  
   "type": "SMUser",  
-  "userId": {  
-    "type": "Property",  
-    "value": "21098319"  
-  },  
-  "platform": {  
-    "type": "Property",  
-    "value": "Twitter"  
-  },  
-  "userName": {  
-    "type": "Property",  
-    "value": "Jsmith2"  
-  },  
-  "createdPost": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123"  
-    }  
+  "userId": "21098319",  
+  "platform": "Twitter",  
+  "userName": "Jsmith2",  
+  "createdPosts": [  
+    "urn:ngsi-ld:SMPost:123"  
   ],  
   "isMentionedBy": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123"  
-    }  
+    "urn:ngsi-ld:SMPost:123"  
   ],  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld"  
@@ -349,19 +335,28 @@ SMUser:
     "type": "Property",  
     "value": "Jsmith2"  
   },  
-  "createdPost": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:SMPost:123"  
-      }  
-    ]  
-  },  
+  "createdPosts": [  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:123",  
+      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:124",  
+      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
+    }  
+  ],  
   "isMentionedBy": [  
     {  
       "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123"  
+      "object": "urn:ngsi-ld:SMPost:123",  
+      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+    },  
+    {  
+      "type": "Relationship",  
+      "object": "urn:ngsi-ld:SMPost:124",  
+      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
     }  
   ],  
   "@context": [  
