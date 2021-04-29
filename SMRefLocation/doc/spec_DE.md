@@ -273,20 +273,20 @@ SMRefLocation:
 #### SMRefLocation NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für eine SMRefLocation im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und gibt die Kontextdaten einer einzelnen Entität zurück.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:RefLocation:00",  
-  "type": "SMRefLocation",  
-  "address": {  
-    "addressLocality": "Thessaloniki"  
-  },  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
-    ]  
-  },  
-  "locationReferencedBy": "urn:ngsi-ld:SMPost:123"  
+{  
+  "id": "RefLocation.00",  
+  "type": "SMRefLocation",  
+  "address": {  
+    "addressLocality": "Thessaloniki"  
+  },  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      40.3,  
+      25.5  
+    ]  
+  },  
+  "locationReferencedBy": "SMPost.123"  
 }  
 ```  
 #### SMRefLocation NGSI-v2 normalisiert Beispiel  
@@ -342,31 +342,31 @@ SMRefLocation:
 #### SMRefLocation NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine SMRefLocation im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:RefLocation:00",  
-  "type": "SMRefLocation",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressLocality": "Thessaloniki"  
-    }  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  },  
-  "locationReferencedBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SMPost:123"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context"  
-  ]  
-}  
+{  
+  "id": "urn:ngsi-ld:RefLocation:00",  
+  "type": "SMRefLocation",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressLocality": "Thessaloniki"  
+    }  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        40.3,  
+        25.5  
+      ]  
+    }  
+  },  
+  "locationReferencedBy": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:SMPost:123"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context"  
+  ]  
+}  
 ```  
