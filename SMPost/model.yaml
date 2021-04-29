@@ -28,26 +28,27 @@ SMPost:
       type: Property
       x-ngsi:
         model: https://schema.org/address
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
     areaServed:
       description: 'The geographic area where a service or offered item is provided'
       type: Property
       x-ngsi:
         model: https://schema.org/Text
     belongsToCollection:
-      anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: 'Property. Identifier format of any NGSI entity'
-          format: uri
-          type: string
-      description: 'The ID of the SMCollection, which this post is a part of.'
+      description: 'The IDs of the SMCollections, which this post is a part of.'
+      items:
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
       type: Relationship
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
     createdBy:
       anyOf:
         - description: 'Property. Identifier format of any NGSI entity'
@@ -62,87 +63,122 @@ SMPost:
       type: Relationship
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
-    hasHashtag:
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    hasAnalysis:
+      description: 'The IDs of the SMAnalyses that analyze this post.'
+      items:
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
+      type: Relationship
+    hasHashtags:
       description: 'The hashtags of the post.'
+      items:
+        type: string
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
-    hasImage:
-      description: 'The image URL of the post.'
+    hasImages:
+      description: 'The URLs of the content that is in image form.'
+      items:
+        type: string
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
+    hasInteractionCount:
+      items:
+        properties:
+          count:
+            type: number
+          interactionType:
+            enum:
+              - Quote
+              - Reply
+              - Retweet
+              - Favorite
+              - Shares
+              - Reactions
+              - Views
+              - Like
+              - Dislike
+              - Favorite
+              - Comment
+            type: string
+        type: object
+      type: array
     hasLanguage:
       description: 'The language of the post.'
       type: Property
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
     hasMentions:
-      anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: 'Property. Identifier format of any NGSI entity'
-          format: uri
-          type: string
-      description: 'The ID of the SMUser that has mentions in this post.'
+      description: 'The IDs of the SMUsers mentioned in this post.'
+      items:
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
       type: Relationship
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
     hasPostURL:
       description: 'The URL of the post.'
       type: Property
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
-    hasPrivacy:
+    hasPrivacyLevel:
       description: 'The privacy setting of the post.'
       type: Property
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
-    hasReferencedLocation:
-      anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: 'Property. Identifier format of any NGSI entity'
-          format: uri
-          type: string
-      description: 'The ID of the referenced location of this post.'
+    hasReferencedLocations:
+      description: 'The IDs of the locations referenced in this post.'
+      items:
+        anyOf:
+          - description: 'Property. Identifier format of any NGSI entity'
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+          - description: 'Property. Identifier format of any NGSI entity'
+            format: uri
+            type: string
       type: Relationship
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
     hasText:
-      description: 'The text of the post.'
+      description: 'The content that is in textual form.'
+      items:
+        type: string
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
-    hasThumbnail:
-      description: 'The thumbnail URL of the post.'
+    hasThumbnails:
+      description: 'The thumbnail URLs of the post.'
+      items:
+        type: string
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
-    hasVideo:
-      description: 'The video URL of the post.'
+    hasVideos:
+      description: 'The URLs of the content that is in video form.'
+      items:
+        type: string
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
-    isAnalyzedBy:
-      anyOf:
+    id:
+      anyOf: &smpost_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
           maxLength: 256
           minLength: 1
@@ -151,17 +187,8 @@ SMPost:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
-      description: 'The ID of the SMAnalysis that analyzes this post.'
-      type: Relationship
-      x-ngsi:
-        model: ' https://schema.org/Text'
-        units: 'No unit'
-    likes:
-      description: 'The number of likes of the post. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code.'
+      description: 'Unique identifier of the entity'
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Number'
-        units: 'No unit'
     location:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
@@ -309,10 +336,20 @@ SMPost:
           title: 'GeoJSON MultiPolygon'
           type: object
       title: 'GeoJSON Geometry'
+    name:
+      description: 'The name of this item.'
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *smpost_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
     platform:
       description: 'Platform of post.'
       type: Property
     postCreatedAt:
+      description: ' The datetime of the creation of the SMPost.'
       format: date-time
       type: string
     postId:
@@ -320,7 +357,20 @@ SMPost:
       type: Property
       x-ngsi:
         model: ' https://schema.org/Text'
-        units: 'No unit'
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
     type:
       description: 'NGSI-LD Entity Type. It must be equal to SMPost.'
       enum:
@@ -332,5 +382,4 @@ SMPost:
     - postCreatedAt
     - postId
     - platform
-    - location
   type: object
