@@ -1,0 +1,82 @@
+{
+  "id": "urn:ngsi-ld:SMPost:123",
+  "type": "SMPost",
+  "hasPostURL": {
+    "type": "Property",
+    "value": "http://twt.com/121"
+  },
+  "postCreatedAt": {
+    "type": "DateTime",
+    "value": "2020-12-24T12:00:00Z"
+  },
+  "postId": {
+    "type": "Text",
+    "value": "21098319"
+  },
+  "hasLanguage": {
+    "type": "Text",
+    "value": "en"
+  },
+  "platform": {
+    "type": "Text",
+    "value": "Twitter"
+  },
+  "hasText": {
+    "type": "Text",
+    "value": "This is a tweet"
+  },
+  "hasImage": {
+    "type": "Text",
+    "value": "https://twt.com/image.png"
+  },
+  "hasVideo": {
+    "type": "Text",
+    "value": "https://twt.com/video.mp4"
+  },
+  "hasPrivacy": {
+    "type": "Text",
+    "value": "public"
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        40.3,
+        25.5
+      ]
+    }
+  },
+  "hasHashtag": {
+    "type": "Text",
+    "value": "[#sample,#tag]"
+  },
+  "hasThumbnail": {
+    "type": "Text",
+    "value": "https://twt.com/thumb.png"
+  },
+  "likes": {
+    "type": "Number",
+    "value": 762
+  },
+  "createdBy": {
+    "type": "Relationship",
+    "object": "SMUser.123"
+  },
+  "hasReferencedLocation": {
+    "type": "Relationship",
+    "object": "RefLocation.00"
+  },
+  "hasMentions": {
+    "type": "Relationship",
+    "object": "SMUser.154"
+  },
+  "isAnalyzedBy": {
+    "type": "Relationship",
+    "object": "Analysis.X"
+  },
+  "belongsToCollection": {
+    "type": "Relationship",
+    "object": "SMCollection.001"
+  }
+}

@@ -1,8 +1,7 @@
 {
-  "id": "urn:ngsi-ld:RefLocation:00",
+  "id": "RefLocation.00",
   "type": "SMRefLocation",
-  "locationName": {
-    "type": "string",
+  "address": {
     "addressLocality": "Thessaloniki"
   },
   "location": {
@@ -12,5 +11,5 @@
       25.5
     ]
   },
-  "locationReferencedBy": "urn:ngsi-ld:SMPost:123"
+  "locationReferencedBy": "SMPost.123"
 }

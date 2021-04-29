@@ -20,7 +20,7 @@
         },
         "hasConfidence": {
           "type": "number",
-          "description": "Property.  Model:'https://schema.org/Number'. It represents the confidence of the analysis."
+          "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. It represents the confidence of the analysis. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
         },
         "analyzedAt": {
           "type": "string",
@@ -28,16 +28,28 @@
         },
         "hasAnalysisValue": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. The type of the analysis."
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The type of the analysis."
         },
         "hasAnalysisType": {
           "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. The value of the analysis."
+          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The value of the analysis."
         },
         "isAnalysisOf": {
-          "type": "string",
-          "format": "uri",
-          "description": "Relationship. The ID of the post or the collection that was used in the analysis."
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
+          "description": "Relationship. The ID of the post that was used in the analysis."
         }
       }
     }
@@ -45,8 +57,6 @@
   "required": [
     "id",
     "type",
-    "hasAnalysisValue",
-    "hasAnalysisType",
-    "isAnalysisOf"
+    "analyzedAt"
   ]
 }

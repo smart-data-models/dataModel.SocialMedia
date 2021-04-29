@@ -8,10 +8,10 @@
   "analyzedAt": {
     "type": "Property",
     "value": {
-			"@type": "DateTime",
-			"@value": "2020-12-24T12:00:00Z"
-			 }		
-  },	
+      "@type": "DateTime",
+      "@value": "2020-12-24T12:00:00Z"
+    }
+  },
   "hasAnalysisValue": {
     "type": "Property",
     "value": "Anger"
@@ -21,10 +21,11 @@
     "value": "Sentiment"
   },
   "isAnalysisOf": {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMCollection:001"
-   },
+    "type": "Relationship",
+    "object": "urn:ngsi-ld:SMCollection:001"
+  },
   "@context": [
-    "https://schema.lab.fiware.org/ld/context"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }
+

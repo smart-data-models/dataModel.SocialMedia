@@ -1,0 +1,32 @@
+{
+  "id": "urn:ngsi-ld:SMCollection:001",
+  "type": "SMCollection",
+  "description": {
+    "type": "Text",
+    "value": "this is a collection of posts"
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        40.3,
+        25.5
+      ]
+    }
+  },
+  "hasPosts": [
+    {
+      "type": "Relationship",
+      "object": "SMPost.125"
+    },
+    {
+      "type": "Relationship",
+      "object": "SMPost.124"
+    }
+  ],
+  "isAnalyzedBy": {
+    "type": "Relationship",
+    "object": "Analysis.331"
+  }
+}

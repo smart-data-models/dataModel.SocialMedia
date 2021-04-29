@@ -1,5 +1,5 @@
 {
-  "id": "urn:ngsi-ld:SMCollection:001",
+  "id": "SMCollection.001",
   "type": "SMCollection",
   "description": "this is a collection of posts",
   "location": {
@@ -9,13 +9,12 @@
       25.5
     ]
   },
-  "groupedAt": "2020-12-24T12:00:00Z",
   "hasPosts": [
-    "urn:ngsi-ld:SMPost:125",
-    "urn:ngsi-ld:SMPost:124"
+    "SMPost.125",
+    "SMPost.124"
   ],
-  "hasAnalysis": [
-    "urn:ngsi-ld:Analysis:331",
-    "urn:ngsi-ld:Analysis:334"
+  hasAnalysis": [
+    "Analysis.331",
+    "Analysis.334"
   ]
 }

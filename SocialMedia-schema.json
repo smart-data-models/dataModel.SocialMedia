@@ -1,14 +1,10 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://smart-data-models.github.io/dataModel.SocialMedia/SocialMedia-schema.json",
-  "title": "FIWARE - Social Media base schema",
+  "title": "Smart Data Models - Social Media base schema",
   "description": "Common NGSI-LD definitions for Social Media data models",
   "type": "object",
   "definitions": {
-    "location": {
-      "$ref": "https://geojson.org/schema/Point.json",
-      "description": "Geoproperty. Coordinates of Point, encoded as a GeoJSON."
-    },
     "platform": {
       "type": "string",
       "description": "Property. Model:'https://schema.org/Text'. Text that names the social media platform."

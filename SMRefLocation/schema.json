@@ -10,6 +10,9 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
       "properties": {
         "type": {
           "type": "string",
@@ -18,12 +21,21 @@
             "SMRefLocation"
           ]
         },
-        "locationName": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-        },
         "locationReferencedBy": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+              "description": "Property. Identifier format of any NGSI entity"
+            },
+            {
+              "type": "string",
+              "format": "uri",
+              "description": "Property. Identifier format of any NGSI entity"
+            }
+          ],
           "description": "Relationship. The ID of the post that references this location."
         }
       }
@@ -32,7 +44,6 @@
   "required": [
     "id",
     "type",
-    "locationName",
     "location"
   ]
 }

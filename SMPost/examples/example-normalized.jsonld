@@ -154,6 +154,6 @@
 		"@count": "2150"
 		}}],
   "@context": [
-    "https://schema.lab.fiware.org/ld/context"
+    "https://smartdatamodels.org/context.jsonld"
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "id": "RefLocation.00",
+  "type": "SMRefLocation",
+  "address": {
+    "type": "StructuredValue",
+    "value": {
+      "addressLocality": "Thessaloniki"
+    }
+  },
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        40.3,
+        25.5
+      ]
+    }
+  },
+  "locationReferencedBy": {
+    "type": "Relationship",
+    "object": "SMPost.123"
+  }
+}

@@ -82,32 +82,80 @@
           "description": "Property. Platform of post."
         },
         "createdBy": {
-          "type": "string",
-          "format": "uri",
+          "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ],
           "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post."
         },
         "hasReferencedLocations": {
           "type": "array",
           "description": "Relationship. The IDs of the locations referenced in this post.",
           "items": {
-            "type": "string",
-            "format": "uri"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           }
         },
         "hasMentions": {
           "type": "array",
           "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
           "items": {
-            "type": "string",
-            "format": "uri"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           }
         },
         "hasAnalysis": {
           "type": "array",
           "description": "Relationship. The IDs of the SMAnalyses that analyze this post.",
           "items": {
-            "type": "string",
-            "format": "uri"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           }
         },
         "hasInteractionCount": {
@@ -141,8 +189,20 @@
           "type": "array",
           "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
           "items": {
-            "type": "string",
-            "format": "uri"
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
           }
         }
       }

@@ -1,0 +1,28 @@
+{
+  "id": "SMUser.123",
+  "type": "SMUser",
+  "userId": {
+    "type": "Text",
+    "value": "21098319"
+  },
+  "platform": {
+    "type": "Text",
+    "value": "Twitter"
+  },
+  "userName": {
+    "type": "Text",
+    "value": "Jsmith2"
+  },
+  "createdPost": [
+    {
+      "type": "Relationship",
+      "value": "SMPost.123"
+    }
+  ],
+  "isMentionedBy": [
+    {
+      "type": "Relationship",
+      "value": "SMPost.123"
+    }
+  ]
+}
