@@ -1,5 +1,5 @@
 {
-  "id": "urn:ngsi-ld:SMPost:123",
+  "id": "SMPost:.23",
   "type": "SMPost",
   "hasPostURL": {
     "type": "Property",
@@ -49,7 +49,7 @@
   },
   "hasHashtag": {
     "type": "Text",
-    "value": "[#sample,#tag]"
+    "value": ["#sample","#tag"]
   },
   "hasThumbnail": {
     "type": "Text",
