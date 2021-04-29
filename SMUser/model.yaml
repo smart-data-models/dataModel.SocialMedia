@@ -33,7 +33,7 @@ SMUser:
       type: Property
       x-ngsi:
         model: https://schema.org/Text
-    createdPost:
+    createdPosts:
       description: 'The ID of the post that the SMUser created.'
       items:
         anyOf:
@@ -227,7 +227,6 @@ SMUser:
   required:
     - id
     - type
-    - userId
     - platform
     - userName
   type: object
