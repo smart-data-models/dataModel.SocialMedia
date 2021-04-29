@@ -299,34 +299,34 @@ SMAnalysis:
 #### SMAnalysis NGSI-LD normalisé Exemple  
 Voici un exemple d'une SMAnalysis au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
-{  
-  "id": "urn:ngsi-ld:Analysis:X",  
-  "type": "SMAnalysis",  
-  "hasConfidence": {  
-    "type": "Property",  
-    "value": 0.4  
-  },  
-  "analyzedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-12-24T12:00:00Z"  
-    }  
-  },  
-  "hasAnalysisValue": {  
-    "type": "Property",  
-    "value": "Anger"  
-  },  
-  "hasAnalysisType": {  
-    "type": "Property",  
-    "value": "Sentiment"  
-  },  
-  "isAnalysisOf": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SMCollection:001"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
-}  
+{  
+  "id": "urn:ngsi-ld:Analysis:X",  
+  "type": "SMAnalysis",  
+  "hasConfidence": {  
+    "type": "Property",  
+    "value": 0.4  
+  },  
+  "analyzedAt": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2020-12-24T12:00:00Z"  
+    }  
+  },  
+  "hasAnalysisValue": {  
+    "type": "Property",  
+    "value": "Anger"  
+  },  
+  "hasAnalysisType": {  
+    "type": "Property",  
+    "value": "Sentiment"  
+  },  
+  "isAnalysisOf": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:SMCollection:001"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
 ```  
