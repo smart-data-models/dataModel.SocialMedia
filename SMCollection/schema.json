@@ -1,79 +1,79 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0",
-  "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMCollection/schema.json",
-  "title": "Social Media - SMCollection",
-  "description": "This entity contains a harmonised description of a generic SMCollection made for the Social Media domain. This entity is primarily associated with the process of collection of Social Media posts (primarily Twitter).",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection.",
-          "enum": [
-            "SMCollection"
-          ]
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMCollection/schema.json",
+    "title": "Social Media - SMCollection",
+    "description": "This entity contains a harmonised description of a generic SMCollection made for the Social Media domain. This entity is primarily associated with the process of collection of Social Media posts (primarily Twitter).",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "description": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. General description of the SMCollection."
-        },
-        "hasPosts": {
-          "type": "array",
-          "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMPost that belong in this SMCollection.",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 256,
-                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-                "description": "Property. Identifier format of any NGSI entity"
-              },
-              {
-                "type": "string",
-                "format": "uri",
-                "description": "Property. Identifier format of any NGSI entity"
-              }
-            ]
-          }
-        },
-        "hasAnalysis": {
-          "type": "array",
-          "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection.",
-          "items": {
-            "anyOf": [
-              {
-                "type": "string",
-                "minLength": 1,
-                "maxLength": 256,
-                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-                "description": "Property. Identifier format of any NGSI entity"
-              },
-              {
-                "type": "string",
-                "format": "uri",
-                "description": "Property. Identifier format of any NGSI entity"
-              }
-            ]
-          }
-        },
-        "groupedAt": {
-          "type": "string",
-          "format": "date-time",
-          "description": "Property. The date and time of when the collection was constructed / grouped."
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection.",
+                    "enum": [
+                        "SMCollection"
+                    ]
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Property.  Model:'https://schema.org/Text'. General description of the SMCollection."
+                },
+                "hasPosts": {
+                    "type": "array",
+                    "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMPost that belong in this SMCollection.",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 256,
+                                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            }
+                        ]
+                    }
+                },
+                "hasAnalysis": {
+                    "type": "array",
+                    "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection.",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 256,
+                                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "Property. Identifier format of any NGSI entity"
+                            }
+                        ]
+                    }
+                },
+                "groupedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Property. The date and time of when the collection was constructed / grouped."
+                }
+            }
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "description",
-    "hasPosts"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "description",
+        "hasPosts"
+    ],
+    "$schemaVersion": "0.0.1"
 }
