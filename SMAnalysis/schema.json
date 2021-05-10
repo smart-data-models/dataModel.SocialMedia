@@ -1,62 +1,62 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "schemaVersion": "0.0",
-  "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMAnalysis/schema.json",
-  "title": "Social Media - SMAnalysis",
-  "description": "This entity contains a harmonised description of a generic SMAnalysis made for the Social Media domain. This entity is primarily associated with the process of analysis of Social Media applications' posts.",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
-    },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "Property. NGSI-LD Entity Type. It must be equal to SMAnalysis.",
-          "enum": [
-            "SMAnalysis"
-          ]
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMAnalysis/schema.json",
+    "title": "Social Media - SMAnalysis",
+    "description": "This entity contains a harmonised description of a generic SMAnalysis made for the Social Media domain. This entity is primarily associated with the process of analysis of Social Media applications' posts.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-        "hasConfidence": {
-          "type": "number",
-          "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. It represents the confidence of the analysis. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
-        },
-        "analyzedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "hasAnalysisValue": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The type of the analysis."
-        },
-        "hasAnalysisType": {
-          "type": "string",
-          "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The value of the analysis."
-        },
-        "isAnalysisOf": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+        {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMAnalysis.",
+                    "enum": [
+                        "SMAnalysis"
+                    ]
+                },
+                "hasConfidence": {
+                    "type": "number",
+                    "description": "Property.  Model:'https://schema.org/Number'. Units:'No unit'. It represents the confidence of the analysis. All units are accepted in [CEFACT](https://www.unece.org/cefact.html) code."
+                },
+                "analyzedAt": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "hasAnalysisValue": {
+                    "type": "string",
+                    "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The type of the analysis."
+                },
+                "hasAnalysisType": {
+                    "type": "string",
+                    "description": "Property.  Model:'https://schema.org/Text'. Units:'No unit'. The value of the analysis."
+                },
+                "isAnalysisOf": {
+                    "anyOf": [
+                        {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256,
+                            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        },
+                        {
+                            "type": "string",
+                            "format": "uri",
+                            "description": "Property. Identifier format of any NGSI entity"
+                        }
+                    ],
+                    "description": "Relationship. The ID of the post that was used in the analysis."
+                }
             }
-          ],
-          "description": "Relationship. The ID of the post that was used in the analysis."
         }
-      }
-    }
-  ],
-  "required": [
-    "id",
-    "type",
-    "analyzedAt"
-  ]
+    ],
+    "required": [
+        "id",
+        "type",
+        "analyzedAt"
+    ],
+    "$schemaVersion": "0.0.1"
 }
