@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMAnalysis/schema.json",
-    "$schemaVersion": "0.1.0"
+    "$schemaVersion": "0.1.0",
     "title": "Social Media - SMAnalysis",
     "description": "This entity contains a harmonised description of a generic SMAnalysis made for the Social Media domain. This entity is primarily associated with the process of analysis of Social Media applications' posts.",
     "type": "object",
