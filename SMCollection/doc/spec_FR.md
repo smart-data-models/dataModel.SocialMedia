@@ -1,11 +1,12 @@
 Entité : SMCollection  
 =====================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMCollection/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée d'une SMCollection générique réalisée pour le domaine des médias sociaux. Cette entité est principalement associée au processus de collecte de messages de médias sociaux (principalement Twitter).**  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `description`: Description générale de la collection SMC.  - `groupedAt`: La date et l'heure auxquelles la collection a été construite / regroupée.  - `hasAnalysis`: Les ID des SMAnalyses qui analysent ce SMCollection.  - `hasPosts`: Les ID des SMPost qui appartiennent à cette SMCollection.  - `location`:   - `type`: Type d'entité NGSI-LD. Il doit être égal à SMCollection.    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Description générale de la collection SMC.  - `groupedAt`: La date et l'heure auxquelles la collection a été construite / regroupée.  - `hasAnalysis`: Les ID des SMAnalyses qui analysent ce SMCollection.  - `hasPosts`: Les ID des SMPost qui appartiennent à cette SMCollection.  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être égal à SMCollection.    
 Propriétés requises  
 - `description`  - `hasPosts`  - `id`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -26,14 +27,11 @@ SMCollection:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -41,11 +39,25 @@ SMCollection:
       type: Property    
       x-ngsi:    
         model: https://schema.org/address    
+    alternateName:    
+      description: 'An alternative name for this item'    
+      type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/Text    
+    dataProvider:    
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      type: Property    
+    dateCreated:    
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
+    dateModified:    
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      format: date-time    
+      type: Property    
     description:    
       description: 'General description of the SMCollection.'    
       type: Property    
@@ -85,6 +97,18 @@ SMCollection:
       type: Relationship    
       x-ngsi:    
         model: ' https://schema.org/Text'    
+    id:    
+      anyOf: &smcollection_-_properties_-_owner_-_items_-_anyof    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -232,6 +256,29 @@ SMCollection:
           title: 'GeoJSON MultiPolygon'    
           type: object    
       title: 'GeoJSON Geometry'    
+    name:    
+      description: 'The name of this item.'    
+      type: Property    
+    owner:    
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      items:    
+        anyOf: *smcollection_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
+      type: Property    
+    seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
+      oneOf:    
+        - items:    
+            format: uri    
+            type: string    
+          minItems: 1    
+          type: array    
+        - format: uri    
+          type: string    
+      type: Property    
+    source:    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to SMCollection.'    
       enum:    
