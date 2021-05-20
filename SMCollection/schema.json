@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMCollection/schema.json",
-    "$schemaVersion": "0.1.0",
+    "$schemaVersion": "0.1.1",
     "title": "Social Media - SMCollection",
     "description": "This entity contains a harmonised description of a generic SMCollection made for the Social Media domain. This entity is primarily associated with the process of collection of Social Media posts (primarily Twitter).",
     "type": "object",
@@ -20,10 +20,6 @@
                     "enum": [
                         "SMCollection"
                     ]
-                },
-                "description": {
-                    "type": "string",
-                    "description": "Property.  Model:'https://schema.org/Text'. General description of the SMCollection."
                 },
                 "hasPosts": {
                     "type": "array",
