@@ -6,7 +6,7 @@ Entity: SMCollection
 
 ## List of properties  
 
-- `address`: The mailing address  - `areaServed`: The geographic area where a service or offered item is provided  - `description`: General description of the SMCollection.  - `groupedAt`: The date and time of when the collection was constructed / grouped.  - `hasAnalysis`: The IDs of the SMAnalyses that analyze this SMCollection.  - `hasPosts`: The IDs of the SMPost that belong in this SMCollection.  - `location`:   - `type`: NGSI-LD Entity Type. It must be equal to SMCollection.    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: General description of the SMCollection.  - `groupedAt`: The date and time of when the collection was constructed / grouped.  - `hasAnalysis`: The IDs of the SMAnalyses that analyze this SMCollection.  - `hasPosts`: The IDs of the SMPost that belong in this SMCollection.  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It must be equal to SMCollection.    
 Required properties  
 - `description`  - `hasPosts`  - `id`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -59,10 +59,8 @@ SMCollection:
       format: date-time    
       type: Property    
     description:    
-      description: 'General description of the SMCollection.'    
+      description: 'A description of this item'    
       type: Property    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
     groupedAt:    
       description: 'The date and time of when the collection was constructed / grouped.'    
       format: date-time    
