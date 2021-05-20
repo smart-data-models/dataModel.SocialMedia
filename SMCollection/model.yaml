@@ -45,10 +45,8 @@ SMCollection:
       format: date-time
       type: Property
     description:
-      description: 'General description of the SMCollection.'
+      description: 'A description of this item'
       type: Property
-      x-ngsi:
-        model: ' https://schema.org/Text'
     groupedAt:
       description: 'The date and time of when the collection was constructed / grouped.'
       format: date-time
