@@ -6,7 +6,7 @@ Entität: SMCollection
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `description`: Allgemeine Beschreibung der SMCollection.  - `groupedAt`: Das Datum und die Uhrzeit, zu der die Sammlung erstellt / gruppiert wurde.  - `hasAnalysis`: Die IDs der SMAnalysen, die diese SMCollection analysieren.  - `hasPosts`: Die IDs der SMPosts, die in diese SMCollection gehören.  - `location`:   - `type`: NGSI-LD Entity Type. Er muss gleich SMCollection sein.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Allgemeine Beschreibung der SMCollection.  - `groupedAt`: Das Datum und die Uhrzeit, zu der die Sammlung erstellt / gruppiert wurde.  - `hasAnalysis`: Die IDs der SMAnalysen, die diese SMCollection analysieren.  - `hasPosts`: Die IDs der SMPosts, die in diese SMCollection gehören.  - `id`: Eindeutiger Bezeichner der Entität  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-LD Entity Type. Er muss gleich SMCollection sein.    
 Erforderliche Eigenschaften  
 - `description`  - `hasPosts`  - `id`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -59,10 +59,8 @@ SMCollection:
       format: date-time    
       type: Property    
     description:    
-      description: 'General description of the SMCollection.'    
+      description: 'A description of this item'    
       type: Property    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
     groupedAt:    
       description: 'The date and time of when the collection was constructed / grouped.'    
       format: date-time    
