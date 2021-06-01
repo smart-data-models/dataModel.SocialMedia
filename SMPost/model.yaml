@@ -13,9 +13,6 @@ SMPost:
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
-        areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''
-          type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
           type: string
@@ -101,26 +98,26 @@ SMPost:
         type: string
       type: Property
     hasInteractionCount:
+      description: 'The different interactions of this post.'
       items:
         properties:
           count:
             type: number
           interactionType:
             enum:
-              - Quote
-              - Reply
-              - Retweet
-              - Favorite
-              - Shares
-              - Reactions
-              - Views
-              - Like
+              - Comment
               - Dislike
               - Favorite
-              - Comment
+              - Like
+              - Quote
+              - Reactions
+              - Reply
+              - Retweet
+              - Shares
+              - Views
             type: string
         type: object
-      type: array
+      type: Property
     hasLanguage:
       description: 'The language of the post.'
       type: Property
@@ -349,9 +346,9 @@ SMPost:
       description: 'Platform of post.'
       type: Property
     postCreatedAt:
-      description: ' The datetime of the creation of the SMPost.'
+      description: 'The datetime of the creation of the SMPost.'
       format: date-time
-      type: string
+      type: Property
     postId:
       description: 'The  post ID of the SMPost.'
       type: Property
