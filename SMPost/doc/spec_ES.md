@@ -1,11 +1,12 @@
 Entidad: SMPost  
 ===============  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descripción global: **Esta entidad contiene una descripción armonizada de un SMPost genérico realizado para el dominio de los medios sociales.**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `belongsToCollection`: Las identificaciones de las SMCollections, de las que forma parte este post.  - `createdBy`: El ID del SMUser que creó esta entrada.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAnalysis`: Los ID de los SMAnalyses que analizan este puesto.  - `hasHashtags`: Los hashtags del post.  - `hasImages`: Las URL del contenido que está en forma de imagen.  - `hasInteractionCount`:   - `hasLanguage`: El lenguaje del puesto.  - `hasMentions`: Las identificaciones de los SMUsers mencionados en este post.  - `hasPostURL`: La URL del puesto.  - `hasPrivacyLevel`: La configuración de privacidad del puesto.  - `hasReferencedLocations`: Las identificaciones de los lugares a los que se hace referencia en este post.  - `hasText`: El contenido que está en forma de texto.  - `hasThumbnails`: Las URLs de las miniaturas de las entradas.  - `hasVideos`: Las URL de los contenidos que están en forma de vídeo.  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `platform`: Plataforma del puesto.  - `postCreatedAt`:  La fecha de creación del SMPost.  - `postId`: El ID del puesto de SMPost.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMPost.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `belongsToCollection`: Los ID de las SMCollections, de las que forma parte este post.  - `createdBy`: El ID del SMUser que creó esta entrada.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAnalysis`: Los ID de los SMAnalyses que analizan este puesto.  - `hasHashtags`: Los hashtags del post.  - `hasImages`: Las URL del contenido que está en forma de imagen.  - `hasInteractionCount`: Las diferentes interacciones de este puesto.  - `hasLanguage`: El lenguaje del puesto.  - `hasMentions`: Las identificaciones de los SMUsers mencionados en este post.  - `hasPostURL`: La URL del puesto.  - `hasPrivacyLevel`: La configuración de privacidad del puesto.  - `hasReferencedLocations`: Las identificaciones de los lugares a los que se hace referencia en este post.  - `hasText`: El contenido que está en forma de texto.  - `hasThumbnails`: Las URLs de las miniaturas de las entradas.  - `hasVideos`: Las URL de los contenidos que están en forma de vídeo.  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `platform`: Plataforma del puesto.  - `postCreatedAt`: La fecha de creación del SMPost.  - `postId`: El ID del puesto de SMPost.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMPost.    
 Propiedades requeridas  
 - `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -26,14 +27,11 @@ SMPost:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -114,26 +112,26 @@ SMPost:
         type: string    
       type: Property    
     hasInteractionCount:    
+      description: 'The different interactions of this post.'    
       items:    
         properties:    
           count:    
             type: number    
           interactionType:    
             enum:    
-              - Quote    
-              - Reply    
-              - Retweet    
-              - Favorite    
-              - Shares    
-              - Reactions    
-              - Views    
-              - Like    
+              - Comment    
               - Dislike    
               - Favorite    
-              - Comment    
+              - Like    
+              - Quote    
+              - Reactions    
+              - Reply    
+              - Retweet    
+              - Shares    
+              - Views    
             type: string    
         type: object    
-      type: array    
+      type: Property    
     hasLanguage:    
       description: 'The language of the post.'    
       type: Property    
@@ -362,9 +360,9 @@ SMPost:
       description: 'Platform of post.'    
       type: Property    
     postCreatedAt:    
-      description: ' The datetime of the creation of the SMPost.'    
+      description: 'The datetime of the creation of the SMPost.'    
       format: date-time    
-      type: string    
+      type: Property    
     postId:    
       description: 'The  post ID of the SMPost.'    
       type: Property    
@@ -374,8 +372,8 @@ SMPost:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
