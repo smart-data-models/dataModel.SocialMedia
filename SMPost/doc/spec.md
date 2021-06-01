@@ -1,11 +1,12 @@
 Entity: SMPost  
 ==============  
 [Open License](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised description of a generic SMPost made for the Social Media domain.**  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `belongsToCollection`: The IDs of the SMCollections, which this post is a part of.  - `createdBy`: The ID of the SMUser that created this post.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAnalysis`: The IDs of the SMAnalyses that analyze this post.  - `hasHashtags`: The hashtags of the post.  - `hasImages`: The URLs of the content that is in image form.  - `hasInteractionCount`:   - `hasLanguage`: The language of the post.  - `hasMentions`: The IDs of the SMUsers mentioned in this post.  - `hasPostURL`: The URL of the post.  - `hasPrivacyLevel`: The privacy setting of the post.  - `hasReferencedLocations`: The IDs of the locations referenced in this post.  - `hasText`: The content that is in textual form.  - `hasThumbnails`: The thumbnail URLs of the post.  - `hasVideos`: The URLs of the content that is in video form.  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `platform`: Platform of post.  - `postCreatedAt`:  The datetime of the creation of the SMPost.  - `postId`: The  post ID of the SMPost.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It must be equal to SMPost.    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `belongsToCollection`: The IDs of the SMCollections, which this post is a part of.  - `createdBy`: The ID of the SMUser that created this post.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAnalysis`: The IDs of the SMAnalyses that analyze this post.  - `hasHashtags`: The hashtags of the post.  - `hasImages`: The URLs of the content that is in image form.  - `hasInteractionCount`: The different interactions of this post.  - `hasLanguage`: The language of the post.  - `hasMentions`: The IDs of the SMUsers mentioned in this post.  - `hasPostURL`: The URL of the post.  - `hasPrivacyLevel`: The privacy setting of the post.  - `hasReferencedLocations`: The IDs of the locations referenced in this post.  - `hasText`: The content that is in textual form.  - `hasThumbnails`: The thumbnail URLs of the post.  - `hasVideos`: The URLs of the content that is in video form.  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `platform`: Platform of post.  - `postCreatedAt`: The datetime of the creation of the SMPost.  - `postId`: The  post ID of the SMPost.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It must be equal to SMPost.    
 Required properties  
 - `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
@@ -26,14 +27,11 @@ SMPost:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -114,26 +112,26 @@ SMPost:
         type: string    
       type: Property    
     hasInteractionCount:    
+      description: 'The different interactions of this post.'    
       items:    
         properties:    
           count:    
             type: number    
           interactionType:    
             enum:    
-              - Quote    
-              - Reply    
-              - Retweet    
-              - Favorite    
-              - Shares    
-              - Reactions    
-              - Views    
-              - Like    
+              - Comment    
               - Dislike    
               - Favorite    
-              - Comment    
+              - Like    
+              - Quote    
+              - Reactions    
+              - Reply    
+              - Retweet    
+              - Shares    
+              - Views    
             type: string    
         type: object    
-      type: array    
+      type: Property    
     hasLanguage:    
       description: 'The language of the post.'    
       type: Property    
@@ -362,9 +360,9 @@ SMPost:
       description: 'Platform of post.'    
       type: Property    
     postCreatedAt:    
-      description: ' The datetime of the creation of the SMPost.'    
+      description: 'The datetime of the creation of the SMPost.'    
       format: date-time    
-      type: string    
+      type: Property    
     postId:    
       description: 'The  post ID of the SMPost.'    
       type: Property    
@@ -374,8 +372,8 @@ SMPost:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
