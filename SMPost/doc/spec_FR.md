@@ -1,11 +1,12 @@
 Entité : SMPost  
 ===============  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
+[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Description globale : **Cette entité contient une description harmonisée d'un SMPost générique réalisé pour le domaine des médias sociaux.**  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `belongsToCollection`: Les ID des SMCollections, dont ce post fait partie.  - `createdBy`: L'ID du SMUser qui a créé ce message.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasAnalysis`: Les ID des SMAnalyses qui analysent ce poste.  - `hasHashtags`: Les hashtags de la publication.  - `hasImages`: Les URLs du contenu qui est sous forme d'image.  - `hasInteractionCount`:   - `hasLanguage`: La langue du poste.  - `hasMentions`: Les ID des SMUsers mentionnés dans ce post.  - `hasPostURL`: L'URL de l'article.  - `hasPrivacyLevel`: Le paramètre de confidentialité du message.  - `hasReferencedLocations`: Les ID des lieux référencés dans ce post.  - `hasText`: Le contenu qui est sous forme textuelle.  - `hasThumbnails`: Les URL des vignettes de l'article.  - `hasVideos`: Les URLs du contenu qui est sous forme de vidéo.  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `platform`: Plate-forme du poste.  - `postCreatedAt`:  La date de création de la SMPost.  - `postId`: L'ID du poste du SMPost.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être égal à SMPost.    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `belongsToCollection`: Les ID des SMCollections, dont ce post fait partie.  - `createdBy`: L'ID du SMUser qui a créé ce message.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `hasAnalysis`: Les ID des SMAnalyses qui analysent ce poste.  - `hasHashtags`: Les hashtags de la publication.  - `hasImages`: Les URLs du contenu qui est sous forme d'image.  - `hasInteractionCount`: Les différentes interactions de ce poste.  - `hasLanguage`: La langue du poste.  - `hasMentions`: Les ID des SMUsers mentionnés dans ce post.  - `hasPostURL`: L'URL de l'article.  - `hasPrivacyLevel`: Le paramètre de confidentialité du message.  - `hasReferencedLocations`: Les ID des lieux référencés dans ce post.  - `hasText`: Le contenu qui est sous forme textuelle.  - `hasThumbnails`: Les URL des vignettes de l'article.  - `hasVideos`: Les URLs du contenu qui est sous forme de vidéo.  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `platform`: Plate-forme du poste.  - `postCreatedAt`: La date de création de la SMPost.  - `postId`: L'ID du poste du SMPost.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être égal à SMPost.    
 Propriétés requises  
 - `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -26,14 +27,11 @@ SMPost:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -114,26 +112,26 @@ SMPost:
         type: string    
       type: Property    
     hasInteractionCount:    
+      description: 'The different interactions of this post.'    
       items:    
         properties:    
           count:    
             type: number    
           interactionType:    
             enum:    
-              - Quote    
-              - Reply    
-              - Retweet    
-              - Favorite    
-              - Shares    
-              - Reactions    
-              - Views    
-              - Like    
+              - Comment    
               - Dislike    
               - Favorite    
-              - Comment    
+              - Like    
+              - Quote    
+              - Reactions    
+              - Reply    
+              - Retweet    
+              - Shares    
+              - Views    
             type: string    
         type: object    
-      type: array    
+      type: Property    
     hasLanguage:    
       description: 'The language of the post.'    
       type: Property    
@@ -362,9 +360,9 @@ SMPost:
       description: 'Platform of post.'    
       type: Property    
     postCreatedAt:    
-      description: ' The datetime of the creation of the SMPost.'    
+      description: 'The datetime of the creation of the SMPost.'    
       format: date-time    
-      type: string    
+      type: Property    
     postId:    
       description: 'The  post ID of the SMPost.'    
       type: Property    
@@ -374,8 +372,8 @@ SMPost:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
