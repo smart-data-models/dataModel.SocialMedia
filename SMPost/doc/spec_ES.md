@@ -6,7 +6,7 @@ Entidad: SMPost
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `belongsToCollection`: Los ID de las SMCollections, de las que forma parte este post.  - `createdBy`: El ID del SMUser que creó esta entrada.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAnalysis`: Los ID de los SMAnalyses que analizan este puesto.  - `hasHashtags`: Los hashtags del post.  - `hasImages`: Las URL del contenido que está en forma de imagen.  - `hasInteractionCount`: Las diferentes interacciones de este puesto.  - `hasLanguage`: El lenguaje del puesto.  - `hasMentions`: Las identificaciones de los SMUsers mencionados en este post.  - `hasPostURL`: La URL del puesto.  - `hasPrivacyLevel`: La configuración de privacidad del puesto.  - `hasReferencedLocations`: Las identificaciones de los lugares a los que se hace referencia en este post.  - `hasText`: El contenido que está en forma de texto.  - `hasThumbnails`: Las URLs de las miniaturas de las entradas.  - `hasVideos`: Las URL de los contenidos que están en forma de vídeo.  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `platform`: Plataforma del puesto.  - `postCreatedAt`: La fecha de creación del SMPost.  - `postId`: El ID del puesto de SMPost.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMPost.    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `belongsToCollection`: Las identificaciones de las SMCollections, de las que forma parte este post.  - `createdBy`: El ID del SMUser que creó esta entrada.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `hasAnalysis`: Los ID de los SMAnalyses que analizan este puesto.  - `hasHashtags`: Los hashtags del post.  - `hasImages`: Las URL del contenido que está en forma de imagen.  - `hasInteractionCount`: Las diferentes interacciones de este puesto.  - `hasLanguage`: El lenguaje del puesto.  - `hasMentions`: Las identificaciones de los SMUsers mencionados en este post.  - `hasPostURL`: La URL del puesto.  - `hasPrivacyLevel`: La configuración de privacidad del puesto.  - `hasReferencedLocations`: Las identificaciones de los lugares a los que se hace referencia en este post.  - `hasText`: El contenido que está en forma de texto.  - `hasThumbnails`: Las URLs de las miniaturas de las entradas.  - `hasVideos`: Las URL de los contenidos que están en forma de vídeo.  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `platform`: Plataforma del puesto.  - `postCreatedAt`: La fecha de creación del SMPost.  - `postId`: El ID del puesto de SMPost.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI-LD. Debe ser igual a SMPost.    
 Propiedades requeridas  
 - `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
@@ -201,10 +201,10 @@ SMPost:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -224,7 +224,8 @@ SMPost:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -247,7 +248,8 @@ SMPost:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -272,7 +274,8 @@ SMPost:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -294,7 +297,8 @@ SMPost:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -319,7 +323,8 @@ SMPost:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -346,7 +351,7 @@ SMPost:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
