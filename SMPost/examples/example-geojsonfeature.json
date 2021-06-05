@@ -1,0 +1,65 @@
+{
+  "id": "urn:ngsi-ld:SMPost:123",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      40.3,
+      25.5
+    ]
+  },
+  "properties": {
+    "type": "SMPost",
+    "hasPostURL": "http://twt.com/121",
+    "postCreatedAt": "2020-12-24T12:00:00Z",
+    "postId": "21098319",
+    "hasLanguage": "en",
+    "platform": "Twitter",
+    "hasText": [
+      "This is a tweet"
+    ],
+    "hasImages": [
+      "https://twt.com/image.png"
+    ],
+    "hasVideos": [
+      "https://twt.com/video.mp4"
+    ],
+    "hasPrivacy": "public",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        40.3,
+        25.5
+      ]
+    },
+    "hasHashtags": [
+      "#sample",
+      "#tag"
+    ],
+    "hasThumbnails": [
+      "https://twt.com/thumb.png"
+    ],
+    "hasInteractionCount": [
+      {
+        "interactionType": "Like",
+        "count": 762
+      }
+    ],
+    "createdBy": "urn:ngsi-ld:SMUser:123",
+    "hasReferencedLocations": [
+      "urn:ngsi-ld:RefLocation:00"
+    ],
+    "hasMentions": [
+      "urn:ngsi-ld:SMUser:154"
+    ],
+    "hasAnalysis": [
+      "urn:ngsi-ld:Analysis:X"
+    ],
+    "belongsToCollection": [
+      "urn:ngsi-ld:SMCollection:001"
+    ],
+    "@context": [
+      "https://smartdatamodels.org/context.jsonld"
+    ]
+  }
+}
