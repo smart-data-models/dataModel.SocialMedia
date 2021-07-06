@@ -28,5 +28,12 @@
   "isAnalyzedBy": {
     "type": "Relationship",
     "object": "Analysis.331"
+  },
+   "groupedAt": {
+    "type": "Property",
+    "value": {
+			"@type": "DateTime",
+			"@value": "2020-12-24T12:00:00Z"
+			 }		
   }
 }
