@@ -1,51 +1,50 @@
 {
   "id": "urn:ngsi-ld:SMCollection:001",
   "type": "SMCollection",
-	
   "description": {
     "type": "Property",
     "value": "this is a collection of posts"
   },
   "location": {
     "type": "GeoProperty",
-	"value": {
-	 "type": "Point",
-	 "coordinates": 
-	 [
-	  40.3,
-	  25.5
-	 ]
-	}
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        40.3,
+        25.5
+      ]
+    }
   },
   "hasPosts": [
-  {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMPost:125",
-   "datasetId": "urn:ngsi-ld:Dataset:SMPost:125"
-  },
-  {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMPost:124",
-   "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
-  }
+    {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:SMPost:125",
+      "datasetId": "urn:ngsi-ld:Dataset:SMPost:125"
+    },
+    {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:SMPost:124",
+      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
+    }
   ],
-   "hasAnalysis": [
-   {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMAnalysis:331"
-   "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:331"	   
-   },
-   {
-   "type": "Relationship",
-   "object": "urn:ngsi-ld:SMAnalysis:332"
-   "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:332"	   
-   }],
-    "groupedAt": {
+  "hasAnalysis": [
+    {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:SMAnalysis:331",
+      "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:331"
+    },
+    {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:SMAnalysis:332",
+      "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:332"
+    }
+  ],
+  "groupedAt": {
     "type": "Property",
     "value": {
-			"@type": "DateTime",
-			"@value": "2020-12-24T12:00:00Z"
-			 }		
+      "@type": "DateTime",
+      "@value": "2020-12-24T12:00:00Z"
+    }
   },
   "@context": [
     "https://smartdatamodels.org/context.jsonld"
