@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "modelTags": "",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMRefLocation/schema.json",
     "title": "Social Media - SMRefLocation",
     "description": "This entity contains a harmonised description of a generic SM Reference Location (SMRefLocation) made for the Social Media domain.",
