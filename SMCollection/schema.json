@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "modelTags": "",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMCollection/schema.json",
     "$schemaVersion": "0.1.1",
     "title": "Social Media - SMCollection",
@@ -9,7 +10,7 @@
         {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-         {
+        {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
         {
