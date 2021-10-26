@@ -6,7 +6,7 @@ Version: 0.1.1
 This entity contains a harmonised description of a generic SMCollection made for the Social Media domain. This entity is primarily associated with the process of collection of Social Media posts (primarily Twitter).
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMCollection/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMCollection/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMCollection/doc/spec.md)
 
