@@ -6,7 +6,7 @@ Version: 0.1.0
 This entity contains a harmonised description of a generic SMUser made for the Social Media domain. This entity is primarily associated with the description of a user of Social Media applications.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMUser/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMUser/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMUser/doc/spec.md)
 
