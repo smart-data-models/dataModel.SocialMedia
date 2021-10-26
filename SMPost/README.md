@@ -6,7 +6,7 @@ Version: 0.0.2
 This entity contains a harmonised description of a generic SMPost made for the Social Media domain.
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMPost/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMPost/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMPost/doc/spec.md)
 
