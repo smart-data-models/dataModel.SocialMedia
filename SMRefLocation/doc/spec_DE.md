@@ -345,7 +345,7 @@ SMRefLocation:
 }  
 ```  
 #### SMRefLocation NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen SMRefLocation im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für eine SMRefLocation im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:RefLocation:00",  
