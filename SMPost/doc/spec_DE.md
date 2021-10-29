@@ -2,11 +2,11 @@ Entität: SMPost
 ===============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen SMPosts, der für die Social-Media-Domäne erstellt wurde.**  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen SMPosts für den Bereich Soziale Medien**.  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `belongsToCollection`: Die IDs der SMCollections, von denen dieser Beitrag ein Teil ist.  - `createdBy`: Die ID des SMUsers, der diesen Beitrag erstellt hat.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasAnalysis`: Die IDs der SMAnalysen, die diesen Beitrag analysieren.  - `hasHashtags`: Die Hashtags des Beitrags.  - `hasImages`: Die URLs der Inhalte, die in Bildform vorliegen.  - `hasInteractionCount`: Die verschiedenen Wechselwirkungen dieses Postens.  - `hasLanguage`: Die Sprache des Beitrags.  - `hasMentions`: Die IDs der in diesem Beitrag erwähnten SMUsers.  - `hasPostURL`: Die URL des Beitrags.  - `hasPrivacyLevel`: Die Datenschutzeinstellung des Beitrags.  - `hasReferencedLocations`: Die IDs der Orte, auf die in diesem Beitrag verwiesen wird.  - `hasText`: Der Inhalt, der in Textform vorliegt.  - `hasThumbnails`: Die Miniatur-URLs des Beitrags.  - `hasVideos`: Die URLs der Inhalte, die in Videoform vorliegen.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `platform`: Plattform der Stelle.  - `postCreatedAt`: Der Zeitpunkt der Erstellung des SMPosts.  - `postId`: Die Post-ID des SMPosts.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI-LD Entity Type. Er muss gleich SMPost sein.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `belongsToCollection`: Die IDs der SMCollections, zu denen dieser Beitrag gehört.  - `createdBy`: Die ID des SMUsers, der diesen Beitrag erstellt hat.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `hasAnalysis`: Die IDs der SMAnalyses, die diesen Beitrag analysieren.  - `hasHashtags`: Die Hashtags des Beitrags.  - `hasImages`: Die URLs der Inhalte, die in Form von Bildern vorliegen.  - `hasInteractionCount`: Die verschiedenen Interaktionen dieser Stelle.  - `hasLanguage`: Die Sprache der Stelle.  - `hasMentions`: Die IDs der in diesem Beitrag erwähnten SMUsers.  - `hasPostURL`: Die URL des Beitrags.  - `hasPrivacyLevel`: Die Privatsphäre-Einstellung des Beitrags.  - `hasReferencedLocations`: Die IDs der Orte, auf die in diesem Beitrag verwiesen wird.  - `hasText`: Der Inhalt, der in Textform vorliegt.  - `hasThumbnails`: Die URLs der Miniaturansichten des Beitrags.  - `hasVideos`: Die URLs der Inhalte, die in Videoform vorliegen.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `platform`: Plattform der Stelle.  - `postCreatedAt`: Der Zeitpunkt der Erstellung des SMPosts.  - `postId`: Die Post-ID des SMPosts.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-LD Entity Type. Er muss gleich SMPost sein.    
 Erforderliche Eigenschaften  
 - `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
@@ -36,17 +36,21 @@ SMPost:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     belongsToCollection:    
       description: 'The IDs of the SMCollections, which this post is a part of.'    
       items:    
@@ -59,7 +63,9 @@ SMPost:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     createdBy:    
       anyOf:    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -71,23 +77,31 @@ SMPost:
           format: uri    
           type: string    
       description: 'The ID of the SMUser that created this post.'    
-      type: Relationship    
       x-ngsi:    
         model: ' https://schema.org/Text'    
+        type: Relationship    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     hasAnalysis:    
       description: 'The IDs of the SMAnalyses that analyze this post.'    
       items:    
@@ -100,17 +114,23 @@ SMPost:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasHashtags:    
       description: 'The hashtags of the post.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     hasImages:    
       description: 'The URLs of the content that is in image form.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     hasInteractionCount:    
       description: 'The different interactions of this post.'    
       items:    
@@ -131,12 +151,15 @@ SMPost:
               - Views    
             type: string    
         type: object    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     hasLanguage:    
       description: 'The language of the post.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/Text'    
+        type: Property    
     hasMentions:    
       description: 'The IDs of the SMUsers mentioned in this post.'    
       items:    
@@ -149,17 +172,21 @@ SMPost:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasPostURL:    
       description: 'The URL of the post.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/Text'    
+        type: Property    
     hasPrivacyLevel:    
       description: 'The privacy setting of the post.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/Text'    
+        type: Property    
     hasReferencedLocations:    
       description: 'The IDs of the locations referenced in this post.'    
       items:    
@@ -172,22 +199,30 @@ SMPost:
           - description: 'Property. Identifier format of any NGSI entity'    
             format: uri    
             type: string    
-      type: Relationship    
+      type: array    
+      x-ngsi:    
+        type: Relationship    
     hasText:    
       description: 'The content that is in textual form.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     hasThumbnails:    
       description: 'The thumbnail URLs of the post.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     hasVideos:    
       description: 'The URLs of the content that is in video form.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &smpost_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -199,7 +234,8 @@ SMPost:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -351,28 +387,38 @@ SMPost:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *smpost_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     platform:    
       description: 'Platform of post.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     postCreatedAt:    
       description: 'The datetime of the creation of the SMPost.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     postId:    
       description: 'The  post ID of the SMPost.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: ' https://schema.org/Text'    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -383,15 +429,20 @@ SMPost:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI-LD Entity Type. It must be equal to SMPost.'    
       enum:    
         - SMPost    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -403,7 +454,7 @@ SMPost:
 </details>    
 ## Beispiel-Nutzlasten  
 #### SMPost NGSI-v2 key-values Beispiel  
-Hier ist ein Beispiel für einen SMPost im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und gibt die Kontextdaten einer einzelnen Entität zurück.  
+Hier ist ein Beispiel für einen SMPost im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "SMPost.123",  
@@ -473,7 +524,7 @@ SMPost:
 }  
 ```  
 #### SMPost NGSI-v2 normalisiert Beispiel  
-Hier ist ein Beispiel für einen SMPost im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen SMPost im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "SMPost:.23",  
@@ -559,7 +610,7 @@ SMPost:
 }  
 ```  
 #### SMPost NGSI-LD key-values Beispiel  
-Hier ist ein Beispiel für einen SMPost im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen SMPost im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SMPost:123",  
@@ -616,7 +667,7 @@ SMPost:
 }  
 ```  
 #### SMPost NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für einen SMPost im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen SMPost im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:SMPost:123",  
