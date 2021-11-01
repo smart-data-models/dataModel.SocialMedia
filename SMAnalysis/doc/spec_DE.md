@@ -2,7 +2,7 @@ Entität: SMAnalysis
 ===================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMAnalysis/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Globale Beschreibung: **Diese Einheit enthält eine harmonisierte Beschreibung einer generischen SMAnalyse für den Bereich der sozialen Medien. Diese Entität ist in erster Linie mit dem Prozess der Analyse der Beiträge von Social-Media-Anwendungen verbunden.**  
+Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung einer generischen SMAnalyse für den Bereich der sozialen Medien. Diese Entität ist in erster Linie mit dem Prozess der Analyse der Beiträge von Social-Media-Anwendungen verbunden.**  
 
 ## Liste der Eigenschaften  
 
