@@ -32,8 +32,11 @@ SMAnalysis:
       x-ngsi:
         type: Property
     analyzedAt:
+      description: 'The time at which the analysis finished'
       format: date-time
       type: string
+      x-ngsi:
+        type: Property
     areaServed:
       description: 'The geographic area where a service or offered item is provided'
       type: string
@@ -309,4 +312,4 @@ SMAnalysis:
   x-license-url: https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMAnalysis/LICENSE.md
   x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMAnalysis/schema.json
   x-model-tags: ""
-  x-version: 0.1.0
+  x-version: 0.1.1
