@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "modelTags": "",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMAnalysis/schema.json",
-    "$schemaVersion": "0.1.0",
+    "$schemaVersion": "0.1.1",
     "title": "Social Media - SMAnalysis",
     "description": "This entity contains a harmonised description of a generic SMAnalysis made for the Social Media domain. This entity is primarily associated with the process of analysis of Social Media applications' posts.",
     "type": "object",
@@ -28,7 +28,8 @@
                 },
                 "analyzedAt": {
                     "type": "string",
-                    "format": "date-time"
+                    "format": "date-time",
+                    "description": "Property. The time at which the analysis finished"
                 },
                 "hasAnalysisValue": {
                     "type": "string",
