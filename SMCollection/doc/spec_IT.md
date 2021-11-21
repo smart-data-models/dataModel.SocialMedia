@@ -320,6 +320,12 @@ SMCollection:
     - description    
     - hasPosts    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMCollection/LICENSE.md    
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMCollection/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.1    
 ```  
 </details>    
 ## Esempio di payloads  
