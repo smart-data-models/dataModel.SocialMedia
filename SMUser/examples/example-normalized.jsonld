@@ -1,43 +1,41 @@
 {
-  "id": "urn:ngsi-ld:SMUser:123",
-  "type": "SMUser",
-  "userId": {
-    "type": "Property",
-    "value": "21098319"
-  },
-  "platform": {
-    "type": "Property",
-    "value": "Twitter"
-  },
-  "userName": {
-    "type": "Property",
-    "value": "Jsmith2"
-  },
-  "createdPosts": [
-    {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:123",
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"
+    "id": "urn:ngsi-ld:SMUser:123",
+    "type": "SMUser",
+    "createdPosts": [
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:SMPost:123",
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"
+        },
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:SMPost:124",
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
+        }
+    ],
+    "isMentionedBy": [
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:SMPost:123",
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"
+        },
+        {
+            "type": "Relationship",
+            "object": "urn:ngsi-ld:SMPost:124",
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
+        }
+    ],
+    "platform": {
+        "type": "Property",
+        "value": "Twitter"
     },
-    {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:124",
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
-    }
-  ],
-  "isMentionedBy": [
-    {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:123",
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"
+    "userId": {
+        "type": "Property",
+        "value": "21098319"
     },
-    {
-      "type": "Relationship",
-      "object": "urn:ngsi-ld:SMPost:124",
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"
-    }
-  ],
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "userName": {
+        "type": "Property",
+        "value": "Jsmith2"
+    },
+    "@context": []
 }
