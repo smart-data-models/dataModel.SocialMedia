@@ -37,5 +37,7 @@
         "type": "Property",
         "value": "Jsmith2"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
+    ]
 }
