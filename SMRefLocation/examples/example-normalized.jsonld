@@ -22,6 +22,7 @@
         "object": "urn:ngsi-ld:SMPost:123"
     },
     "@context": [
-        "https://smartdatamodels.org/context"
+        "https://smartdatamodels.org/context",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
     ]
 }
