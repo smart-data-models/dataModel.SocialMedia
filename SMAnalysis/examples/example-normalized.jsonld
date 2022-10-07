@@ -24,5 +24,7 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:SMCollection:001"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
+    ]
 }
