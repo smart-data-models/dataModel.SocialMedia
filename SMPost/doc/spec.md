@@ -1,15 +1,31 @@
-Entity: SMPost  
-==============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: SMPost  
+==============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **This entity contains a harmonised description of a generic SMPost made for the Social Media domain.**  
+version: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `belongsToCollection`: The IDs of the SMCollections, which this post is a part of.  - `createdBy`: The ID of the SMUser that created this post.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `hasAnalysis`: The IDs of the SMAnalyses that analyze this post.  - `hasHashtags`: The hashtags of the post.  - `hasImages`: The URLs of the content that is in image form.  - `hasInteractionCount`: The different interactions of this post.  - `hasLanguage`: The language of the post.  - `hasMentions`: The IDs of the SMUsers mentioned in this post.  - `hasPostURL`: The URL of the post.  - `hasPrivacyLevel`: The privacy setting of the post.  - `hasReferencedLocations`: The IDs of the locations referenced in this post.  - `hasText`: The content that is in textual form.  - `hasThumbnails`: The thumbnail URLs of the post.  - `hasVideos`: The URLs of the content that is in video form.  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `platform`: Platform of post.  - `postCreatedAt`: The datetime of the creation of the SMPost.  - `postId`: The  post ID of the SMPost.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI-LD Entity Type. It must be equal to SMPost.    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsToCollection[array]`: The IDs of the SMCollections, which this post is a part of.  - `createdBy[*]`: The ID of the SMUser that created this post.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `hasAnalysis[array]`: The IDs of the SMAnalyses that analyze this post.  - `hasHashtags[array]`: The hashtags of the post.  - `hasImages[array]`: The URLs of the content that is in image form.  - `hasInteractionCount[array]`: The different interactions of this post.  - `hasLanguage[string]`: The language of the post.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasMentions[array]`: The IDs of the SMUsers mentioned in this post.  - `hasPostURL[string]`: The URL of the post.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasPrivacyLevel[string]`: The privacy setting of the post.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasReferencedLocations[array]`: The IDs of the locations referenced in this post.  - `hasText[array]`: The content that is in textual form.  - `hasThumbnails[array]`: The thumbnail URLs of the post.  - `hasVideos[array]`: The URLs of the content that is in video form.  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `platform[string]`: Platform of post.  - `postCreatedAt[string]`: The datetime of the creation of the SMPost.  - `postId[string]`: The  post ID of the SMPost.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI-LD Entity Type. It must be equal to SMPost.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## Data Model description of properties  
+- `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SMPost:    
@@ -458,9 +474,14 @@ SMPost:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### SMPost NGSI-v2 key-values Example    
 Here is an example of a SMPost in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMPost.123",  
@@ -529,8 +550,10 @@ SMPost:
   ]  
 }  
 ```  
+</details>  
 #### SMPost NGSI-v2 normalized Example    
 Here is an example of a SMPost in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMPost:.23",  
@@ -615,233 +638,247 @@ SMPost:
   }  
 }  
 ```  
+</details>  
 #### SMPost NGSI-LD key-values Example    
 Here is an example of a SMPost in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMPost:123",  
-  "type": "SMPost",  
-  "hasPostURL": "http://twt.com/121",  
-  "postCreatedAt": "2020-12-24T12:00:00Z",  
-  "postId": "21098319",  
-  "hasLanguage": "en",  
-  "platform": "Twitter",  
-  "hasText": [  
-    "This is a tweet"  
-  ],  
-  "hasImages": [  
-    "https://twt.com/image.png"  
-  ],  
-  "hasVideos": [  
-    "https://twt.com/video.mp4"  
-  ],  
-  "hasPrivacy": "public",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
-    ]  
-  },  
-  "hasHashtags": [  
-    "#sample",  
-    "#tag"  
-  ],  
-  "hasThumbnails": [  
-    "https://twt.com/thumb.png"  
-  ],  
-  "hasInteractionCount": [  
-    {  
-      "interactionType": "Like",  
-      "count": 762  
-    }  
-  ],  
-  "createdBy": "urn:ngsi-ld:SMUser:123",  
-  "hasReferencedLocations": [  
-    "urn:ngsi-ld:RefLocation:00"  
-  ],  
-  "hasMentions": [  
-    "urn:ngsi-ld:SMUser:154"  
-  ],  
-  "hasAnalysis": [  
-    "urn:ngsi-ld:Analysis:X"  
-  ],  
-  "belongsToCollection": ["urn:ngsi-ld:SMCollection:001"],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
-}  
-```  
-#### SMPost NGSI-LD normalized Example    
-Here is an example of a SMPost in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
-```json  
-{  
-  "id": "urn:ngsi-ld:SMPost:123",  
-  "type": "SMPost",  
-  "hasPostURL": {  
-    "type": "Property",  
-    "value": "http://twt.com/121"  
-  },  
-  "postCreatedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-12-24T12:00:00Z"  
-    }  
-  },  
-  "postId": {  
-    "type": "Property",  
-    "value": "21098319"  
-  },  
-  "hasLanguage": {  
-    "type": "Property",  
-    "value": "en"  
-  },  
-  "platform": {  
-    "type": "Property",  
-    "value": "Twitter"  
-  },  
-  "hasText": [  
-    {  
-      "type": "Property",  
-      "value": "This is a tweet."  
-    },  
-    {  
-      "type": "Property",  
-      "value": "This is another tweet."  
-    }  
-  ],  
-  "hasImages": [  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/image.png"  
-    },  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/image2.png"  
-    }  
-  ],  
-  "hasVideos": [  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/video.mp4"  
-    },  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/video2.mp4"  
-    }  
-  ],  
-  "hasPrivacyLevel": {  
-    "type": "Property",  
-    "value": "public"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  },  
-  "hasHashtags": [  
-    {  
-      "type": "Property",  
-      "value": [  
+    "id": "urn:ngsi-ld:SMPost:123",  
+    "type": "SMPost",  
+    "belongsToCollection": [  
+        "urn:ngsi-ld:SMCollection:001"  
+    ],  
+    "createdBy": "urn:ngsi-ld:SMUser:123",  
+    "hasAnalysis": [  
+        "urn:ngsi-ld:Analysis:X"  
+    ],  
+    "hasHashtags": [  
         "#sample",  
         "#tag"  
-      ]  
+    ],  
+    "hasImages": [  
+        "https://twt.com/image.png"  
+    ],  
+    "hasInteractionCount": [  
+        {  
+            "interactionType": "Like",  
+            "count": 762  
+        }  
+    ],  
+    "hasLanguage": "en",  
+    "hasMentions": [  
+        "urn:ngsi-ld:SMUser:154"  
+    ],  
+    "hasPostURL": "http://twt.com/121",  
+    "hasPrivacy": "public",  
+    "hasReferencedLocations": [  
+        "urn:ngsi-ld:RefLocation:00"  
+    ],  
+    "hasText": [  
+        "This is a tweet"  
+    ],  
+    "hasThumbnails": [  
+        "https://twt.com/thumb.png"  
+    ],  
+    "hasVideos": [  
+        "https://twt.com/video.mp4"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
     },  
-    {  
-      "type": "Property",  
-      "value": [  
-        "#sample2",  
-        "#tag2"  
-      ]  
-    }  
-  ],  
-  "hasThumbnails": [  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/thumb.png"  
-    },  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/thumb2.png"  
-    }  
-  ],  
-  "createdBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SMUser:123"  
-  },  
-  "hasReferencedLocations": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:RefLocation:00",  
-      "datasetId": "urn:ngsi-ld:Dataset:RefLocation:00"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:RefLocation:01",  
-      "datasetId": "urn:ngsi-ld:Dataset:RefLocation:01"  
-    }  
-  ],  
-  "hasMentions": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMUser:154",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMUser:154"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMUser:155",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMUser:155"  
-    }  
-  ],  
-  "hasAnalysis": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Analysis:X",  
-      "datasetId": "urn:ngsi-ld:Dataset:Analysis:X"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Analysis:02",  
-      "datasetId": "urn:ngsi-ld:Dataset:Analysis:02"  
-    }  
-  ],  
-  "belongsToCollection": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMCollection:001",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMCollection:001"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMCollection:002",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMCollection:002"  
-    }  
-  ],  
-  "hasInteractionCount": [  
-    {  
-      "type": "Property",  
-      "value": {  
-        "@interactionType": "Like",  
-        "@count": "750"  
-      }  
-    },  
-    {  
-      "type": "Property",  
-      "value": {  
-        "@interactionType": "Views",  
-        "@count": "2150"  
-      }  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "platform": "Twitter",  
+    "postCreatedAt": "2020-12-24T12:00:00Z",  
+    "postId": "21098319",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+</details>  
+#### SMPost NGSI-LD normalized Example    
+Here is an example of a SMPost in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:SMPost:123",  
+    "type": "SMPost",  
+    "belongsToCollection": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMCollection:001",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMCollection:001"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMCollection:002",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMCollection:002"  
+        }  
+    ],  
+    "createdBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:SMUser:123"  
+    },  
+    "hasAnalysis": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Analysis:X",  
+            "datasetId": "urn:ngsi-ld:Dataset:Analysis:X"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Analysis:02",  
+            "datasetId": "urn:ngsi-ld:Dataset:Analysis:02"  
+        }  
+    ],  
+    "hasHashtags": [  
+        {  
+            "type": "Property",  
+            "value": [  
+                "#sample",  
+                "#tag"  
+            ]  
+        },  
+        {  
+            "type": "Property",  
+            "value": [  
+                "#sample2",  
+                "#tag2"  
+            ]  
+        }  
+    ],  
+    "hasImages": [  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/image.png"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/image2.png"  
+        }  
+    ],  
+    "hasInteractionCount": [  
+        {  
+            "type": "Property",  
+            "value": {  
+                "@interactionType": "Like",  
+                "@count": "750"  
+            }  
+        },  
+        {  
+            "type": "Property",  
+            "value": {  
+                "@interactionType": "Views",  
+                "@count": "2150"  
+            }  
+        }  
+    ],  
+    "hasLanguage": {  
+        "type": "Property",  
+        "value": "en"  
+    },  
+    "hasMentions": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMUser:154",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMUser:154"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMUser:155",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMUser:155"  
+        }  
+    ],  
+    "hasPostURL": {  
+        "type": "Property",  
+        "value": "http://twt.com/121"  
+    },  
+    "hasPrivacyLevel": {  
+        "type": "Property",  
+        "value": "public"  
+    },  
+    "hasReferencedLocations": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RefLocation:00",  
+            "datasetId": "urn:ngsi-ld:Dataset:RefLocation:00"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RefLocation:01",  
+            "datasetId": "urn:ngsi-ld:Dataset:RefLocation:01"  
+        }  
+    ],  
+    "hasText": [  
+        {  
+            "type": "Property",  
+            "value": "This is a tweet."  
+        },  
+        {  
+            "type": "Property",  
+            "value": "This is another tweet."  
+        }  
+    ],  
+    "hasThumbnails": [  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/thumb.png"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/thumb2.png"  
+        }  
+    ],  
+    "hasVideos": [  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/video.mp4"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/video2.mp4"  
+        }  
+    ],  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "platform": {  
+        "type": "Property",  
+        "value": "Twitter"  
+    },  
+    "postCreatedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-12-24T12:00:00Z"  
+        }  
+    },  
+    "postId": {  
+        "type": "Property",  
+        "value": "21098319"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
