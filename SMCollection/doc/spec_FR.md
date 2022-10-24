@@ -1,15 +1,31 @@
-Entité : SMCollection  
-=====================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entité : SMCollection  
+=====================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMCollection/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Description globale : **Cette entité contient une description harmonisée d'une SMCollection générique réalisée pour le domaine des médias sociaux. Cette entité est principalement associée au processus de collecte de messages de médias sociaux (principalement Twitter).**  
+version : 0.1.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `groupedAt`: La date et l'heure auxquelles la collection a été construite / regroupée.  - `hasAnalysis`: Les ID des SMAnalyses qui analysent ce SMCollection.  - `hasPosts`: Les ID des SMPost qui appartiennent à cette SMCollection.  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI-LD. Il doit être égal à SMCollection.    
+<sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il pourrait avoir plusieurs types ou différents formats/modèles</sub></sup>.  
+- `address[object]`: L'adresse postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nom alternatif pour cet élément  - `areaServed[string]`: La zone géographique où un service ou un article offert est fourni  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified[string]`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description[string]`: Une description de cet article  - `groupedAt[string]`: La date et l'heure auxquelles la collection a été construite / regroupée.  - `hasAnalysis[array]`: Les ID des SMAnalyses qui analysent ce SMCollection.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasPosts[array]`: Les ID des SMPost qui appartiennent à cette SMCollection.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source[string]`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI-LD. Il doit être égal à SMCollection.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `description`  - `hasPosts`  - `id`  - `type`  ## Description des propriétés du modèle de données  
+- `description`  - `hasPosts`  - `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SMCollection:    
@@ -328,9 +344,14 @@ SMCollection:
   x-version: 0.1.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Exemples de charges utiles  
 #### SMCollection NGSI-v2 key-values Exemple  
 Voici un exemple d'une collection SMCollection au format JSON-LD comme valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMCollection.001",  
@@ -354,8 +375,10 @@ SMCollection:
   "groupedAt": "2020-12-24T12:00:00Z"  
 }  
 ```  
+</details>  
 #### SMCollection NGSI-v2 normalisé Exemple  
 Voici un exemple de SMCollection au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:SMCollection:001",  
@@ -397,85 +420,99 @@ SMCollection:
   }  
 }  
 ```  
+</details>  
 #### SMCollection Valeurs-clés NGSI-LD Exemple  
 Voici un exemple de SMCollection au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMCollection:001",  
-  "type": "SMCollection",  
-  "description": "this is a collection of posts",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
+    "id": "urn:ngsi-ld:SMCollection:001",  
+    "type": "SMCollection",  
+    "description": "this is a collection of posts",  
+    "groupedAt": "2020-12-24T12:00:00Z",  
+    "hasPosts": [  
+        "urn:ngsi-ld:SMPost:125",  
+        "urn:ngsi-ld:SMPost:124"  
+    ],  
+    "isAnalyzedBy": [  
+        "urn:ngsi-ld:Analysis:331"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
     ]  
-  },  
-  "hasPosts": [  
-    "urn:ngsi-ld:SMPost:125",  
-    "urn:ngsi-ld:SMPost:124"  
-  ],  
-  "isAnalyzedBy": ["urn:ngsi-ld:Analysis:331"],  
-  "groupedAt": "2020-12-24T12:00:00Z",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### SMCollection NGSI-LD normalisé Exemple  
 Voici un exemple de SMCollection au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMCollection:001",  
-  "type": "SMCollection",  
-  "description": {  
-    "type": "Property",  
-    "value": "this is a collection of posts"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  },  
-  "hasPosts": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:125",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:125"  
+    "id": "urn:ngsi-ld:SMCollection:001",  
+    "type": "SMCollection",  
+    "description": {  
+        "type": "Property",  
+        "value": "this is a collection of posts"  
     },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:124",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
-    }  
-  ],  
-  "hasAnalysis": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMAnalysis:331",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:331"  
+    "groupedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-12-24T12:00:00Z"  
+        }  
     },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMAnalysis:332",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:332"  
-    }  
-  ],  
-  "groupedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-12-24T12:00:00Z"  
-    }  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "hasAnalysis": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMAnalysis:331",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:331"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMAnalysis:332",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMAnalysis:332"  
+        }  
+    ],  
+    "hasPosts": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:125",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:125"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:124",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
+        }  
+    ],  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
