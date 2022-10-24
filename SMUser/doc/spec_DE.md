@@ -1,15 +1,31 @@
-Entität: SMUser  
-===============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: SMUser  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMUser/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Diese Entität enthält eine harmonisierte Beschreibung eines generischen SMUsers, die für den Bereich der sozialen Medien erstellt wurde. Diese Entität ist in erster Linie mit der Beschreibung eines Nutzers von Social-Media-Anwendungen verbunden.**  
+Version: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `createdPosts`: Die ID des Beitrags, den der SMUser erstellt hat.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `isMentionedBy`: Die ID eines Beitrags, in dem der SMUser erwähnt wird.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `platform`: Beschreibung der sozialen Plattform des Nutzers.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: NGSI-LD-Entitätstyp. Er muss gleich SMUser sein.  - `userId`: Die Benutzer-ID des SMUsers.  - `userName`: Der Benutzername des SMUsers. Datenschutz:'Niedrig'    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `createdPosts[array]`: Die ID des Beitrags, den der SMUser erstellt hat.  - `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `isMentionedBy[array]`: Die ID eines Beitrags, in dem der SMUser erwähnt wird.  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `platform[string]`: Beschreibung der sozialen Plattform des Nutzers.  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type[string]`: NGSI-LD-Entitätstyp. Er muss gleich SMUser sein.  - `userId[string]`: Die Benutzer-ID des SMUsers.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `userName[string]`: Der Benutzername des SMUsers. Datenschutz:'Niedrig'  . Model: [ https://schema.org/Text]( https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `platform`  - `type`  - `userName`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `platform`  - `type`  - `userName`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SMUser:    
@@ -337,9 +353,14 @@ SMUser:
   x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### SMUser NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für einen SMUser im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMUser.123",  
@@ -357,8 +378,10 @@ SMUser:
   ]  
 }  
 ```  
+</details>  
 #### SMUser NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für einen SMUser im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMUser.123",  
@@ -389,71 +412,83 @@ SMUser:
   ]  
 }  
 ```  
+</details>  
 #### SMUser NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für einen SMUser im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": "21098319",  
-  "platform": "Twitter",  
-  "userName": "Jsmith2",  
-  "createdPosts": [  
-    "urn:ngsi-ld:SMPost:123"  
-  ],  
-  "isMentionedBy": [  
-    "urn:ngsi-ld:SMPost:123"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:SMUser:123",  
+    "type": "SMUser",  
+    "createdPosts": [  
+        "urn:ngsi-ld:SMPost:123"  
+    ],  
+    "isMentionedBy": [  
+        "urn:ngsi-ld:SMPost:123"  
+    ],  
+    "platform": "Twitter",  
+    "userId": "21098319",  
+    "userName": "Jsmith2",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### SMUser NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für einen SMUser im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": {  
-    "type": "Property",  
-    "value": "21098319"  
-  },  
-  "platform": {  
-    "type": "Property",  
-    "value": "Twitter"  
-  },  
-  "userName": {  
-    "type": "Property",  
-    "value": "Jsmith2"  
-  },  
-  "createdPosts": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+    "id": "urn:ngsi-ld:SMUser:123",  
+    "type": "SMUser",  
+    "createdPosts": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:123",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:124",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
+        }  
+    ],  
+    "isMentionedBy": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:123",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:124",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
+        }  
+    ],  
+    "platform": {  
+        "type": "Property",  
+        "value": "Twitter"  
     },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:124",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
-    }  
-  ],  
-  "isMentionedBy": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+    "userId": {  
+        "type": "Property",  
+        "value": "21098319"  
     },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:124",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "userName": {  
+        "type": "Property",  
+        "value": "Jsmith2"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
