@@ -1,15 +1,31 @@
-エンティティSMUser  
-============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティSMUser  
+============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMUser/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、ソーシャルメディアドメイン用に作られた一般的なSMUserの調和された記述を含む。このエンティティは、主にソーシャルメディアアプリケーションのユーザーの記述に関連しています。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、Social Media 領域のために作られた一般的な SMUser の調和された記述を含む。このエンティティは、主にソーシャル・メディア・アプリケーションのユーザの記述と関連している。  
+バージョン: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `createdPosts`: SMUserが作成したポストのIDです。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `isMentionedBy`: SMUserに言及している投稿のIDです。  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `platform`: ユーザーのソーシャルプラットフォームの説明。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティ・タイプ。SMUserと等しくなければなりません。  - `userId`: SMUserのユーザーIDです。  - `userName`: SMUserのユーザー名です。プライバシー:'低'    
-必須項目  
-- `id`  - `platform`  - `type`  - `userName`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `createdPosts[array]`: SMUserが作成した投稿のID。  - `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `isMentionedBy[array]`: SMUserに言及した投稿のID。  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `platform[string]`: ユーザーのソーシャルプラットフォームの説明。  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI-LD Entity Type。SMUser と等しくなければならない。  - `userId[string]`: SMUserのユーザーID。  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `userName[string]`: SMUserのユーザ名。プライバシー:'Low'  . Model: [ https://schema.org/Text]( https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `platform`  - `type`  - `userName`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SMUser:    
@@ -337,9 +353,14 @@ SMUser:
   x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### SMUser NGSI-v2 key-values の例。  
-SMUserをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SMUser NGSI-v2 key-value の例。  
+SMUserをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMUser.123",  
@@ -357,8 +378,10 @@ SMUser:
   ]  
 }  
 ```  
-#### SMUser NGSI-v2の正規化例  
-ここでは、SMUserを正規化したJSON-LD形式の例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SMUser NGSI-v2 正規化例  
+SMUserをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMUser.123",  
@@ -389,71 +412,83 @@ SMUser:
   ]  
 }  
 ```  
-#### SMUser NGSI-LDのキーバリューの例  
-SMUserをkey-valuesとしてJSON-LD形式で表現した例を示します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SMUser NGSI-LD key-value の例  
+SMUserをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": "21098319",  
-  "platform": "Twitter",  
-  "userName": "Jsmith2",  
-  "createdPosts": [  
-    "urn:ngsi-ld:SMPost:123"  
-  ],  
-  "isMentionedBy": [  
-    "urn:ngsi-ld:SMPost:123"  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:SMUser:123",  
+    "type": "SMUser",  
+    "createdPosts": [  
+        "urn:ngsi-ld:SMPost:123"  
+    ],  
+    "isMentionedBy": [  
+        "urn:ngsi-ld:SMPost:123"  
+    ],  
+    "platform": "Twitter",  
+    "userId": "21098319",  
+    "userName": "Jsmith2",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-#### SMUser NGSI-LDの正規化例  
-ここでは、SMUserを正規化したJSON-LD形式の例を示します。これはオプションを使わない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SMUser NGSI-LD 正規化例  
+SMUserをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMUser:123",  
-  "type": "SMUser",  
-  "userId": {  
-    "type": "Property",  
-    "value": "21098319"  
-  },  
-  "platform": {  
-    "type": "Property",  
-    "value": "Twitter"  
-  },  
-  "userName": {  
-    "type": "Property",  
-    "value": "Jsmith2"  
-  },  
-  "createdPosts": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+    "id": "urn:ngsi-ld:SMUser:123",  
+    "type": "SMUser",  
+    "createdPosts": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:123",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:124",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
+        }  
+    ],  
+    "isMentionedBy": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:123",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMPost:124",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
+        }  
+    ],  
+    "platform": {  
+        "type": "Property",  
+        "value": "Twitter"  
     },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:124",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
-    }  
-  ],  
-  "isMentionedBy": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:123",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:123"  
+    "userId": {  
+        "type": "Property",  
+        "value": "21098319"  
     },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMPost:124",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMPost:124"  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "userName": {  
+        "type": "Property",  
+        "value": "Jsmith2"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
