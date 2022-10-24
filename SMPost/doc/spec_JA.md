@@ -1,15 +1,31 @@
-エンティティSMPost  
-============  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティSMPost  
+============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、ソーシャルメディアドメイン用に作られた一般的なSMPostの調和された記述を含んでいます。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、ソーシャルメディア領域のために作られた一般的な SMPost の調和された記述を含んでいる。  
+バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `belongsToCollection`: この投稿が含まれるSMCollectionsのIDです。  - `createdBy`: この投稿を作成したSMUserのID。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `hasAnalysis`: この投稿を分析するSMAnalysesのIDです。  - `hasHashtags`: 投稿のハッシュタグです。  - `hasImages`: 画像化されているコンテンツのURLです。  - `hasInteractionCount`: この記事の異なるインタラクション  - `hasLanguage`: ポストの言語。  - `hasMentions`: この記事で紹介したSMUsersのIDです。  - `hasPostURL`: 投稿のURLです。  - `hasPrivacyLevel`: 投稿のプライバシー設定です。  - `hasReferencedLocations`: この記事で参照している場所のIDです。  - `hasText`: テキスト形式のコンテンツのことです。  - `hasThumbnails`: 投稿のサムネイルURLです。  - `hasVideos`: 動画になっているコンテンツのURLです。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `platform`: ポストのプラットフォーム。  - `postCreatedAt`: SMPostが作成された日時。  - `postId`: SMPostのポストIDです。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI-LD エンティティタイプ。SMPostと同じでなければなりません。    
-必須項目  
-- `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  ## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsToCollection[array]`: この投稿が含まれるSMCollectionsのIDです。  - `createdBy[*]`: この投稿を作成したSMUserのID。  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `hasAnalysis[array]`: この投稿を解析するSMAnalysesのID。  - `hasHashtags[array]`: 投稿のハッシュタグです。  - `hasImages[array]`: 画像形式になっているコンテンツのURLです。  - `hasInteractionCount[array]`: この記事の異なるインタラクション。  - `hasLanguage[string]`: ポストの言語  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasMentions[array]`: この記事で紹介したSMUsersのIDです。  - `hasPostURL[string]`: 投稿のURLです。  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasPrivacyLevel[string]`: 投稿のプライバシー設定です。  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasReferencedLocations[array]`: この記事で参照した場所のIDです。  - `hasText[array]`: テキスト形式になっているコンテンツ。  - `hasThumbnails[array]`: 投稿のサムネイルURLです。  - `hasVideos[array]`: 動画形式になっているコンテンツのURLです。  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `platform[string]`: ポストのプラットフォーム  - `postCreatedAt[string]`: SMPostが作成された日時。  - `postId[string]`: SMPostのポストID。  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI-LD エンティティタイプ。SMPostと同じでなければならない。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SMPost:    
@@ -458,9 +474,14 @@ SMPost:
   x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### SMPost NGSI-v2 key-values の例。  
-SMPostをJSON-LD形式でkey-valuesにした例を紹介します。これは、`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SMPost NGSI-v2 key-value の例  
+SMPostをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMPost.123",  
@@ -529,8 +550,10 @@ SMPost:
   ]  
 }  
 ```  
+</details>  
 #### SMPost NGSI-v2 正規化例  
-ここでは、JSON-LD形式のSMPostを正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+SMPostを正規化したJSON-LD形式の例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SMPost:.23",  
@@ -615,233 +638,247 @@ SMPost:
   }  
 }  
 ```  
-#### SMPost NGSI-LDのキーバリューの例  
-SMPostをkey-valuesとしてJSON-LD形式にした例を紹介します。これは、`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SMPost NGSI-LD キー値の例  
+SMPostをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使った場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SMPost:123",  
-  "type": "SMPost",  
-  "hasPostURL": "http://twt.com/121",  
-  "postCreatedAt": "2020-12-24T12:00:00Z",  
-  "postId": "21098319",  
-  "hasLanguage": "en",  
-  "platform": "Twitter",  
-  "hasText": [  
-    "This is a tweet"  
-  ],  
-  "hasImages": [  
-    "https://twt.com/image.png"  
-  ],  
-  "hasVideos": [  
-    "https://twt.com/video.mp4"  
-  ],  
-  "hasPrivacy": "public",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      40.3,  
-      25.5  
-    ]  
-  },  
-  "hasHashtags": [  
-    "#sample",  
-    "#tag"  
-  ],  
-  "hasThumbnails": [  
-    "https://twt.com/thumb.png"  
-  ],  
-  "hasInteractionCount": [  
-    {  
-      "interactionType": "Like",  
-      "count": 762  
-    }  
-  ],  
-  "createdBy": "urn:ngsi-ld:SMUser:123",  
-  "hasReferencedLocations": [  
-    "urn:ngsi-ld:RefLocation:00"  
-  ],  
-  "hasMentions": [  
-    "urn:ngsi-ld:SMUser:154"  
-  ],  
-  "hasAnalysis": [  
-    "urn:ngsi-ld:Analysis:X"  
-  ],  
-  "belongsToCollection": ["urn:ngsi-ld:SMCollection:001"],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
-}  
-```  
-#### SMPost NGSI-LDの正規化例  
-ここでは、JSON-LD形式のSMPostを正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "id": "urn:ngsi-ld:SMPost:123",  
-  "type": "SMPost",  
-  "hasPostURL": {  
-    "type": "Property",  
-    "value": "http://twt.com/121"  
-  },  
-  "postCreatedAt": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "DateTime",  
-      "@value": "2020-12-24T12:00:00Z"  
-    }  
-  },  
-  "postId": {  
-    "type": "Property",  
-    "value": "21098319"  
-  },  
-  "hasLanguage": {  
-    "type": "Property",  
-    "value": "en"  
-  },  
-  "platform": {  
-    "type": "Property",  
-    "value": "Twitter"  
-  },  
-  "hasText": [  
-    {  
-      "type": "Property",  
-      "value": "This is a tweet."  
-    },  
-    {  
-      "type": "Property",  
-      "value": "This is another tweet."  
-    }  
-  ],  
-  "hasImages": [  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/image.png"  
-    },  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/image2.png"  
-    }  
-  ],  
-  "hasVideos": [  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/video.mp4"  
-    },  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/video2.mp4"  
-    }  
-  ],  
-  "hasPrivacyLevel": {  
-    "type": "Property",  
-    "value": "public"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        40.3,  
-        25.5  
-      ]  
-    }  
-  },  
-  "hasHashtags": [  
-    {  
-      "type": "Property",  
-      "value": [  
+    "id": "urn:ngsi-ld:SMPost:123",  
+    "type": "SMPost",  
+    "belongsToCollection": [  
+        "urn:ngsi-ld:SMCollection:001"  
+    ],  
+    "createdBy": "urn:ngsi-ld:SMUser:123",  
+    "hasAnalysis": [  
+        "urn:ngsi-ld:Analysis:X"  
+    ],  
+    "hasHashtags": [  
         "#sample",  
         "#tag"  
-      ]  
+    ],  
+    "hasImages": [  
+        "https://twt.com/image.png"  
+    ],  
+    "hasInteractionCount": [  
+        {  
+            "interactionType": "Like",  
+            "count": 762  
+        }  
+    ],  
+    "hasLanguage": "en",  
+    "hasMentions": [  
+        "urn:ngsi-ld:SMUser:154"  
+    ],  
+    "hasPostURL": "http://twt.com/121",  
+    "hasPrivacy": "public",  
+    "hasReferencedLocations": [  
+        "urn:ngsi-ld:RefLocation:00"  
+    ],  
+    "hasText": [  
+        "This is a tweet"  
+    ],  
+    "hasThumbnails": [  
+        "https://twt.com/thumb.png"  
+    ],  
+    "hasVideos": [  
+        "https://twt.com/video.mp4"  
+    ],  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            40.3,  
+            25.5  
+        ]  
     },  
-    {  
-      "type": "Property",  
-      "value": [  
-        "#sample2",  
-        "#tag2"  
-      ]  
-    }  
-  ],  
-  "hasThumbnails": [  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/thumb.png"  
-    },  
-    {  
-      "type": "Property",  
-      "value": "https://twt.com/thumb2.png"  
-    }  
-  ],  
-  "createdBy": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SMUser:123"  
-  },  
-  "hasReferencedLocations": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:RefLocation:00",  
-      "datasetId": "urn:ngsi-ld:Dataset:RefLocation:00"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:RefLocation:01",  
-      "datasetId": "urn:ngsi-ld:Dataset:RefLocation:01"  
-    }  
-  ],  
-  "hasMentions": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMUser:154",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMUser:154"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMUser:155",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMUser:155"  
-    }  
-  ],  
-  "hasAnalysis": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Analysis:X",  
-      "datasetId": "urn:ngsi-ld:Dataset:Analysis:X"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:Analysis:02",  
-      "datasetId": "urn:ngsi-ld:Dataset:Analysis:02"  
-    }  
-  ],  
-  "belongsToCollection": [  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMCollection:001",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMCollection:001"  
-    },  
-    {  
-      "type": "Relationship",  
-      "object": "urn:ngsi-ld:SMCollection:002",  
-      "datasetId": "urn:ngsi-ld:Dataset:SMCollection:002"  
-    }  
-  ],  
-  "hasInteractionCount": [  
-    {  
-      "type": "Property",  
-      "value": {  
-        "@interactionType": "Like",  
-        "@count": "750"  
-      }  
-    },  
-    {  
-      "type": "Property",  
-      "value": {  
-        "@interactionType": "Views",  
-        "@count": "2150"  
-      }  
-    }  
-  ],  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld"  
-  ]  
+    "platform": "Twitter",  
+    "postCreatedAt": "2020-12-24T12:00:00Z",  
+    "postId": "21098319",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details>  
+#### SMPost NGSI-LD 正規化例  
+SMPostを正規化したJSON-LD形式の例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:SMPost:123",  
+    "type": "SMPost",  
+    "belongsToCollection": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMCollection:001",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMCollection:001"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMCollection:002",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMCollection:002"  
+        }  
+    ],  
+    "createdBy": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:SMUser:123"  
+    },  
+    "hasAnalysis": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Analysis:X",  
+            "datasetId": "urn:ngsi-ld:Dataset:Analysis:X"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:Analysis:02",  
+            "datasetId": "urn:ngsi-ld:Dataset:Analysis:02"  
+        }  
+    ],  
+    "hasHashtags": [  
+        {  
+            "type": "Property",  
+            "value": [  
+                "#sample",  
+                "#tag"  
+            ]  
+        },  
+        {  
+            "type": "Property",  
+            "value": [  
+                "#sample2",  
+                "#tag2"  
+            ]  
+        }  
+    ],  
+    "hasImages": [  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/image.png"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/image2.png"  
+        }  
+    ],  
+    "hasInteractionCount": [  
+        {  
+            "type": "Property",  
+            "value": {  
+                "@interactionType": "Like",  
+                "@count": "750"  
+            }  
+        },  
+        {  
+            "type": "Property",  
+            "value": {  
+                "@interactionType": "Views",  
+                "@count": "2150"  
+            }  
+        }  
+    ],  
+    "hasLanguage": {  
+        "type": "Property",  
+        "value": "en"  
+    },  
+    "hasMentions": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMUser:154",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMUser:154"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:SMUser:155",  
+            "datasetId": "urn:ngsi-ld:Dataset:SMUser:155"  
+        }  
+    ],  
+    "hasPostURL": {  
+        "type": "Property",  
+        "value": "http://twt.com/121"  
+    },  
+    "hasPrivacyLevel": {  
+        "type": "Property",  
+        "value": "public"  
+    },  
+    "hasReferencedLocations": [  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RefLocation:00",  
+            "datasetId": "urn:ngsi-ld:Dataset:RefLocation:00"  
+        },  
+        {  
+            "type": "Relationship",  
+            "object": "urn:ngsi-ld:RefLocation:01",  
+            "datasetId": "urn:ngsi-ld:Dataset:RefLocation:01"  
+        }  
+    ],  
+    "hasText": [  
+        {  
+            "type": "Property",  
+            "value": "This is a tweet."  
+        },  
+        {  
+            "type": "Property",  
+            "value": "This is another tweet."  
+        }  
+    ],  
+    "hasThumbnails": [  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/thumb.png"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/thumb2.png"  
+        }  
+    ],  
+    "hasVideos": [  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/video.mp4"  
+        },  
+        {  
+            "type": "Property",  
+            "value": "https://twt.com/video2.mp4"  
+        }  
+    ],  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                40.3,  
+                25.5  
+            ]  
+        }  
+    },  
+    "platform": {  
+        "type": "Property",  
+        "value": "Twitter"  
+    },  
+    "postCreatedAt": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "DateTime",  
+            "@value": "2020-12-24T12:00:00Z"  
+        }  
+    },  
+    "postId": {  
+        "type": "Property",  
+        "value": "21098319"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
