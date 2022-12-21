@@ -1,0 +1,3 @@
+/* (Beta) Export of data model SMCollection of the subject dataModel.SocialMedia for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE SMCollection_type AS ENUM ('SMCollection');
+CREATE TABLE SMCollection (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, groupedAt timestamp, hasAnalysis json, hasPosts json, id text, location json, name text, owner json, seeAlso json, source text, type SMCollection_type);
