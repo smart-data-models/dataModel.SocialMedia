@@ -1,0 +1,3 @@
+/* (Beta) Export of data model SMAnalysis of the subject dataModel.SocialMedia for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE SMAnalysis_type AS ENUM ('SMAnalysis');
+CREATE TABLE SMAnalysis (address json, alternateName text, analyzedAt timestamp, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, hasAnalysisType text, hasAnalysisValue text, hasConfidence text, id text, isAnalysisOf text, location json, name text, owner json, seeAlso json, source text, type SMAnalysis_type);
