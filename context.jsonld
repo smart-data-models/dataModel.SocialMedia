@@ -1,5 +1,10 @@
 {
     "@context": {
+        "SMAnalysis": "https://smartdatamodels.org/dataModel.SocialMedia/SMAnalysis",
+        "SMCollection": "https://smartdatamodels.org/dataModel.SocialMedia/SMCollection",
+        "SMPost": "https://smartdatamodels.org/dataModel.SocialMedia/SMPost",
+        "SMRefLocation": "https://smartdatamodels.org/dataModel.SocialMedia/SMRefLocation",
+        "SMUser": "https://smartdatamodels.org/dataModel.SocialMedia/SMUser",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "analyzedAt": "https://smartdatamodels.org/dataModel.SocialMedia/analyzedAt",
