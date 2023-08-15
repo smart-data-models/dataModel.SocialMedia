@@ -22,8 +22,10 @@
     "value": "Twitter"
   },
   "hasText": {
-    "type": "Text",
-    "value": "This is a tweet"
+    "type": "array",
+    "value": [
+      "This is a tweet"
+    ]
   },
   "hasImages": {
     "type": "array",
@@ -80,14 +82,11 @@
       "SMUser.154"
       ]
   },
-  "isAnalyzedBy": {
-    "type": "Relationship",
-    "object": "Analysis.X"
-  },
   "belongsToCollection": {
     "type": "Relationship",
     "object": [
-      "SMCollection.001"
+      "SMCollection.001",
+      "SMCollection.002"
     ]
   }
 }
