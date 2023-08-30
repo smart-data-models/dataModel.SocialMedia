@@ -17,14 +17,14 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMCollection",
                     "enum": [
                         "SMCollection"
                     ]
                 },
                 "hasPosts": {
                     "type": "array",
-                    "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMPost that belong in this SMCollection.",
+                    "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMPost that belong in this SMCollection",
                     "items": {
                         "anyOf": [
                             {
@@ -44,7 +44,7 @@
                 },
                 "hasAnalysis": {
                     "type": "array",
-                    "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection.",
+                    "description": "Relationship.  Model:'https://schema.org/Text'. The IDs of the SMAnalyses that analyze this SMCollection",
                     "items": {
                         "anyOf": [
                             {
@@ -65,7 +65,7 @@
                 "groupedAt": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. The date and time of when the collection was constructed / grouped."
+                    "description": "Property. The date and time of when the collection was constructed / grouped"
                 }
             }
         }
