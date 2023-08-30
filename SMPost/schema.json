@@ -17,7 +17,7 @@
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMPost",
                     "enum": [
                         "SMPost"
                     ]
@@ -25,62 +25,62 @@
                 "postCreatedAt": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "Property. The datetime of the creation of the SMPost."
+                    "description": "Property. The datetime of the creation of the SMPost"
                 },
                 "postId": {
                     "type": "string",
-                    "description": "Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost."
+                    "description": "Property.  Model:'https://schema.org/Text'. The  post ID of the SMPost"
                 },
                 "hasLanguage": {
                     "type": "string",
-                    "description": "Property.  Model:'https://schema.org/Text'. The language of the post."
+                    "description": "Property.  Model:'https://schema.org/Text'. The language of the post"
                 },
                 "hasPostURL": {
                     "type": "string",
-                    "description": "Property.  Model:'https://schema.org/Text'. The URL of the post."
+                    "description": "Property.  Model:'https://schema.org/Text'. The URL of the post"
                 },
                 "hasText": {
                     "type": "array",
-                    "description": "Property. The content that is in textual form.",
+                    "description": "Property. The content that is in textual form",
                     "items": {
                         "type": "string"
                     }
                 },
                 "hasImages": {
                     "type": "array",
-                    "description": "Property. The URLs of the content that is in image form.",
+                    "description": "Property. The URLs of the content that is in image form",
                     "items": {
                         "type": "string"
                     }
                 },
                 "hasVideos": {
                     "type": "array",
-                    "description": "Property. The URLs of the content that is in video form.",
+                    "description": "Property. The URLs of the content that is in video form",
                     "items": {
                         "type": "string"
                     }
                 },
                 "hasPrivacyLevel": {
                     "type": "string",
-                    "description": "Property.  Model:'https://schema.org/Text'. The privacy setting of the post."
+                    "description": "Property.  Model:'https://schema.org/Text'. The privacy setting of the post"
                 },
                 "hasHashtags": {
                     "type": "array",
-                    "description": "Property. The hashtags of the post.",
+                    "description": "Property. The hashtags of the post",
                     "items": {
                         "type": "string"
                     }
                 },
                 "hasThumbnails": {
                     "type": "array",
-                    "description": "Property. The thumbnail URLs of the post.",
+                    "description": "Property. The thumbnail URLs of the post",
                     "items": {
                         "type": "string"
                     }
                 },
                 "platform": {
                     "type": "string",
-                    "description": "Property. Platform of post."
+                    "description": "Property. Platform of post"
                 },
                 "createdBy": {
                     "anyOf": [
@@ -97,11 +97,11 @@
                             "description": "Property. Identifier format of any NGSI entity"
                         }
                     ],
-                    "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post."
+                    "description": "Relationship.  Model:'https://schema.org/Text'. The ID of the SMUser that created this post"
                 },
                 "hasReferencedLocations": {
                     "type": "array",
-                    "description": "Relationship. The IDs of the locations referenced in this post.",
+                    "description": "Relationship. The IDs of the locations referenced in this post",
                     "items": {
                         "anyOf": [
                             {
@@ -121,7 +121,7 @@
                 },
                 "hasMentions": {
                     "type": "array",
-                    "description": "Relationship. The IDs of the SMUsers mentioned in this post.",
+                    "description": "Relationship. The IDs of the SMUsers mentioned in this post",
                     "items": {
                         "anyOf": [
                             {
@@ -141,7 +141,7 @@
                 },
                 "hasAnalysis": {
                     "type": "array",
-                    "description": "Relationship. The IDs of the SMAnalyses that analyze this post.",
+                    "description": "Relationship. The IDs of the SMAnalyses that analyze this post",
                     "items": {
                         "anyOf": [
                             {
@@ -161,7 +161,7 @@
                 },
                 "hasInteractionCount": {
                     "type": "array",
-                    "description": "Property. The different interactions of this post.",
+                    "description": "Property. The different interactions of this post",
                     "items": {
                         "type": "object",
                         "properties": {
@@ -188,7 +188,7 @@
                 },
                 "belongsToCollection": {
                     "type": "array",
-                    "description": "Relationship. The IDs of the SMCollections, which this post is a part of.",
+                    "description": "Relationship. The IDs of the SMCollections, which this post is a part of",
                     "items": {
                         "anyOf": [
                             {
