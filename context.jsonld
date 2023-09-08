@@ -12,7 +12,16 @@
         "alternateName": "https://smartdatamodels.org/alternateName",
         "analyzedAt": "https://smartdatamodels.org/dataModel.SocialMedia/analyzedAt",
         "areaServed": "https://smartdatamodels.org/areaServed",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "belongsToCollection": "https://smartdatamodels.org/dataModel.SocialMedia/belongsToCollection",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
+        "count": "https://smartdatamodels.org/dataModel.SocialMedia/count",
         "createdBy": "https://smartdatamodels.org/dataModel.SocialMedia/createdBy",
         "createdPosts": "https://smartdatamodels.org/dataModel.SocialMedia/createdPosts",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
@@ -38,6 +47,7 @@
         "hasThumbnails": "https://smartdatamodels.org/dataModel.SocialMedia/hasThumbnails",
         "hasVideos": "https://smartdatamodels.org/dataModel.SocialMedia/hasVideos",
         "id": "@id",
+        "interactionType": "https://smartdatamodels.org/dataModel.SocialMedia/interactionType",
         "isAnalysisOf": "https://smartdatamodels.org/dataModel.SocialMedia/isAnalysisOf",
         "isMentionedBy": "https://smartdatamodels.org/dataModel.SocialMedia/isMentionedBy",
         "location": "ngsi-ld:location",
