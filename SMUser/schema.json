@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
+    "modelTags": "",
     "$id": "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMUser/schema.json",
     "$schemaVersion": "0.1.0",
     "title": "Social Media - SMUser",
@@ -9,25 +10,25 @@
         {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
-         {
+        {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
         },
         {
             "properties": {
                 "type": {
                     "type": "string",
-                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMUser.",
+                    "description": "Property. NGSI-LD Entity Type. It must be equal to SMUser",
                     "enum": [
                         "SMUser"
                     ]
                 },
                 "userId": {
                     "type": "string",
-                    "description": "Property.  Model:'https://schema.org/Text'. The User ID of the SMUser."
+                    "description": "Property.  Model:'https://schema.org/Text'. The User ID of the SMUser"
                 },
                 "platform": {
                     "type": "string",
-                    "description": "Property. Description of the  social platform of the user."
+                    "description": "Property. Description of the  social platform of the user"
                 },
                 "userName": {
                     "type": "string",
@@ -35,7 +36,7 @@
                 },
                 "createdPosts": {
                     "type": "array",
-                    "description": "Relationship. The ID of the post that the SMUser created.",
+                    "description": "Relationship. The ID of the post that the SMUser created",
                     "items": {
                         "anyOf": [
                             {
@@ -55,7 +56,7 @@
                 },
                 "isMentionedBy": {
                     "type": "array",
-                    "description": "Relationship. The ID of a post that mentions the SMUser.",
+                    "description": "Relationship. The ID of a post that mentions the SMUser",
                     "items": {
                         "anyOf": [
                             {

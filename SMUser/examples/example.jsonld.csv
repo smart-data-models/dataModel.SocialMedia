@@ -1,0 +1,2 @@
+"id_", "type_", "userId_", "platform_", "userName_", "createdPosts__0_", "isMentionedBy__0_", "@context__0_"
+"urn:ngsi-ld:SMUser:123", "SMUser", "21098319", "Twitter", "Jsmith2", "urn:ngsi-ld:SMPost:123", "urn:ngsi-ld:SMPost:123", "https://smartdatamodels.org/context.jsonld"

@@ -1,5 +1,5 @@
 {
-  "id": "SMPost:.23",
+  "id": "SMPost.123",
   "type": "SMPost",
   "hasPostURL": {
     "type": "Property",
@@ -22,18 +22,24 @@
     "value": "Twitter"
   },
   "hasText": {
-    "type": "Text",
-    "value": "This is a tweet"
+    "type": "array",
+    "value": [
+      "This is a tweet"
+    ]
   },
-  "hasImage": {
-    "type": "Text",
-    "value": "https://twt.com/image.png"
+  "hasImages": {
+    "type": "array",
+    "value": [
+      "https://twt.com/image.png"
+    ]
   },
-  "hasVideo": {
-    "type": "Text",
-    "value": "https://twt.com/video.mp4"
+  "hasVideos": {
+    "type": "array",
+    "value": [
+      "https://twt.com/video.mp4"
+    ]
   },
-  "hasPrivacy": {
+  "hasPrivacyLevel": {
     "type": "Text",
     "value": "public"
   },
@@ -48,35 +54,39 @@
     }
   },
   "hasHashtag": {
-    "type": "Text",
-    "value": ["#sample","#tag"]
+    "type": "array",
+    "value": [
+      "#sample",
+      "#tag"
+    ]
   },
-  "hasThumbnail": {
-    "type": "Text",
-    "value": "https://twt.com/thumb.png"
-  },
-  "likes": {
-    "type": "Number",
-    "value": 762
+  "hasThumbnails": {
+    "type": "array",
+    "value": [
+      "https://twt.com/thumb.png"
+    ]
   },
   "createdBy": {
     "type": "Relationship",
     "object": "SMUser.123"
   },
-  "hasReferencedLocation": {
+  "hasReferencedLocations": {
     "type": "Relationship",
-    "object": "RefLocation.00"
+    "object": [
+      "RefLocation.00"
+    ]
   },
   "hasMentions": {
     "type": "Relationship",
-    "object": "SMUser.154"
-  },
-  "isAnalyzedBy": {
-    "type": "Relationship",
-    "object": "Analysis.X"
+    "object": [
+      "SMUser.154"
+      ]
   },
   "belongsToCollection": {
     "type": "Relationship",
-    "object": "SMCollection.001"
+    "object": [
+      "SMCollection.001",
+      "SMCollection.002"
+    ]
   }
 }

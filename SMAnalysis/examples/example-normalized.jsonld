@@ -1,31 +1,30 @@
 {
-  "id": "urn:ngsi-ld:Analysis:X",
-  "type": "SMAnalysis",
-  "hasConfidence": {
-    "type": "Property",
-    "value": 0.4
-  },
-  "analyzedAt": {
-    "type": "Property",
-    "value": {
-      "@type": "DateTime",
-      "@value": "2020-12-24T12:00:00Z"
-    }
-  },
-  "hasAnalysisValue": {
-    "type": "Property",
-    "value": "Anger"
-  },
-  "hasAnalysisType": {
-    "type": "Property",
-    "value": "Sentiment"
-  },
-  "isAnalysisOf": {
-    "type": "Relationship",
-    "object": "urn:ngsi-ld:SMCollection:001"
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld"
-  ]
+    "id": "urn:ngsi-ld:Analysis:X",
+    "type": "SMAnalysis",
+    "analyzedAt": {
+        "type": "Property",
+        "value": {
+            "@type": "DateTime",
+            "@value": "2020-12-24T12:00:00Z"
+        }
+    },
+    "hasAnalysisType": {
+        "type": "Property",
+        "value": "Sentiment"
+    },
+    "hasAnalysisValue": {
+        "type": "Property",
+        "value": "Anger"
+    },
+    "hasConfidence": {
+        "type": "Property",
+        "value": 0.4
+    },
+    "isAnalysisOf": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:SMCollection:001"
+    },
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
+    ]
 }
-

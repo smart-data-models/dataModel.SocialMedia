@@ -1,0 +1,2 @@
+"id_", "type_", "userId__type_", "userId__value_", "platform__type_", "platform__value_", "userName__type_", "userName__value_", "createdPosts__0__type_", "createdPosts__0__value_", "isMentionedBy__0__type_", "isMentionedBy__0__value_"
+"SMUser.123", "SMUser", "Text", "21098319", "Text", "Twitter", "Text", "Jsmith2", "Relationship", "SMPost.123", "Relationship", "SMPost.123"

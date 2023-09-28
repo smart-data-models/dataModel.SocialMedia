@@ -1,0 +1,2 @@
+"id_", "type_", "description_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "hasPosts__0_", "hasPosts__1_", "hasAnalysis__0_", "hasAnalysis__1_", "groupedAt_"
+"SMCollection.001", "SMCollection", "this is a collection of posts", "Point", "40.3", "25.5", "SMPost.125", "SMPost.124", "Analysis.331", "Analysis.334", "2020-12-24T12:00:00Z"

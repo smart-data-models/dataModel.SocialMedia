@@ -1,0 +1,2 @@
+"id_", "type_", "address__type_", "address__value__addressLocality_", "location__type_", "location__value__type_", "location__value__coordinates__0_", "location__value__coordinates__1_", "locationReferencedBy__type_", "locationReferencedBy__object_"
+"RefLocation.00", "SMRefLocation", "StructuredValue", "Thessaloniki", "GeoProperty", "Point", "40.3", "25.5", "Relationship", "SMPost.123"

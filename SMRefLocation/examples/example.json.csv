@@ -1,0 +1,2 @@
+"id_", "type_", "address__addressLocality_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "locationReferencedBy_"
+"RefLocation.00", "SMRefLocation", "Thessaloniki", "Point", "40.3", "25.5", "SMPost.123"
