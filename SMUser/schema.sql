@@ -1,3 +1,3 @@
 /* (Beta) Export of data model SMUser of the subject dataModel.SocialMedia for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE SMUser_type AS ENUM ('SMUser');
-CREATE TABLE SMUser (address JSON, alternateName TEXT, areaServed TEXT, createdPosts JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, isMentionedBy JSON, name TEXT, owner JSON, platform TEXT, source TEXT, type SMUser_type, userId TEXT, userName TEXT);
+CREATE TABLE SMUser (address JSON, alternateName TEXT, areaServed TEXT, createdPosts JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, isMentionedBy JSON, location JSON, name TEXT, owner JSON, platform TEXT, seeAlso JSON, source TEXT, type SMUser_type, userId TEXT, userName TEXT);
