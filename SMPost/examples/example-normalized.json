@@ -2,7 +2,7 @@
   "id": "SMPost.123",
   "type": "SMPost",
   "hasPostURL": {
-    "type": "Property",
+    "type": "Text",
     "value": "http://twt.com/121"
   },
   "postCreatedAt": {
@@ -22,19 +22,19 @@
     "value": "Twitter"
   },
   "hasText": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "This is a tweet"
     ]
   },
   "hasImages": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "https://twt.com/image.png"
     ]
   },
   "hasVideos": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "https://twt.com/video.mp4"
     ]
@@ -54,37 +54,37 @@
     }
   },
   "hasHashtag": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "#sample",
       "#tag"
     ]
   },
   "hasThumbnails": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "https://twt.com/thumb.png"
     ]
   },
   "createdBy": {
-    "type": "Relationship",
-    "object": "SMUser.123"
+    "type": "Text",
+    "value": "SMUser.123"
   },
   "hasReferencedLocations": {
-    "type": "Relationship",
-    "object": [
+    "type": "StructuredValue",
+    "value": [
       "RefLocation.00"
     ]
   },
   "hasMentions": {
-    "type": "Relationship",
-    "object": [
+    "type": "StructuredValue",
+    "value": [
       "SMUser.154"
-      ]
+    ]
   },
   "belongsToCollection": {
-    "type": "Relationship",
-    "object": [
+    "type": "StructuredValue",
+    "value": [
       "SMCollection.001",
       "SMCollection.002"
     ]
