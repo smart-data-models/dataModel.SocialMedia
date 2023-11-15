@@ -15,25 +15,19 @@
       ]
     }
   },
-  "hasPosts": [
-    {
-      "type": "Relationship",
-      "object": "SMPost.125"
-    },
-    {
-      "type": "Relationship",
-      "object": "SMPost.124"
-    }
-  ],
-  "isAnalyzedBy": {
-    "type": "Relationship",
-    "object": "Analysis.331"
+  "hasPosts": {
+    "type": "StructuredValue",
+    "value": [
+      "SMPost.125",
+      "SMPost.124"
+    ]
   },
-   "groupedAt": {
-    "type": "Property",
-    "value": {
-			"@type": "DateTime",
-			"@value": "2020-12-24T12:00:00Z"
-			 }		
+  "isAnalyzedBy": {
+    "type": "Text",
+    "value": "Analysis.331"
+  },
+  "groupedAt": {
+    "type": "DateTime",
+    "value": "2020-12-24T12:00:00Z"
   }
 }
