@@ -1,23 +1,23 @@
 {
-    "id": "urn:ngsi-ld:SMCollection:001",
-    "type": "SMCollection",
-    "description": "this is a collection of posts",
-    "groupedAt": "2020-12-24T12:00:00Z",
-    "hasPosts": [
-        "urn:ngsi-ld:SMPost:125",
-        "urn:ngsi-ld:SMPost:124"
-    ],
-    "isAnalyzedBy": [
-        "urn:ngsi-ld:Analysis:331"
-    ],
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            40.3,
-            25.5
-        ]
-    },
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
+  "id": "urn:ngsi-ld:SMCollection:001",
+  "type": "SMCollection",
+  "description": "this is a collection of posts",
+  "groupedAt": "2020-12-24T12:00:00Z",
+  "hasPosts": [
+    "urn:ngsi-ld:SMPost:125",
+    "urn:ngsi-ld:SMPost:124"
+  ],
+  "isAnalyzedBy": [
+    "urn:ngsi-ld:Analysis:331"
+  ],
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      40.3,
+      25.5
     ]
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
+  ]
 }
