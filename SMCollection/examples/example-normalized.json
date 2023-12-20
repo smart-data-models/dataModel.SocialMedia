@@ -22,9 +22,11 @@
       "SMPost.124"
     ]
   },
-  "isAnalyzedBy": {
-    "type": "Text",
-    "value": "Analysis.331"
+  "hasAnalysis": {
+    "type": "StructuredValue",
+    "value": [
+      "Analysis.331"
+    ]
   },
   "groupedAt": {
     "type": "DateTime",
