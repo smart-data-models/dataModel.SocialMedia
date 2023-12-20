@@ -7,7 +7,7 @@
     "urn:ngsi-ld:SMPost:125",
     "urn:ngsi-ld:SMPost:124"
   ],
-  "isAnalyzedBy": [
+  "hasAnalysis": [
     "urn:ngsi-ld:Analysis:331"
   ],
   "location": {
