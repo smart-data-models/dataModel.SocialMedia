@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "SMUser"
 subject = "dataModel.SocialMedia"
-createdPosts = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:SMPost:123', 'datasetId': 'urn:ngsi-ld:Dataset:SMPost:123'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:SMPost:124', 'datasetId': 'urn:ngsi-ld:Dataset:SMPost:124'}]
+createdPosts = ['urn:ngsi-ld:SMPost:123']
 attribute = "createdPosts"
 value = createdPosts
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-isMentionedBy = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:SMPost:123', 'datasetId': 'urn:ngsi-ld:Dataset:SMPost:123'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:SMPost:124', 'datasetId': 'urn:ngsi-ld:Dataset:SMPost:124'}]
+isMentionedBy = ['urn:ngsi-ld:SMPost:123']
 attribute = "isMentionedBy"
 value = isMentionedBy
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-platform = "{'type': 'Property', 'value': 'Twitter'}"
+platform = "Twitter"
 attribute = "platform"
 value = platform
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-userId = "{'type': 'Property', 'value': '21098319'}"
+userId = "21098319"
 attribute = "userId"
 value = userId
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
