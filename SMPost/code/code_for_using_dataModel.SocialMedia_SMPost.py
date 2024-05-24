@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "SMPost"
 subject = "dataModel.SocialMedia"
-belongsToCollection = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:SMCollection:001', 'datasetId': 'urn:ngsi-ld:Dataset:SMCollection:001'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:SMCollection:002', 'datasetId': 'urn:ngsi-ld:Dataset:SMCollection:002'}]
+belongsToCollection = ['urn:ngsi-ld:SMCollection:001']
 attribute = "belongsToCollection"
 value = belongsToCollection
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-createdBy = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:SMUser:123'}"
+createdBy = "urn:ngsi-ld:SMUser:123"
 attribute = "createdBy"
 value = createdBy
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAnalysis = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:Analysis:X', 'datasetId': 'urn:ngsi-ld:Dataset:Analysis:X'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:Analysis:02', 'datasetId': 'urn:ngsi-ld:Dataset:Analysis:02'}]
+hasAnalysis = ['urn:ngsi-ld:Analysis:X']
 attribute = "hasAnalysis"
 value = hasAnalysis
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasHashtags = [{'type': 'Property', 'value': ['#sample', '#tag']}, {'type': 'Property', 'value': ['#sample2', '#tag2']}]
+hasHashtags = ['#sample', '#tag']
 attribute = "hasHashtags"
 value = hasHashtags
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
