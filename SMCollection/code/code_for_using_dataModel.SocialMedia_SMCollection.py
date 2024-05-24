@@ -24,27 +24,32 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "SMCollection"
 subject = "dataModel.SocialMedia"
-groupedAt = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2020-12-24T12:00:00Z'}}"
+groupedAt = "2020-12-24T12:00:00Z"
 attribute = "groupedAt"
 value = groupedAt
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasAnalysis = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:SMAnalysis:331', 'datasetId': 'urn:ngsi-ld:Dataset:SMAnalysis:331'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:SMAnalysis:332', 'datasetId': 'urn:ngsi-ld:Dataset:SMAnalysis:332'}]
-attribute = "hasAnalysis"
-value = hasAnalysis
+hasPosts = ['urn:ngsi-ld:SMPost:125', 'urn:ngsi-ld:SMPost:124']
+attribute = "hasPosts"
+value = hasPosts
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-hasPosts = [{'type': 'Relationship', 'object': 'urn:ngsi-ld:SMPost:125', 'datasetId': 'urn:ngsi-ld:Dataset:SMPost:125'}, {'type': 'Relationship', 'object': 'urn:ngsi-ld:SMPost:124', 'datasetId': 'urn:ngsi-ld:Dataset:SMPost:124'}]
-attribute = "hasPosts"
-value = hasPosts
+hasAnalysis = ['urn:ngsi-ld:Analysis:331']
+attribute = "hasAnalysis"
+value = hasAnalysis
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
