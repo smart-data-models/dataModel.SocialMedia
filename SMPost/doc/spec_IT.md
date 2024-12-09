@@ -1,572 +1,570 @@
-<!-- 10-Header -->  
-[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: SMPost  
-==============<!-- /10-Header -->  
-<!-- 15-License -->  
-[Licenza aperta](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)  
-[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-<!-- /15-License -->  
-<!-- 20-Description -->  
-Descrizione globale: **Questa entità contiene una descrizione armonizzata di un generico SMPost realizzato per il dominio dei Social Media **.  
-versione: 0.0.2  
-<!-- /20-Description -->  
-<!-- 30-PropertiesList -->  
-
-## Elenco delle proprietà  
-
-<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
-	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsToCollection[array]`: Gli ID delle SMCollections, di cui questo post fa parte  - `createdBy[*]`: L'ID dell'utente SMU che ha creato questo post.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `hasAnalysis[array]`: Gli ID delle SMAnalyses che analizzano questo post  - `hasHashtags[array]`: Gli hashtag del post  - `hasImages[array]`: Gli URL del contenuto sotto forma di immagine  - `hasInteractionCount[array]`: Le diverse interazioni di questo post  - `hasLanguage[string]`: Il linguaggio del post  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasMentions[array]`: Gli ID degli SMUser citati in questo post  - `hasPostURL[string]`: L'URL del post  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasPrivacyLevel[string]`: L'impostazione della privacy del post  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasReferencedLocations[array]`: Gli ID dei luoghi a cui si fa riferimento in questo post  - `hasText[array]`: Il contenuto in forma testuale  - `hasThumbnails[array]`: Gli URL delle miniature del post  - `hasVideos[array]`: Gli URL dei contenuti in forma di video  - `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `platform[string]`: Piattaforma della postazione  - `postCreatedAt[date-time]`: Data di creazione dell'SMPost  - `postId[string]`: L'ID del post di SMPost  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI-LD. Deve essere uguale a SMPost  <!-- /30-PropertiesList -->  
-<!-- 35-RequiredProperties -->  
-Proprietà richieste  
-- `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
-<!-- /40-RequiredProperties -->  
-<!-- 50-DataModelHeader -->  
-## Modello di dati descrizione delle proprietà  
-Ordinati in ordine alfabetico (clicca per i dettagli)  
-<!-- /50-DataModelHeader -->  
-<!-- 60-ModelYaml -->  
-<details><summary><strong>full yaml details</strong></summary>    
-```yaml  
-SMPost:    
-  description: This entity contains a harmonised description of a generic SMPost made for the Social Media domain.    
-  properties:    
-    address:    
-      description: The mailing address    
-      properties:    
-        addressCountry:    
-          description: 'The country. For example, Spain'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/addressCountry    
-            type: Property    
-        addressLocality:    
-          description: 'The locality in which the street address is, and which is in the region'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/addressLocality    
-            type: Property    
-        addressRegion:    
-          description: 'The region in which the locality is, and which is in the country'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/addressRegion    
-            type: Property    
-        district:    
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
-          type: string    
-          x-ngsi:    
-            type: Property    
-        postOfficeBoxNumber:    
-          description: 'The post office box number for PO box addresses. For example, 03578'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/postOfficeBoxNumber    
-            type: Property    
-        postalCode:    
-          description: 'The postal code. For example, 24004'    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/https://schema.org/postalCode    
-            type: Property    
-        streetAddress:    
-          description: The street address    
-          type: string    
-          x-ngsi:    
-            model: https://schema.org/streetAddress    
-            type: Property    
-        streetNr:    
-          description: Number identifying a specific property on a public street    
-          type: string    
-          x-ngsi:    
-            type: Property    
-      type: object    
-      x-ngsi:    
-        model: https://schema.org/address    
-        type: Property    
-    alternateName:    
-      description: An alternative name for this item    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    areaServed:    
-      description: The geographic area where a service or offered item is provided    
-      type: string    
-      x-ngsi:    
-        model: https://schema.org/Text    
-        type: Property    
-    belongsToCollection:    
-      description: 'The IDs of the SMCollections, which this post is a part of'    
-      items:    
-        anyOf:    
-          - description: Identifier format of any NGSI entity    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-            x-ngsi:    
-              type: Property    
-          - description: Identifier format of any NGSI entity    
-            format: uri    
-            type: string    
-            x-ngsi:    
-              type: Property    
-      type: array    
-      x-ngsi:    
-        type: Relationship    
-    createdBy:    
-      anyOf:    
-        - description: Identifier format of any NGSI entity    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-          x-ngsi:    
-            type: Property    
-        - description: Identifier format of any NGSI entity    
-          format: uri    
-          type: string    
-          x-ngsi:    
-            type: Property    
-      description: The ID of the SMUser that created this post    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        type: Relationship    
-    dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform    
-      format: date-time    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
-      format: date-time    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    description:    
-      description: A description of this item    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    hasAnalysis:    
-      description: The IDs of the SMAnalyses that analyze this post    
-      items:    
-        anyOf:    
-          - description: Identifier format of any NGSI entity    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-            x-ngsi:    
-              type: Property    
-          - description: Identifier format of any NGSI entity    
-            format: uri    
-            type: string    
-            x-ngsi:    
-              type: Property    
-      type: array    
-      x-ngsi:    
-        type: Relationship    
-    hasHashtags:    
-      description: The hashtags of the post    
-      items:    
-        type: string    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    hasImages:    
-      description: The URLs of the content that is in image form    
-      items:    
-        type: string    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    hasInteractionCount:    
-      description: The different interactions of this post    
-      items:    
-        properties:    
-          count:    
-            type: number    
-          interactionType:    
-            enum:    
-              - Comment    
-              - Dislike    
-              - Favorite    
-              - Like    
-              - Quote    
-              - Reactions    
-              - Reply    
-              - Retweet    
-              - Shares    
-              - Views    
-            type: string    
-        type: object    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    hasLanguage:    
-      description: The language of the post    
-      type: string    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        type: Property    
-    hasMentions:    
-      description: The IDs of the SMUsers mentioned in this post    
-      items:    
-        anyOf:    
-          - description: Identifier format of any NGSI entity    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-            x-ngsi:    
-              type: Property    
-          - description: Identifier format of any NGSI entity    
-            format: uri    
-            type: string    
-            x-ngsi:    
-              type: Property    
-      type: array    
-      x-ngsi:    
-        type: Relationship    
-    hasPostURL:    
-      description: The URL of the post    
-      type: string    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        type: Property    
-    hasPrivacyLevel:    
-      description: The privacy setting of the post    
-      type: string    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        type: Property    
-    hasReferencedLocations:    
-      description: The IDs of the locations referenced in this post    
-      items:    
-        anyOf:    
-          - description: Identifier format of any NGSI entity    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-            x-ngsi:    
-              type: Property    
-          - description: Identifier format of any NGSI entity    
-            format: uri    
-            type: string    
-            x-ngsi:    
-              type: Property    
-      type: array    
-      x-ngsi:    
-        type: Relationship    
-    hasText:    
-      description: The content that is in textual form    
-      items:    
-        type: string    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    hasThumbnails:    
-      description: The thumbnail URLs of the post    
-      items:    
-        type: string    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    hasVideos:    
-      description: The URLs of the content that is in video form    
-      items:    
-        type: string    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    id:    
-      anyOf:    
-        - description: Identifier format of any NGSI entity    
-          maxLength: 256    
-          minLength: 1    
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-          type: string    
-          x-ngsi:    
-            type: Property    
-        - description: Identifier format of any NGSI entity    
-          format: uri    
-          type: string    
-          x-ngsi:    
-            type: Property    
-      description: Unique identifier of the entity    
-      x-ngsi:    
-        type: Property    
-    location:    
-      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
-      oneOf:    
-        - description: Geojson reference to the item. Point    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                type: number    
-              minItems: 2    
-              type: array    
-            type:    
-              enum:    
-                - Point    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON Point    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. LineString    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  type: number    
-                minItems: 2    
-                type: array    
-              minItems: 2    
-              type: array    
-            type:    
-              enum:    
-                - LineString    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON LineString    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. Polygon    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    type: number    
-                  minItems: 2    
-                  type: array    
-                minItems: 4    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - Polygon    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON Polygon    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. MultiPoint    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  type: number    
-                minItems: 2    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiPoint    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON MultiPoint    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. MultiLineString    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    type: number    
-                  minItems: 2    
-                  type: array    
-                minItems: 2    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiLineString    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON MultiLineString    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-        - description: Geojson reference to the item. MultiLineString    
-          properties:    
-            bbox:    
-              items:    
-                type: number    
-              minItems: 4    
-              type: array    
-            coordinates:    
-              items:    
-                items:    
-                  items:    
-                    items:    
-                      type: number    
-                    minItems: 2    
-                    type: array    
-                  minItems: 4    
-                  type: array    
-                type: array    
-              type: array    
-            type:    
-              enum:    
-                - MultiPolygon    
-              type: string    
-          required:    
-            - type    
-            - coordinates    
-          title: GeoJSON MultiPolygon    
-          type: object    
-          x-ngsi:    
-            type: GeoProperty    
-      x-ngsi:    
-        type: GeoProperty    
-    name:    
-      description: The name of this item    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    owner:    
-      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
-      items:    
-        anyOf:    
-          - description: Identifier format of any NGSI entity    
-            maxLength: 256    
-            minLength: 1    
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
-            type: string    
-            x-ngsi:    
-              type: Property    
-          - description: Identifier format of any NGSI entity    
-            format: uri    
-            type: string    
-            x-ngsi:    
-              type: Property    
-        description: Unique identifier of the entity    
-        x-ngsi:    
-          type: Property    
-      type: array    
-      x-ngsi:    
-        type: Property    
-    platform:    
-      description: Platform of post    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    postCreatedAt:    
-      description: The datetime of the creation of the SMPost    
-      format: date-time    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    postId:    
-      description: The  post ID of the SMPost    
-      type: string    
-      x-ngsi:    
-        model: ' https://schema.org/Text'    
-        type: Property    
-    seeAlso:    
-      description: list of uri pointing to additional resources about the item    
-      oneOf:    
-        - items:    
-            format: uri    
-            type: string    
-          minItems: 1    
-          type: array    
-        - format: uri    
-          type: string    
-      x-ngsi:    
-        type: Property    
-    source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
-      type: string    
-      x-ngsi:    
-        type: Property    
-    type:    
-      description: NGSI-LD Entity Type. It must be equal to SMPost    
-      enum:    
-        - SMPost    
-      type: string    
-      x-ngsi:    
-        type: Property    
-  required:    
-    - id    
-    - type    
-    - postCreatedAt    
-    - postId    
-    - platform    
-  type: object    
-  x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
-  x-license-url: https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMPost/LICENSE.md    
-  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMPost/schema.json    
-  x-model-tags: ""    
-  x-version: 0.0.2    
-```  
-</details>    
-<!-- /60-ModelYaml -->  
-<!-- 70-MiddleNotes -->  
-<!-- /70-MiddleNotes -->  
-<!-- 80-Examples -->  
-## Esempi di payload  
-#### SMPost NGSI-v2 valori-chiave Esempio  
-Ecco un esempio di SMPost in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-<details><summary><strong>show/hide example</strong></summary>    
+<!-- 10-Header -->    
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)    
+Entità: SMPost    
+==============<!-- /10-Header -->    
+<!-- 15-License -->    
+[Licenza aperta](https://github.com/smart-data-models//dataModel.SocialMedia/blob/master/SMPost/LICENSE.md)    
+[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)    
+<!-- /15-License -->    
+<!-- 20-Description -->    
+Descrizione globale: **Questa entità contiene una descrizione armonizzata di un generico SMPost realizzato per il dominio dei Social Media **.    
+versione: 0.0.2    
+<!-- /20-Description -->    
+<!-- 30-PropertiesList -->    
+## Elenco delle proprietà    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.    
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)    
+	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)    
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)    
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.      
+	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)    
+	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)    
+	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)    
+- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `belongsToCollection[array]`: Gli ID delle SMCollections, di cui questo post fa parte  - `createdBy[*]`: L'ID dell'utente SMU che ha creato questo post.  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `hasAnalysis[array]`: Gli ID delle SMAnalyses che analizzano questo post  - `hasHashtags[array]`: Gli hashtag del post  - `hasImages[array]`: Gli URL del contenuto sotto forma di immagine  - `hasInteractionCount[array]`: Le diverse interazioni di questo post  - `hasLanguage[string]`: Il linguaggio del post  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasMentions[array]`: Gli ID degli SMUser citati in questo post  - `hasPostURL[string]`: L'URL del post  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasPrivacyLevel[string]`: L'impostazione della privacy del post  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `hasReferencedLocations[array]`: Gli ID dei luoghi a cui si fa riferimento in questo post  - `hasText[array]`: Il contenuto in forma testuale  - `hasThumbnails[array]`: Gli URL delle miniature del post  - `hasVideos[array]`: Gli URL dei contenuti in forma di video  - `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `platform[string]`: Piattaforma della postazione  - `postCreatedAt[date-time]`: Data di creazione dell'SMPost  - `postId[string]`: L'ID del post di SMPost  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI-LD. Deve essere uguale a SMPost  <!-- /30-PropertiesList -->    
+<!-- 35-RequiredProperties -->    
+Proprietà richieste    
+- `id`  - `platform`  - `postCreatedAt`  - `postId`  - `type`  <!-- /35-RequiredProperties -->    
+<!-- 40-RequiredProperties -->    
+<!-- /40-RequiredProperties -->    
+<!-- 50-DataModelHeader -->    
+## Modello di dati descrizione delle proprietà    
+Ordinati in ordine alfabetico (clicca per i dettagli)    
+<!-- /50-DataModelHeader -->    
+<!-- 60-ModelYaml -->    
+<details><summary><strong>full yaml details</strong></summary>      
+```yaml    
+SMPost:      
+  description: This entity contains a harmonised description of a generic SMPost made for the Social Media domain.      
+  properties:      
+    address:      
+      description: The mailing address      
+      properties:      
+        addressCountry:      
+          description: 'The country. For example, Spain'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/addressCountry      
+            type: Property      
+        addressLocality:      
+          description: 'The locality in which the street address is, and which is in the region'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/addressLocality      
+            type: Property      
+        addressRegion:      
+          description: 'The region in which the locality is, and which is in the country'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/addressRegion      
+            type: Property      
+        district:      
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'      
+          type: string      
+          x-ngsi:      
+            type: Property      
+        postOfficeBoxNumber:      
+          description: 'The post office box number for PO box addresses. For example, 03578'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/postOfficeBoxNumber      
+            type: Property      
+        postalCode:      
+          description: 'The postal code. For example, 24004'      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/https://schema.org/postalCode      
+            type: Property      
+        streetAddress:      
+          description: The street address      
+          type: string      
+          x-ngsi:      
+            model: https://schema.org/streetAddress      
+            type: Property      
+        streetNr:      
+          description: Number identifying a specific property on a public street      
+          type: string      
+          x-ngsi:      
+            type: Property      
+      type: object      
+      x-ngsi:      
+        model: https://schema.org/address      
+        type: Property      
+    alternateName:      
+      description: An alternative name for this item      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    areaServed:      
+      description: The geographic area where a service or offered item is provided      
+      type: string      
+      x-ngsi:      
+        model: https://schema.org/Text      
+        type: Property      
+    belongsToCollection:      
+      description: 'The IDs of the SMCollections, which this post is a part of'      
+      items:      
+        anyOf:      
+          - description: Identifier format of any NGSI entity      
+            maxLength: 256      
+            minLength: 1      
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+            type: string      
+            x-ngsi:      
+              type: Property      
+          - description: Identifier format of any NGSI entity      
+            format: uri      
+            type: string      
+            x-ngsi:      
+              type: Property      
+      type: array      
+      x-ngsi:      
+        type: Relationship      
+    createdBy:      
+      anyOf:      
+        - description: Identifier format of any NGSI entity      
+          maxLength: 256      
+          minLength: 1      
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+          type: string      
+          x-ngsi:      
+            type: Property      
+        - description: Identifier format of any NGSI entity      
+          format: uri      
+          type: string      
+          x-ngsi:      
+            type: Property      
+      description: The ID of the SMUser that created this post      
+      x-ngsi:      
+        model: ' https://schema.org/Text'      
+        type: Relationship      
+    dataProvider:      
+      description: A sequence of characters identifying the provider of the harmonised data entity      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    dateCreated:      
+      description: Entity creation timestamp. This will usually be allocated by the storage platform      
+      format: date-time      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    dateModified:      
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform      
+      format: date-time      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    description:      
+      description: A description of this item      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    hasAnalysis:      
+      description: The IDs of the SMAnalyses that analyze this post      
+      items:      
+        anyOf:      
+          - description: Identifier format of any NGSI entity      
+            maxLength: 256      
+            minLength: 1      
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+            type: string      
+            x-ngsi:      
+              type: Property      
+          - description: Identifier format of any NGSI entity      
+            format: uri      
+            type: string      
+            x-ngsi:      
+              type: Property      
+      type: array      
+      x-ngsi:      
+        type: Relationship      
+    hasHashtags:      
+      description: The hashtags of the post      
+      items:      
+        type: string      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    hasImages:      
+      description: The URLs of the content that is in image form      
+      items:      
+        type: string      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    hasInteractionCount:      
+      description: The different interactions of this post      
+      items:      
+        properties:      
+          count:      
+            type: number      
+          interactionType:      
+            enum:      
+              - Comment      
+              - Dislike      
+              - Favorite      
+              - Like      
+              - Quote      
+              - Reactions      
+              - Reply      
+              - Retweet      
+              - Shares      
+              - Views      
+            type: string      
+        type: object      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    hasLanguage:      
+      description: The language of the post      
+      type: string      
+      x-ngsi:      
+        model: ' https://schema.org/Text'      
+        type: Property      
+    hasMentions:      
+      description: The IDs of the SMUsers mentioned in this post      
+      items:      
+        anyOf:      
+          - description: Identifier format of any NGSI entity      
+            maxLength: 256      
+            minLength: 1      
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+            type: string      
+            x-ngsi:      
+              type: Property      
+          - description: Identifier format of any NGSI entity      
+            format: uri      
+            type: string      
+            x-ngsi:      
+              type: Property      
+      type: array      
+      x-ngsi:      
+        type: Relationship      
+    hasPostURL:      
+      description: The URL of the post      
+      type: string      
+      x-ngsi:      
+        model: ' https://schema.org/Text'      
+        type: Property      
+    hasPrivacyLevel:      
+      description: The privacy setting of the post      
+      type: string      
+      x-ngsi:      
+        model: ' https://schema.org/Text'      
+        type: Property      
+    hasReferencedLocations:      
+      description: The IDs of the locations referenced in this post      
+      items:      
+        anyOf:      
+          - description: Identifier format of any NGSI entity      
+            maxLength: 256      
+            minLength: 1      
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+            type: string      
+            x-ngsi:      
+              type: Property      
+          - description: Identifier format of any NGSI entity      
+            format: uri      
+            type: string      
+            x-ngsi:      
+              type: Property      
+      type: array      
+      x-ngsi:      
+        type: Relationship      
+    hasText:      
+      description: The content that is in textual form      
+      items:      
+        type: string      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    hasThumbnails:      
+      description: The thumbnail URLs of the post      
+      items:      
+        type: string      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    hasVideos:      
+      description: The URLs of the content that is in video form      
+      items:      
+        type: string      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    id:      
+      anyOf:      
+        - description: Identifier format of any NGSI entity      
+          maxLength: 256      
+          minLength: 1      
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+          type: string      
+          x-ngsi:      
+            type: Property      
+        - description: Identifier format of any NGSI entity      
+          format: uri      
+          type: string      
+          x-ngsi:      
+            type: Property      
+      description: Unique identifier of the entity      
+      x-ngsi:      
+        type: Property      
+    location:      
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'      
+      oneOf:      
+        - description: Geojson reference to the item. Point      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                type: number      
+              minItems: 2      
+              type: array      
+            type:      
+              enum:      
+                - Point      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON Point      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. LineString      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  type: number      
+                minItems: 2      
+                type: array      
+              minItems: 2      
+              type: array      
+            type:      
+              enum:      
+                - LineString      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON LineString      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. Polygon      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  items:      
+                    type: number      
+                  minItems: 2      
+                  type: array      
+                minItems: 4      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - Polygon      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON Polygon      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. MultiPoint      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  type: number      
+                minItems: 2      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - MultiPoint      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON MultiPoint      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. MultiLineString      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  items:      
+                    type: number      
+                  minItems: 2      
+                  type: array      
+                minItems: 2      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - MultiLineString      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON MultiLineString      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+        - description: Geojson reference to the item. MultiLineString      
+          properties:      
+            bbox:      
+              items:      
+                type: number      
+              minItems: 4      
+              type: array      
+            coordinates:      
+              items:      
+                items:      
+                  items:      
+                    items:      
+                      type: number      
+                    minItems: 2      
+                    type: array      
+                  minItems: 4      
+                  type: array      
+                type: array      
+              type: array      
+            type:      
+              enum:      
+                - MultiPolygon      
+              type: string      
+          required:      
+            - type      
+            - coordinates      
+          title: GeoJSON MultiPolygon      
+          type: object      
+          x-ngsi:      
+            type: GeoProperty      
+      x-ngsi:      
+        type: GeoProperty      
+    name:      
+      description: The name of this item      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    owner:      
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)      
+      items:      
+        anyOf:      
+          - description: Identifier format of any NGSI entity      
+            maxLength: 256      
+            minLength: 1      
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$      
+            type: string      
+            x-ngsi:      
+              type: Property      
+          - description: Identifier format of any NGSI entity      
+            format: uri      
+            type: string      
+            x-ngsi:      
+              type: Property      
+        description: Unique identifier of the entity      
+        x-ngsi:      
+          type: Property      
+      type: array      
+      x-ngsi:      
+        type: Property      
+    platform:      
+      description: Platform of post      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    postCreatedAt:      
+      description: The datetime of the creation of the SMPost      
+      format: date-time      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    postId:      
+      description: The  post ID of the SMPost      
+      type: string      
+      x-ngsi:      
+        model: ' https://schema.org/Text'      
+        type: Property      
+    seeAlso:      
+      description: list of uri pointing to additional resources about the item      
+      oneOf:      
+        - items:      
+            format: uri      
+            type: string      
+          minItems: 1      
+          type: array      
+        - format: uri      
+          type: string      
+      x-ngsi:      
+        type: Property      
+    source:      
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'      
+      type: string      
+      x-ngsi:      
+        type: Property      
+    type:      
+      description: NGSI-LD Entity Type. It must be equal to SMPost      
+      enum:      
+        - SMPost      
+      type: string      
+      x-ngsi:      
+        type: Property      
+  required:      
+    - id      
+    - type      
+    - postCreatedAt      
+    - postId      
+    - platform      
+  type: object      
+  x-derived-from: ""      
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'      
+  x-license-url: https://github.com/smart-data-models/dataModel.SocialMedia/blob/master/SMPost/LICENSE.md      
+  x-model-schema: https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/SMPost/schema.json      
+  x-model-tags: ""      
+  x-version: 0.0.2      
+```    
+</details>      
+<!-- /60-ModelYaml -->    
+<!-- 70-MiddleNotes -->    
+<!-- /70-MiddleNotes -->    
+<!-- 80-Examples -->    
+## Esempi di payload    
+#### SMPost NGSI-v2 valori-chiave Esempio    
+Ecco un esempio di SMPost in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
   "id": "SMPost.123",  
@@ -635,16 +633,16 @@ SMPost:
   ]  
 }  
 ```  
-</details>  
-#### SMPost NGSI-v2 normalizzato Esempio  
-Ecco un esempio di SMPost in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
-<details><summary><strong>show/hide example</strong></summary>    
+</details>    
+#### SMPost NGSI-v2 normalizzato Esempio    
+Ecco un esempio di SMPost in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
   "id": "SMPost.123",  
   "type": "SMPost",  
   "hasPostURL": {  
-    "type": "Property",  
+    "type": "Text",  
     "value": "http://twt.com/121"  
   },  
   "postCreatedAt": {  
@@ -664,19 +662,19 @@ SMPost:
     "value": "Twitter"  
   },  
   "hasText": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "This is a tweet"  
     ]  
   },  
   "hasImages": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "https://twt.com/image.png"  
     ]  
   },  
   "hasVideos": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "https://twt.com/video.mp4"  
     ]  
@@ -696,108 +694,108 @@ SMPost:
     }  
   },  
   "hasHashtag": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "#sample",  
       "#tag"  
     ]  
   },  
   "hasThumbnails": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "https://twt.com/thumb.png"  
     ]  
   },  
   "createdBy": {  
-    "type": "Relationship",  
-    "object": "SMUser.123"  
+    "type": "Text",  
+    "value": "SMUser.123"  
   },  
   "hasReferencedLocations": {  
-    "type": "Relationship",  
-    "object": [  
+    "type": "StructuredValue",  
+    "value": [  
       "RefLocation.00"  
     ]  
   },  
   "hasMentions": {  
-    "type": "Relationship",  
-    "object": [  
+    "type": "StructuredValue",  
+    "value": [  
       "SMUser.154"  
-      ]  
+    ]  
   },  
   "belongsToCollection": {  
-    "type": "Relationship",  
-    "object": [  
+    "type": "StructuredValue",  
+    "value": [  
       "SMCollection.001",  
       "SMCollection.002"  
     ]  
   }  
 }  
 ```  
-</details>  
-#### SMPost Valori chiave NGSI-LD Esempio  
-Ecco un esempio di SMPost in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
-<details><summary><strong>show/hide example</strong></summary>    
+</details>    
+#### SMPost Valori chiave NGSI-LD Esempio    
+Ecco un esempio di SMPost in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
-    "id": "urn:ngsi-ld:SMPost:123",  
-    "type": "SMPost",  
-    "belongsToCollection": [  
-        "urn:ngsi-ld:SMCollection:001"  
-    ],  
-    "createdBy": "urn:ngsi-ld:SMUser:123",  
-    "hasAnalysis": [  
-        "urn:ngsi-ld:Analysis:X"  
-    ],  
-    "hasHashtags": [  
-        "#sample",  
-        "#tag"  
-    ],  
-    "hasImages": [  
-        "https://twt.com/image.png"  
-    ],  
-    "hasInteractionCount": [  
-        {  
-            "interactionType": "Like",  
-            "count": 762  
-        }  
-    ],  
-    "hasLanguage": "en",  
-    "hasMentions": [  
-        "urn:ngsi-ld:SMUser:154"  
-    ],  
-    "hasPostURL": "http://twt.com/121",  
-    "hasPrivacy": "public",  
-    "hasReferencedLocations": [  
-        "urn:ngsi-ld:RefLocation:00"  
-    ],  
-    "hasText": [  
-        "This is a tweet"  
-    ],  
-    "hasThumbnails": [  
-        "https://twt.com/thumb.png"  
-    ],  
-    "hasVideos": [  
-        "https://twt.com/video.mp4"  
-    ],  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            40.3,  
-            25.5  
-        ]  
-    },  
-    "platform": "Twitter",  
-    "postCreatedAt": "2020-12-24T12:00:00Z",  
-    "postId": "21098319",  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+  "id": "urn:ngsi-ld:SMPost:123",  
+  "type": "SMPost",  
+  "belongsToCollection": [  
+    "urn:ngsi-ld:SMCollection:001"  
+  ],  
+  "createdBy": "urn:ngsi-ld:SMUser:123",  
+  "hasAnalysis": [  
+    "urn:ngsi-ld:Analysis:X"  
+  ],  
+  "hasHashtags": [  
+    "#sample",  
+    "#tag"  
+  ],  
+  "hasImages": [  
+    "https://twt.com/image.png"  
+  ],  
+  "hasInteractionCount": [  
+    {  
+      "interactionType": "Like",  
+      "count": 762  
+    }  
+  ],  
+  "hasLanguage": "en",  
+  "hasMentions": [  
+    "urn:ngsi-ld:SMUser:154"  
+  ],  
+  "hasPostURL": "http://twt.com/121",  
+  "hasPrivacy": "public",  
+  "hasReferencedLocations": [  
+    "urn:ngsi-ld:RefLocation:00"  
+  ],  
+  "hasText": [  
+    "This is a tweet"  
+  ],  
+  "hasThumbnails": [  
+    "https://twt.com/thumb.png"  
+  ],  
+  "hasVideos": [  
+    "https://twt.com/video.mp4"  
+  ],  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      40.3,  
+      25.5  
     ]  
+  },  
+  "platform": "Twitter",  
+  "postCreatedAt": "2020-12-24T12:00:00Z",  
+  "postId": "21098319",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"  
+  ]  
 }  
 ```  
-</details>  
-#### SMPost NGSI-LD normalizzato Esempio  
-Ecco un esempio di SMPost in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
-<details><summary><strong>show/hide example</strong></summary>    
+</details>    
+#### SMPost NGSI-LD normalizzato Esempio    
+Ecco un esempio di SMPost in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.    
+<details><summary><strong>show/hide example</strong></summary>      
 ```json  
 {  
     "id": "urn:ngsi-ld:SMPost:123",  
@@ -968,12 +966,12 @@ SMPost:
     ]  
 }  
 ```  
-</details><!-- /80-Examples -->  
-<!-- 90-FooterNotes -->  
-<!-- /90-FooterNotes -->  
-<!-- 95-Units -->  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
-<!-- /95-Units -->  
-<!-- 97-LastFooter -->  
----  
-[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
+</details><!-- /80-Examples -->    
+<!-- 90-FooterNotes -->    
+<!-- /90-FooterNotes -->    
+<!-- 95-Units -->    
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.    
+<!-- /95-Units -->    
+<!-- 97-LastFooter -->    
+---    
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->    

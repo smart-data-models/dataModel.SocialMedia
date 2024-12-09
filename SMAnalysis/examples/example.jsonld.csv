@@ -1,2 +1,2 @@
-"id_", "type_", "hasConfidence_", "analyzedAt_", "hasAnalysisValue_", "hasAnalysisType_", "isAnalysisOf_", "@context__0_"
-"urn:ngsi-ld:Analysis:X", "SMAnalysis", "0.4", "2020-12-24T12:00:00Z", "Anger", "Sentiment", "urn:ngsi-ld:SMCollection:001", "https://smartdatamodels.org/context.jsonld"
+"id_", "type_", "analyzedAt_", "hasAnalysisType_", "hasAnalysisValue_", "hasConfidence_", "isAnalysisOf_", "@context__0_"
+"urn:ngsi-ld:Analysis:X", "SMAnalysis", "2020-12-24T12:00:00Z", "Sentiment", "Anger", "0.4", "urn:ngsi-ld:SMCollection:001", "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"

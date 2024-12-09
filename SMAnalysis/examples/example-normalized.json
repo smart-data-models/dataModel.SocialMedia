@@ -18,7 +18,7 @@
     "value": "Sentiment"
   },
   "isAnalysisOf": {
-    "type": "Relationship",
-    "object": "SMCollection.001"
+    "type": "Text",
+    "value": "SMCollection.001"
   }
 }

@@ -8,7 +8,7 @@
     }
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -18,7 +18,7 @@
     }
   },
   "locationReferencedBy": {
-    "type": "Relationship",
-    "object": "SMPost.123"
+    "type": "Text",
+    "value": "SMPost.123"
   }
 }

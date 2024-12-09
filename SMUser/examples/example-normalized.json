@@ -13,16 +13,16 @@
     "type": "Text",
     "value": "Jsmith2"
   },
-  "createdPosts": [
-    {
-      "type": "Relationship",
-      "value": "SMPost.123"
-    }
-  ],
-  "isMentionedBy": [
-    {
-      "type": "Relationship",
-      "value": "SMPost.123"
-    }
-  ]
+  "createdPosts": {
+    "type": "StructuredValue",
+    "value": [
+      "SMPost.123"
+    ]
+  },
+  "isMentionedBy": {
+    "type": "StructuredValue",
+    "value": [
+      "SMPost.123"
+    ]
+  }
 }

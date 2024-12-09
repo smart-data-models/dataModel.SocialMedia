@@ -1,12 +1,12 @@
 {
-    "id": "urn:ngsi-ld:Analysis:X",
-    "type": "SMAnalysis",
-    "analyzedAt": "2020-12-24T12:00:00Z",
-    "hasAnalysisType": "Sentiment",
-    "hasAnalysisValue": "Anger",
-    "hasConfidence": 0.4,
-    "isAnalysisOf": "urn:ngsi-ld:SMCollection:001",
-    "@context": [
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:Analysis:X",
+  "type": "SMAnalysis",
+  "analyzedAt": "2020-12-24T12:00:00Z",
+  "hasAnalysisType": "Sentiment",
+  "hasAnalysisValue": "Anger",
+  "hasConfidence": 0.4,
+  "isAnalysisOf": "urn:ngsi-ld:SMCollection:001",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.SocialMedia/master/context.jsonld"
+  ]
 }

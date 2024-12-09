@@ -1,3 +1,3 @@
-/* (Beta) Export of data model SMRefLocation of the subject dataModel.SocialMedia for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model SMRefLocation of the subject dataModel.SocialMedia for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE SMRefLocation_type AS ENUM ('SMRefLocation');
-CREATE TABLE SMRefLocation (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, locationReferencedBy text, name text, owner json, seeAlso json, source text, type SMRefLocation_type);
+CREATE TABLE SMRefLocation (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type SMRefLocation_type);
